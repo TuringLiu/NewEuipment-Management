@@ -167,6 +167,11 @@
             this.经费明细删除 = new System.Windows.Forms.Panel();
             this.经费明细修改 = new System.Windows.Forms.Panel();
             this.经费明细添加 = new System.Windows.Forms.Panel();
+            this.部门人员基本信息表部门前缀 = new System.Windows.Forms.Label();
+            this.部门人员基本信息表部门名 = new System.Windows.Forms.Label();
+            this.部门人员基本信息表成员 = new System.Windows.Forms.TextBox();
+            this.部门人员基本信息表搜索按钮 = new System.Windows.Forms.Button();
+            this.部门人员基本信息表成员名标题 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.系统管理.SuspendLayout();
             this.用户管理.SuspendLayout();
@@ -611,7 +616,7 @@
             // WelcomePicture
             // 
             this.WelcomePicture.Location = new System.Drawing.Point(0, 25);
-            this.WelcomePicture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WelcomePicture.Margin = new System.Windows.Forms.Padding(2);
             this.WelcomePicture.Name = "WelcomePicture";
             this.WelcomePicture.Size = new System.Drawing.Size(932, 466);
             this.WelcomePicture.TabIndex = 0;
@@ -621,7 +626,7 @@
             this.系统管理.Controls.Add(this.用户管理);
             this.系统管理.Dock = System.Windows.Forms.DockStyle.Fill;
             this.系统管理.Location = new System.Drawing.Point(0, 25);
-            this.系统管理.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.系统管理.Margin = new System.Windows.Forms.Padding(2);
             this.系统管理.Name = "系统管理";
             this.系统管理.Size = new System.Drawing.Size(932, 425);
             this.系统管理.TabIndex = 2;
@@ -630,7 +635,7 @@
             // 
             this.用户管理.Controls.Add(this.添加账户);
             this.用户管理.Location = new System.Drawing.Point(2, 2);
-            this.用户管理.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.用户管理.Margin = new System.Windows.Forms.Padding(2);
             this.用户管理.Name = "用户管理";
             this.用户管理.Size = new System.Drawing.Size(927, 458);
             this.用户管理.TabIndex = 0;
@@ -638,20 +643,20 @@
             // 添加账户
             // 
             this.添加账户.Location = new System.Drawing.Point(0, 0);
-            this.添加账户.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.添加账户.Margin = new System.Windows.Forms.Padding(2);
             this.添加账户.Name = "添加账户";
             this.添加账户.Size = new System.Drawing.Size(929, 463);
             this.添加账户.TabIndex = 0;
             // 
             // 统计与查询
             // 
+            this.统计与查询.Controls.Add(this.部门人员查询);
             this.统计与查询.Controls.Add(this.出入库统计表);
             this.统计与查询.Controls.Add(this.装备经费汇总);
-            this.统计与查询.Controls.Add(this.部门人员查询);
             this.统计与查询.Controls.Add(this.装备库存流水统计表);
             this.统计与查询.Dock = System.Windows.Forms.DockStyle.Fill;
             this.统计与查询.Location = new System.Drawing.Point(0, 25);
-            this.统计与查询.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.统计与查询.Margin = new System.Windows.Forms.Padding(2);
             this.统计与查询.Name = "统计与查询";
             this.统计与查询.Size = new System.Drawing.Size(932, 425);
             this.统计与查询.TabIndex = 0;
@@ -662,7 +667,7 @@
             this.出入库统计表.Controls.Add(this.装备出入库信息内容显示);
             this.出入库统计表.Dock = System.Windows.Forms.DockStyle.Fill;
             this.出入库统计表.Location = new System.Drawing.Point(0, 0);
-            this.出入库统计表.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.出入库统计表.Margin = new System.Windows.Forms.Padding(2);
             this.出入库统计表.Name = "出入库统计表";
             this.出入库统计表.Size = new System.Drawing.Size(932, 425);
             this.出入库统计表.TabIndex = 0;
@@ -672,9 +677,9 @@
             this.装备出入库信息查询容器.Controls.Add(this.出入库查询内容输入容器);
             this.装备出入库信息查询容器.Controls.Add(this.出入库查询类型选择容器);
             this.装备出入库信息查询容器.Location = new System.Drawing.Point(777, 21);
-            this.装备出入库信息查询容器.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.装备出入库信息查询容器.Margin = new System.Windows.Forms.Padding(2);
             this.装备出入库信息查询容器.Name = "装备出入库信息查询容器";
-            this.装备出入库信息查询容器.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.装备出入库信息查询容器.Padding = new System.Windows.Forms.Padding(2);
             this.装备出入库信息查询容器.Size = new System.Drawing.Size(150, 355);
             this.装备出入库信息查询容器.TabIndex = 0;
             this.装备出入库信息查询容器.TabStop = false;
@@ -685,18 +690,18 @@
             this.出入库查询内容输入容器.Controls.Add(this.出入库信息查询按钮);
             this.出入库查询内容输入容器.Controls.Add(this.出入库查询内容输入);
             this.出入库查询内容输入容器.Location = new System.Drawing.Point(10, 186);
-            this.出入库查询内容输入容器.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.出入库查询内容输入容器.Margin = new System.Windows.Forms.Padding(2);
             this.出入库查询内容输入容器.Name = "出入库查询内容输入容器";
-            this.出入库查询内容输入容器.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.出入库查询内容输入容器.Padding = new System.Windows.Forms.Padding(2);
             this.出入库查询内容输入容器.Size = new System.Drawing.Size(135, 146);
             this.出入库查询内容输入容器.TabIndex = 4;
             this.出入库查询内容输入容器.TabStop = false;
-            this.出入库查询内容输入容器.Text = "查询内容";
+            this.出入库查询内容输入容器.Text = "装备出入库查询";
             // 
             // 出入库信息查询按钮
             // 
             this.出入库信息查询按钮.Location = new System.Drawing.Point(19, 99);
-            this.出入库信息查询按钮.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.出入库信息查询按钮.Margin = new System.Windows.Forms.Padding(2);
             this.出入库信息查询按钮.Name = "出入库信息查询按钮";
             this.出入库信息查询按钮.Size = new System.Drawing.Size(100, 30);
             this.出入库信息查询按钮.TabIndex = 1;
@@ -707,7 +712,7 @@
             // 出入库查询内容输入
             // 
             this.出入库查询内容输入.Location = new System.Drawing.Point(19, 37);
-            this.出入库查询内容输入.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.出入库查询内容输入.Margin = new System.Windows.Forms.Padding(2);
             this.出入库查询内容输入.Multiline = true;
             this.出入库查询内容输入.Name = "出入库查询内容输入";
             this.出入库查询内容输入.Size = new System.Drawing.Size(101, 38);
@@ -719,9 +724,9 @@
             this.出入库查询类型选择容器.Controls.Add(this.出入库信息查询选择);
             this.出入库查询类型选择容器.Controls.Add(this.入库信息查询选择);
             this.出入库查询类型选择容器.Location = new System.Drawing.Point(4, 35);
-            this.出入库查询类型选择容器.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.出入库查询类型选择容器.Margin = new System.Windows.Forms.Padding(2);
             this.出入库查询类型选择容器.Name = "出入库查询类型选择容器";
-            this.出入库查询类型选择容器.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.出入库查询类型选择容器.Padding = new System.Windows.Forms.Padding(2);
             this.出入库查询类型选择容器.Size = new System.Drawing.Size(141, 112);
             this.出入库查询类型选择容器.TabIndex = 3;
             this.出入库查询类型选择容器.TabStop = false;
@@ -731,7 +736,7 @@
             // 
             this.出库信息查询选择.AutoSize = true;
             this.出库信息查询选择.Location = new System.Drawing.Point(18, 24);
-            this.出库信息查询选择.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.出库信息查询选择.Margin = new System.Windows.Forms.Padding(2);
             this.出库信息查询选择.Name = "出库信息查询选择";
             this.出库信息查询选择.Size = new System.Drawing.Size(95, 16);
             this.出库信息查询选择.TabIndex = 0;
@@ -743,7 +748,7 @@
             // 
             this.出入库信息查询选择.AutoSize = true;
             this.出入库信息查询选择.Location = new System.Drawing.Point(18, 86);
-            this.出入库信息查询选择.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.出入库信息查询选择.Margin = new System.Windows.Forms.Padding(2);
             this.出入库信息查询选择.Name = "出入库信息查询选择";
             this.出入库信息查询选择.Size = new System.Drawing.Size(107, 16);
             this.出入库信息查询选择.TabIndex = 2;
@@ -755,7 +760,7 @@
             // 
             this.入库信息查询选择.AutoSize = true;
             this.入库信息查询选择.Location = new System.Drawing.Point(18, 54);
-            this.入库信息查询选择.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.入库信息查询选择.Margin = new System.Windows.Forms.Padding(2);
             this.入库信息查询选择.Name = "入库信息查询选择";
             this.入库信息查询选择.Size = new System.Drawing.Size(95, 16);
             this.入库信息查询选择.TabIndex = 1;
@@ -774,7 +779,7 @@
             this.装备出入库信息内容显示.Controls.Add(this.出入库信息数据显示);
             this.装备出入库信息内容显示.Controls.Add(this.装备出入库信息标题);
             this.装备出入库信息内容显示.Location = new System.Drawing.Point(0, 0);
-            this.装备出入库信息内容显示.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.装备出入库信息内容显示.Margin = new System.Windows.Forms.Padding(2);
             this.装备出入库信息内容显示.Name = "装备出入库信息内容显示";
             this.装备出入库信息内容显示.Size = new System.Drawing.Size(772, 427);
             this.装备出入库信息内容显示.TabIndex = 1;
@@ -802,7 +807,7 @@
             // 出入库信息日期选择按钮
             // 
             this.出入库信息日期选择按钮.Location = new System.Drawing.Point(382, 79);
-            this.出入库信息日期选择按钮.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.出入库信息日期选择按钮.Margin = new System.Windows.Forms.Padding(2);
             this.出入库信息日期选择按钮.Name = "出入库信息日期选择按钮";
             this.出入库信息日期选择按钮.Size = new System.Drawing.Size(81, 20);
             this.出入库信息日期选择按钮.TabIndex = 6;
@@ -813,7 +818,7 @@
             // 出入库导出表格按钮
             // 
             this.出入库导出表格按钮.Location = new System.Drawing.Point(666, 74);
-            this.出入库导出表格按钮.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.出入库导出表格按钮.Margin = new System.Windows.Forms.Padding(2);
             this.出入库导出表格按钮.Name = "出入库导出表格按钮";
             this.出入库导出表格按钮.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.出入库导出表格按钮.Size = new System.Drawing.Size(87, 26);
@@ -825,7 +830,7 @@
             // 出入库时间查询选择2
             // 
             this.出入库时间查询选择2.Location = new System.Drawing.Point(251, 79);
-            this.出入库时间查询选择2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.出入库时间查询选择2.Margin = new System.Windows.Forms.Padding(2);
             this.出入库时间查询选择2.Name = "出入库时间查询选择2";
             this.出入库时间查询选择2.Size = new System.Drawing.Size(108, 21);
             this.出入库时间查询选择2.TabIndex = 4;
@@ -833,7 +838,7 @@
             // 出入库时间查询选择1
             // 
             this.出入库时间查询选择1.Location = new System.Drawing.Point(104, 79);
-            this.出入库时间查询选择1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.出入库时间查询选择1.Margin = new System.Windows.Forms.Padding(2);
             this.出入库时间查询选择1.Name = "出入库时间查询选择1";
             this.出入库时间查询选择1.Size = new System.Drawing.Size(105, 21);
             this.出入库时间查询选择1.TabIndex = 3;
@@ -851,7 +856,7 @@
             this.出入库验收人,
             this.出入库仓库编号});
             this.出入库信息数据显示.Location = new System.Drawing.Point(22, 118);
-            this.出入库信息数据显示.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.出入库信息数据显示.Margin = new System.Windows.Forms.Padding(2);
             this.出入库信息数据显示.Name = "出入库信息数据显示";
             this.出入库信息数据显示.RowTemplate.Height = 27;
             this.出入库信息数据显示.Size = new System.Drawing.Size(730, 300);
@@ -924,7 +929,7 @@
             this.装备经费汇总.Controls.Add(this.装备经费汇总统计标题);
             this.装备经费汇总.Dock = System.Windows.Forms.DockStyle.Fill;
             this.装备经费汇总.Location = new System.Drawing.Point(0, 0);
-            this.装备经费汇总.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.装备经费汇总.Margin = new System.Windows.Forms.Padding(2);
             this.装备经费汇总.Name = "装备经费汇总";
             this.装备经费汇总.Size = new System.Drawing.Size(932, 425);
             this.装备经费汇总.TabIndex = 0;
@@ -932,7 +937,7 @@
             // 装备经费汇总表导出按钮
             // 
             this.装备经费汇总表导出按钮.Location = new System.Drawing.Point(800, 40);
-            this.装备经费汇总表导出按钮.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.装备经费汇总表导出按钮.Margin = new System.Windows.Forms.Padding(2);
             this.装备经费汇总表导出按钮.Name = "装备经费汇总表导出按钮";
             this.装备经费汇总表导出按钮.Size = new System.Drawing.Size(94, 35);
             this.装备经费汇总表导出按钮.TabIndex = 2;
@@ -952,7 +957,7 @@
             this.经费汇总余额,
             this.经费汇总备注});
             this.装备经费汇总数据库表.Location = new System.Drawing.Point(31, 91);
-            this.装备经费汇总数据库表.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.装备经费汇总数据库表.Margin = new System.Windows.Forms.Padding(2);
             this.装备经费汇总数据库表.Name = "装备经费汇总数据库表";
             this.装备经费汇总数据库表.RowTemplate.Height = 27;
             this.装备经费汇总数据库表.Size = new System.Drawing.Size(871, 322);
@@ -1023,7 +1028,7 @@
             this.部门人员查询.Controls.Add(this.部门人员信息显示表);
             this.部门人员查询.Dock = System.Windows.Forms.DockStyle.Fill;
             this.部门人员查询.Location = new System.Drawing.Point(0, 0);
-            this.部门人员查询.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.部门人员查询.Margin = new System.Windows.Forms.Padding(2);
             this.部门人员查询.Name = "部门人员查询";
             this.部门人员查询.Size = new System.Drawing.Size(932, 425);
             this.部门人员查询.TabIndex = 0;
@@ -1033,9 +1038,9 @@
             this.部门信息查询容器.Controls.Add(this.人员信息查询按钮);
             this.部门信息查询容器.Controls.Add(this.人员信息查询输入);
             this.部门信息查询容器.Location = new System.Drawing.Point(788, 80);
-            this.部门信息查询容器.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.部门信息查询容器.Margin = new System.Windows.Forms.Padding(2);
             this.部门信息查询容器.Name = "部门信息查询容器";
-            this.部门信息查询容器.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.部门信息查询容器.Padding = new System.Windows.Forms.Padding(2);
             this.部门信息查询容器.Size = new System.Drawing.Size(118, 206);
             this.部门信息查询容器.TabIndex = 3;
             this.部门信息查询容器.TabStop = false;
@@ -1044,7 +1049,7 @@
             // 人员信息查询按钮
             // 
             this.人员信息查询按钮.Location = new System.Drawing.Point(12, 144);
-            this.人员信息查询按钮.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.人员信息查询按钮.Margin = new System.Windows.Forms.Padding(2);
             this.人员信息查询按钮.Name = "人员信息查询按钮";
             this.人员信息查询按钮.Size = new System.Drawing.Size(94, 27);
             this.人员信息查询按钮.TabIndex = 3;
@@ -1055,18 +1060,24 @@
             // 人员信息查询输入
             // 
             this.人员信息查询输入.Location = new System.Drawing.Point(12, 61);
-            this.人员信息查询输入.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.人员信息查询输入.Margin = new System.Windows.Forms.Padding(2);
             this.人员信息查询输入.Multiline = true;
             this.人员信息查询输入.Name = "人员信息查询输入";
             this.人员信息查询输入.Size = new System.Drawing.Size(96, 35);
             this.人员信息查询输入.TabIndex = 2;
+            this.人员信息查询输入.TextChanged += new System.EventHandler(this.人员信息查询输入_TextChanged);
             // 
             // 部门人员信息显示表
             // 
+            this.部门人员信息显示表.Controls.Add(this.部门人员基本信息表成员名标题);
+            this.部门人员信息显示表.Controls.Add(this.部门人员基本信息表搜索按钮);
+            this.部门人员信息显示表.Controls.Add(this.部门人员基本信息表成员);
+            this.部门人员信息显示表.Controls.Add(this.部门人员基本信息表部门名);
+            this.部门人员信息显示表.Controls.Add(this.部门人员基本信息表部门前缀);
             this.部门人员信息显示表.Controls.Add(this.部门人员信息数据显示);
             this.部门人员信息显示表.Controls.Add(this.部门人员基本信息表标题);
             this.部门人员信息显示表.Location = new System.Drawing.Point(0, 0);
-            this.部门人员信息显示表.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.部门人员信息显示表.Margin = new System.Windows.Forms.Padding(2);
             this.部门人员信息显示表.Name = "部门人员信息显示表";
             this.部门人员信息显示表.Size = new System.Drawing.Size(770, 425);
             this.部门人员信息显示表.TabIndex = 1;
@@ -1082,11 +1093,11 @@
             this.民族,
             this.生日,
             this.职务});
-            this.部门人员信息数据显示.Location = new System.Drawing.Point(35, 62);
-            this.部门人员信息数据显示.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.部门人员信息数据显示.Location = new System.Drawing.Point(31, 118);
+            this.部门人员信息数据显示.Margin = new System.Windows.Forms.Padding(2);
             this.部门人员信息数据显示.Name = "部门人员信息数据显示";
             this.部门人员信息数据显示.RowTemplate.Height = 27;
-            this.部门人员信息数据显示.Size = new System.Drawing.Size(582, 291);
+            this.部门人员信息数据显示.Size = new System.Drawing.Size(721, 291);
             this.部门人员信息数据显示.TabIndex = 1;
             // 
             // 编号
@@ -1140,7 +1151,7 @@
             // 
             this.装备库存流水统计表.Dock = System.Windows.Forms.DockStyle.Fill;
             this.装备库存流水统计表.Location = new System.Drawing.Point(0, 0);
-            this.装备库存流水统计表.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.装备库存流水统计表.Margin = new System.Windows.Forms.Padding(2);
             this.装备库存流水统计表.Name = "装备库存流水统计表";
             this.装备库存流水统计表.Size = new System.Drawing.Size(932, 425);
             this.装备库存流水统计表.TabIndex = 1;
@@ -1153,7 +1164,7 @@
             this.装备库存管理.Controls.Add(this.仓库信息管理);
             this.装备库存管理.Dock = System.Windows.Forms.DockStyle.Fill;
             this.装备库存管理.Location = new System.Drawing.Point(0, 25);
-            this.装备库存管理.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.装备库存管理.Margin = new System.Windows.Forms.Padding(2);
             this.装备库存管理.Name = "装备库存管理";
             this.装备库存管理.Size = new System.Drawing.Size(932, 425);
             this.装备库存管理.TabIndex = 2;
@@ -1161,7 +1172,7 @@
             // 装备库存盘点
             // 
             this.装备库存盘点.Location = new System.Drawing.Point(0, 0);
-            this.装备库存盘点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.装备库存盘点.Margin = new System.Windows.Forms.Padding(2);
             this.装备库存盘点.Name = "装备库存盘点";
             this.装备库存盘点.Size = new System.Drawing.Size(932, 466);
             this.装备库存盘点.TabIndex = 5;
@@ -1172,7 +1183,7 @@
             this.出库信息管理.Controls.Add(this.出库信息修改);
             this.出库信息管理.Controls.Add(this.出库信息添加);
             this.出库信息管理.Location = new System.Drawing.Point(0, 0);
-            this.出库信息管理.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.出库信息管理.Margin = new System.Windows.Forms.Padding(2);
             this.出库信息管理.Name = "出库信息管理";
             this.出库信息管理.Size = new System.Drawing.Size(932, 466);
             this.出库信息管理.TabIndex = 4;
@@ -1180,7 +1191,7 @@
             // 出库信息删除
             // 
             this.出库信息删除.Location = new System.Drawing.Point(0, 0);
-            this.出库信息删除.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.出库信息删除.Margin = new System.Windows.Forms.Padding(2);
             this.出库信息删除.Name = "出库信息删除";
             this.出库信息删除.Size = new System.Drawing.Size(932, 466);
             this.出库信息删除.TabIndex = 0;
@@ -1188,7 +1199,7 @@
             // 出库信息修改
             // 
             this.出库信息修改.Location = new System.Drawing.Point(0, 0);
-            this.出库信息修改.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.出库信息修改.Margin = new System.Windows.Forms.Padding(2);
             this.出库信息修改.Name = "出库信息修改";
             this.出库信息修改.Size = new System.Drawing.Size(932, 466);
             this.出库信息修改.TabIndex = 0;
@@ -1196,7 +1207,7 @@
             // 出库信息添加
             // 
             this.出库信息添加.Location = new System.Drawing.Point(0, 0);
-            this.出库信息添加.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.出库信息添加.Margin = new System.Windows.Forms.Padding(2);
             this.出库信息添加.Name = "出库信息添加";
             this.出库信息添加.Size = new System.Drawing.Size(932, 466);
             this.出库信息添加.TabIndex = 0;
@@ -1207,7 +1218,7 @@
             this.入库信息管理.Controls.Add(this.入库信息修改);
             this.入库信息管理.Controls.Add(this.入库信息添加);
             this.入库信息管理.Location = new System.Drawing.Point(0, 0);
-            this.入库信息管理.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.入库信息管理.Margin = new System.Windows.Forms.Padding(2);
             this.入库信息管理.Name = "入库信息管理";
             this.入库信息管理.Size = new System.Drawing.Size(932, 490);
             this.入库信息管理.TabIndex = 3;
@@ -1215,7 +1226,7 @@
             // 入库信息删除
             // 
             this.入库信息删除.Location = new System.Drawing.Point(0, 0);
-            this.入库信息删除.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.入库信息删除.Margin = new System.Windows.Forms.Padding(2);
             this.入库信息删除.Name = "入库信息删除";
             this.入库信息删除.Size = new System.Drawing.Size(932, 466);
             this.入库信息删除.TabIndex = 0;
@@ -1223,7 +1234,7 @@
             // 入库信息修改
             // 
             this.入库信息修改.Location = new System.Drawing.Point(0, 0);
-            this.入库信息修改.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.入库信息修改.Margin = new System.Windows.Forms.Padding(2);
             this.入库信息修改.Name = "入库信息修改";
             this.入库信息修改.Size = new System.Drawing.Size(932, 466);
             this.入库信息修改.TabIndex = 1;
@@ -1231,7 +1242,7 @@
             // 入库信息添加
             // 
             this.入库信息添加.Location = new System.Drawing.Point(0, 0);
-            this.入库信息添加.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.入库信息添加.Margin = new System.Windows.Forms.Padding(2);
             this.入库信息添加.Name = "入库信息添加";
             this.入库信息添加.Size = new System.Drawing.Size(932, 466);
             this.入库信息添加.TabIndex = 0;
@@ -1242,7 +1253,7 @@
             this.仓库信息管理.Controls.Add(this.仓库信息修改);
             this.仓库信息管理.Controls.Add(this.仓库信息删除);
             this.仓库信息管理.Location = new System.Drawing.Point(0, 0);
-            this.仓库信息管理.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.仓库信息管理.Margin = new System.Windows.Forms.Padding(2);
             this.仓库信息管理.Name = "仓库信息管理";
             this.仓库信息管理.Size = new System.Drawing.Size(932, 466);
             this.仓库信息管理.TabIndex = 0;
@@ -1250,7 +1261,7 @@
             // 仓库信息添加
             // 
             this.仓库信息添加.Location = new System.Drawing.Point(0, 0);
-            this.仓库信息添加.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.仓库信息添加.Margin = new System.Windows.Forms.Padding(2);
             this.仓库信息添加.Name = "仓库信息添加";
             this.仓库信息添加.Size = new System.Drawing.Size(932, 466);
             this.仓库信息添加.TabIndex = 2;
@@ -1258,7 +1269,7 @@
             // 仓库信息修改
             // 
             this.仓库信息修改.Location = new System.Drawing.Point(0, 0);
-            this.仓库信息修改.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.仓库信息修改.Margin = new System.Windows.Forms.Padding(2);
             this.仓库信息修改.Name = "仓库信息修改";
             this.仓库信息修改.Size = new System.Drawing.Size(932, 466);
             this.仓库信息修改.TabIndex = 1;
@@ -1266,7 +1277,7 @@
             // 仓库信息删除
             // 
             this.仓库信息删除.Location = new System.Drawing.Point(0, 0);
-            this.仓库信息删除.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.仓库信息删除.Margin = new System.Windows.Forms.Padding(2);
             this.仓库信息删除.Name = "仓库信息删除";
             this.仓库信息删除.Size = new System.Drawing.Size(932, 466);
             this.仓库信息删除.TabIndex = 0;
@@ -1278,7 +1289,7 @@
             this.装备经费管理.Controls.Add(this.经费明细管理);
             this.装备经费管理.Dock = System.Windows.Forms.DockStyle.Fill;
             this.装备经费管理.Location = new System.Drawing.Point(0, 25);
-            this.装备经费管理.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.装备经费管理.Margin = new System.Windows.Forms.Padding(2);
             this.装备经费管理.Name = "装备经费管理";
             this.装备经费管理.Size = new System.Drawing.Size(932, 425);
             this.装备经费管理.TabIndex = 6;
@@ -1289,7 +1300,7 @@
             this.经费使用管理.Controls.Add(this.经费使用修改);
             this.经费使用管理.Controls.Add(this.经费使用添加);
             this.经费使用管理.Location = new System.Drawing.Point(0, 0);
-            this.经费使用管理.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.经费使用管理.Margin = new System.Windows.Forms.Padding(2);
             this.经费使用管理.Name = "经费使用管理";
             this.经费使用管理.Size = new System.Drawing.Size(932, 466);
             this.经费使用管理.TabIndex = 2;
@@ -1297,7 +1308,7 @@
             // 经费使用删除
             // 
             this.经费使用删除.Location = new System.Drawing.Point(0, 0);
-            this.经费使用删除.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.经费使用删除.Margin = new System.Windows.Forms.Padding(2);
             this.经费使用删除.Name = "经费使用删除";
             this.经费使用删除.Size = new System.Drawing.Size(932, 466);
             this.经费使用删除.TabIndex = 2;
@@ -1305,7 +1316,7 @@
             // 经费使用修改
             // 
             this.经费使用修改.Location = new System.Drawing.Point(0, 0);
-            this.经费使用修改.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.经费使用修改.Margin = new System.Windows.Forms.Padding(2);
             this.经费使用修改.Name = "经费使用修改";
             this.经费使用修改.Size = new System.Drawing.Size(932, 466);
             this.经费使用修改.TabIndex = 1;
@@ -1313,7 +1324,7 @@
             // 经费使用添加
             // 
             this.经费使用添加.Location = new System.Drawing.Point(0, 0);
-            this.经费使用添加.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.经费使用添加.Margin = new System.Windows.Forms.Padding(2);
             this.经费使用添加.Name = "经费使用添加";
             this.经费使用添加.Size = new System.Drawing.Size(932, 466);
             this.经费使用添加.TabIndex = 0;
@@ -1324,7 +1335,7 @@
             this.经费入账管理.Controls.Add(this.经费入账修改);
             this.经费入账管理.Controls.Add(this.经费入账添加);
             this.经费入账管理.Location = new System.Drawing.Point(0, 0);
-            this.经费入账管理.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.经费入账管理.Margin = new System.Windows.Forms.Padding(2);
             this.经费入账管理.Name = "经费入账管理";
             this.经费入账管理.Size = new System.Drawing.Size(932, 466);
             this.经费入账管理.TabIndex = 1;
@@ -1332,7 +1343,7 @@
             // 经费入账删除
             // 
             this.经费入账删除.Location = new System.Drawing.Point(0, 0);
-            this.经费入账删除.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.经费入账删除.Margin = new System.Windows.Forms.Padding(2);
             this.经费入账删除.Name = "经费入账删除";
             this.经费入账删除.Size = new System.Drawing.Size(932, 466);
             this.经费入账删除.TabIndex = 2;
@@ -1340,7 +1351,7 @@
             // 经费入账修改
             // 
             this.经费入账修改.Location = new System.Drawing.Point(0, 0);
-            this.经费入账修改.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.经费入账修改.Margin = new System.Windows.Forms.Padding(2);
             this.经费入账修改.Name = "经费入账修改";
             this.经费入账修改.Size = new System.Drawing.Size(932, 466);
             this.经费入账修改.TabIndex = 1;
@@ -1348,7 +1359,7 @@
             // 经费入账添加
             // 
             this.经费入账添加.Location = new System.Drawing.Point(0, 0);
-            this.经费入账添加.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.经费入账添加.Margin = new System.Windows.Forms.Padding(2);
             this.经费入账添加.Name = "经费入账添加";
             this.经费入账添加.Size = new System.Drawing.Size(932, 466);
             this.经费入账添加.TabIndex = 0;
@@ -1359,7 +1370,7 @@
             this.经费明细管理.Controls.Add(this.经费明细修改);
             this.经费明细管理.Controls.Add(this.经费明细添加);
             this.经费明细管理.Location = new System.Drawing.Point(0, 0);
-            this.经费明细管理.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.经费明细管理.Margin = new System.Windows.Forms.Padding(2);
             this.经费明细管理.Name = "经费明细管理";
             this.经费明细管理.Size = new System.Drawing.Size(932, 466);
             this.经费明细管理.TabIndex = 0;
@@ -1367,7 +1378,7 @@
             // 经费明细删除
             // 
             this.经费明细删除.Location = new System.Drawing.Point(0, 0);
-            this.经费明细删除.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.经费明细删除.Margin = new System.Windows.Forms.Padding(2);
             this.经费明细删除.Name = "经费明细删除";
             this.经费明细删除.Size = new System.Drawing.Size(932, 466);
             this.经费明细删除.TabIndex = 2;
@@ -1375,7 +1386,7 @@
             // 经费明细修改
             // 
             this.经费明细修改.Location = new System.Drawing.Point(0, 0);
-            this.经费明细修改.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.经费明细修改.Margin = new System.Windows.Forms.Padding(2);
             this.经费明细修改.Name = "经费明细修改";
             this.经费明细修改.Size = new System.Drawing.Size(932, 466);
             this.经费明细修改.TabIndex = 1;
@@ -1383,10 +1394,54 @@
             // 经费明细添加
             // 
             this.经费明细添加.Location = new System.Drawing.Point(0, 0);
-            this.经费明细添加.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.经费明细添加.Margin = new System.Windows.Forms.Padding(2);
             this.经费明细添加.Name = "经费明细添加";
             this.经费明细添加.Size = new System.Drawing.Size(932, 466);
             this.经费明细添加.TabIndex = 0;
+            // 
+            // 部门人员基本信息表部门前缀
+            // 
+            this.部门人员基本信息表部门前缀.AutoSize = true;
+            this.部门人员基本信息表部门前缀.Location = new System.Drawing.Point(29, 91);
+            this.部门人员基本信息表部门前缀.Name = "部门人员基本信息表部门前缀";
+            this.部门人员基本信息表部门前缀.Size = new System.Drawing.Size(41, 12);
+            this.部门人员基本信息表部门前缀.TabIndex = 2;
+            this.部门人员基本信息表部门前缀.Text = "部门：";
+            // 
+            // 部门人员基本信息表部门名
+            // 
+            this.部门人员基本信息表部门名.AutoSize = true;
+            this.部门人员基本信息表部门名.Location = new System.Drawing.Point(76, 91);
+            this.部门人员基本信息表部门名.Name = "部门人员基本信息表部门名";
+            this.部门人员基本信息表部门名.Size = new System.Drawing.Size(29, 12);
+            this.部门人员基本信息表部门名.TabIndex = 3;
+            this.部门人员基本信息表部门名.Text = "XXXX";
+            // 
+            // 部门人员基本信息表成员
+            // 
+            this.部门人员基本信息表成员.Location = new System.Drawing.Point(550, 80);
+            this.部门人员基本信息表成员.Name = "部门人员基本信息表成员";
+            this.部门人员基本信息表成员.Size = new System.Drawing.Size(100, 21);
+            this.部门人员基本信息表成员.TabIndex = 4;
+            // 
+            // 部门人员基本信息表搜索按钮
+            // 
+            this.部门人员基本信息表搜索按钮.Location = new System.Drawing.Point(666, 79);
+            this.部门人员基本信息表搜索按钮.Name = "部门人员基本信息表搜索按钮";
+            this.部门人员基本信息表搜索按钮.Size = new System.Drawing.Size(75, 23);
+            this.部门人员基本信息表搜索按钮.TabIndex = 5;
+            this.部门人员基本信息表搜索按钮.Text = "搜索";
+            this.部门人员基本信息表搜索按钮.UseVisualStyleBackColor = true;
+            this.部门人员基本信息表搜索按钮.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // 部门人员基本信息表成员名标题
+            // 
+            this.部门人员基本信息表成员名标题.AutoSize = true;
+            this.部门人员基本信息表成员名标题.Location = new System.Drawing.Point(480, 85);
+            this.部门人员基本信息表成员名标题.Name = "部门人员基本信息表成员名标题";
+            this.部门人员基本信息表成员名标题.Size = new System.Drawing.Size(53, 12);
+            this.部门人员基本信息表成员名标题.TabIndex = 6;
+            this.部门人员基本信息表成员名标题.Text = "成员名：";
             // 
             // Main
             // 
@@ -1400,9 +1455,9 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.WelcomePicture);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Main";
-            this.Text = "Main";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Main_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -1581,5 +1636,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn 经费汇总余额;
         private System.Windows.Forms.DataGridViewTextBoxColumn 经费汇总备注;
         private System.Windows.Forms.Label 装备经费汇总统计标题;
+        private System.Windows.Forms.Button 部门人员基本信息表搜索按钮;
+        private System.Windows.Forms.TextBox 部门人员基本信息表成员;
+        private System.Windows.Forms.Label 部门人员基本信息表部门名;
+        private System.Windows.Forms.Label 部门人员基本信息表部门前缀;
+        private System.Windows.Forms.Label 部门人员基本信息表成员名标题;
     }
 }

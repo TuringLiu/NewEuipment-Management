@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -103,7 +104,25 @@ namespace Equipment_Management
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            string textInput = 人员信息查询输入.Text;   // 读取查询内容并判断 是否为空
+            if(textInput == "")
+            {
+                MessageBox.Show("查询内容不能为空，请重新输入！\n");
+                return;
+            }
+            // 连接数据库 并显示信息
+            string conStr = "Data Source = VCC-PC; Initial Catalog = master; Integrated Security = SSPI";
+            SqlConnection conn = new SqlConnection(conStr);
+            try
+            {
+                conn.Open();
+                MessageBox.Show("打开数据库成功！");
+                conn.Close();
+            }
+            catch
+            {
+                MessageBox.Show("打开数据库失败！");
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -202,15 +221,15 @@ namespace Equipment_Management
                 return;
             }
 
-            if(flag == 1)       // 选择查询内容类型
+            if(flag == 1)       // 查询出库信息
             {
 
             }
-            else if(flag == 2)
+            else if(flag == 2)  // 如果查询入库信息
             {
 
             }
-            else if(flag == 3)
+            else if(flag == 3)  // 如果查询出入库信息
             {
 
             }
@@ -268,6 +287,16 @@ namespace Equipment_Management
             }
             xlApp.Quit();
             GC.Collect();//强行销毁           
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 人员信息查询输入_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
