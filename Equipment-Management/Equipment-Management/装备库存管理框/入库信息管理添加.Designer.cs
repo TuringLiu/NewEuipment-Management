@@ -46,12 +46,12 @@
             this.入库添加备注 = new System.Windows.Forms.TextBox();
             this.入库添加装备类别 = new System.Windows.Forms.ComboBox();
             this.入库添加装备名称 = new System.Windows.Forms.ComboBox();
-            this.入库添加入库类型 = new System.Windows.Forms.ComboBox();
-            this.入库添加生产日期 = new System.Windows.Forms.ComboBox();
-            this.入库添加仓库名称 = new System.Windows.Forms.ComboBox();
+            this.入库添加仓库编号 = new System.Windows.Forms.ComboBox();
             this.入库添加总价格 = new System.Windows.Forms.Label();
             this.入库添加经办人 = new System.Windows.Forms.Label();
             this.入库添加验收人 = new System.Windows.Forms.TextBox();
+            this.入库添加生产日期 = new System.Windows.Forms.TextBox();
+            this.入库添加入库类型 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -133,7 +133,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 12);
             this.label9.TabIndex = 8;
-            this.label9.Text = "仓库名称";
+            this.label9.Text = "仓库编号";
             // 
             // label10
             // 
@@ -161,6 +161,7 @@
             this.入库信息管理添加添加.TabIndex = 11;
             this.入库信息管理添加添加.Text = "添加";
             this.入库信息管理添加添加.UseVisualStyleBackColor = true;
+            this.入库信息管理添加添加.Click += new System.EventHandler(this.入库信息管理添加添加_Click);
             // 
             // 入库信息管理添加取消
             // 
@@ -170,6 +171,7 @@
             this.入库信息管理添加取消.TabIndex = 12;
             this.入库信息管理添加取消.Text = "取消";
             this.入库信息管理添加取消.UseVisualStyleBackColor = true;
+            this.入库信息管理添加取消.Click += new System.EventHandler(this.入库信息管理添加取消_Click);
             // 
             // 入库添加装备价格
             // 
@@ -195,43 +197,31 @@
             // 
             // 入库添加装备类别
             // 
+            this.入库添加装备类别.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.入库添加装备类别.FormattingEnabled = true;
             this.入库添加装备类别.Location = new System.Drawing.Point(103, 27);
             this.入库添加装备类别.Name = "入库添加装备类别";
             this.入库添加装备类别.Size = new System.Drawing.Size(121, 20);
             this.入库添加装备类别.TabIndex = 21;
+            this.入库添加装备类别.SelectedIndexChanged += new System.EventHandler(this.入库添加装备类别_SelectedIndexChanged);
             // 
             // 入库添加装备名称
             // 
+            this.入库添加装备名称.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.入库添加装备名称.FormattingEnabled = true;
             this.入库添加装备名称.Location = new System.Drawing.Point(103, 78);
             this.入库添加装备名称.Name = "入库添加装备名称";
             this.入库添加装备名称.Size = new System.Drawing.Size(121, 20);
             this.入库添加装备名称.TabIndex = 22;
             // 
-            // 入库添加入库类型
+            // 入库添加仓库编号
             // 
-            this.入库添加入库类型.FormattingEnabled = true;
-            this.入库添加入库类型.Location = new System.Drawing.Point(103, 126);
-            this.入库添加入库类型.Name = "入库添加入库类型";
-            this.入库添加入库类型.Size = new System.Drawing.Size(121, 20);
-            this.入库添加入库类型.TabIndex = 23;
-            // 
-            // 入库添加生产日期
-            // 
-            this.入库添加生产日期.FormattingEnabled = true;
-            this.入库添加生产日期.Location = new System.Drawing.Point(307, 27);
-            this.入库添加生产日期.Name = "入库添加生产日期";
-            this.入库添加生产日期.Size = new System.Drawing.Size(121, 20);
-            this.入库添加生产日期.TabIndex = 24;
-            // 
-            // 入库添加仓库名称
-            // 
-            this.入库添加仓库名称.FormattingEnabled = true;
-            this.入库添加仓库名称.Location = new System.Drawing.Point(307, 78);
-            this.入库添加仓库名称.Name = "入库添加仓库名称";
-            this.入库添加仓库名称.Size = new System.Drawing.Size(121, 20);
-            this.入库添加仓库名称.TabIndex = 25;
+            this.入库添加仓库编号.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.入库添加仓库编号.FormattingEnabled = true;
+            this.入库添加仓库编号.Location = new System.Drawing.Point(307, 78);
+            this.入库添加仓库编号.Name = "入库添加仓库编号";
+            this.入库添加仓库编号.Size = new System.Drawing.Size(121, 20);
+            this.入库添加仓库编号.TabIndex = 25;
             // 
             // 入库添加总价格
             // 
@@ -258,17 +248,31 @@
             this.入库添加验收人.Size = new System.Drawing.Size(111, 21);
             this.入库添加验收人.TabIndex = 28;
             // 
+            // 入库添加生产日期
+            // 
+            this.入库添加生产日期.Location = new System.Drawing.Point(307, 27);
+            this.入库添加生产日期.Name = "入库添加生产日期";
+            this.入库添加生产日期.Size = new System.Drawing.Size(121, 21);
+            this.入库添加生产日期.TabIndex = 29;
+            // 
+            // 入库添加入库类型
+            // 
+            this.入库添加入库类型.Location = new System.Drawing.Point(103, 126);
+            this.入库添加入库类型.Name = "入库添加入库类型";
+            this.入库添加入库类型.Size = new System.Drawing.Size(121, 21);
+            this.入库添加入库类型.TabIndex = 30;
+            // 
             // 入库信息管理添加
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 461);
+            this.Controls.Add(this.入库添加入库类型);
+            this.Controls.Add(this.入库添加生产日期);
             this.Controls.Add(this.入库添加验收人);
             this.Controls.Add(this.入库添加经办人);
             this.Controls.Add(this.入库添加总价格);
-            this.Controls.Add(this.入库添加仓库名称);
-            this.Controls.Add(this.入库添加生产日期);
-            this.Controls.Add(this.入库添加入库类型);
+            this.Controls.Add(this.入库添加仓库编号);
             this.Controls.Add(this.入库添加装备名称);
             this.Controls.Add(this.入库添加装备类别);
             this.Controls.Add(this.入库添加备注);
@@ -289,6 +293,7 @@
             this.Controls.Add(this.label1);
             this.Name = "入库信息管理添加";
             this.Text = "入库信息管理添加";
+            this.Load += new System.EventHandler(this.入库信息管理添加_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -314,11 +319,11 @@
         private System.Windows.Forms.TextBox 入库添加备注;
         private System.Windows.Forms.ComboBox 入库添加装备类别;
         private System.Windows.Forms.ComboBox 入库添加装备名称;
-        private System.Windows.Forms.ComboBox 入库添加入库类型;
-        private System.Windows.Forms.ComboBox 入库添加生产日期;
-        private System.Windows.Forms.ComboBox 入库添加仓库名称;
+        private System.Windows.Forms.ComboBox 入库添加仓库编号;
         private System.Windows.Forms.Label 入库添加总价格;
         private System.Windows.Forms.Label 入库添加经办人;
         private System.Windows.Forms.TextBox 入库添加验收人;
+        private System.Windows.Forms.TextBox 入库添加生产日期;
+        private System.Windows.Forms.TextBox 入库添加入库类型;
     }
 }
