@@ -211,12 +211,12 @@ namespace Equipment_Management
                 {
                     DBClass_lilang.conn.Open();
                 }
-                string strCmd = "select UsersName from ArmsUsers where UsersName = '" 
+                string strCmd = "select [UsersName] from ArmsUsers where [UsersName] = '" 
                     + textBoxUserName.Text + "'";
                 string strTemp = "";
                 SqlCommand cmd = new SqlCommand(strCmd, DBClass_lilang.conn);
                 //结果为空时，strTemp也为空
-                if (cmd.ExecuteScalar().ToString() != "")
+                if (cmd.ExecuteScalar() != null)
                 {
                     strTemp = cmd.ExecuteScalar().ToString().Trim();//用trim去掉后面的空格
                 }
