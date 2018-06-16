@@ -48,6 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Equipment_Management_Information_SystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Equipment_Management_Information_SystemDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +64,16 @@
     </Compile>
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="masterDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>masterDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="modelDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>modelDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,6 +106,18 @@
     </Compile>
     <Compile Include="装备基本信息.Designer.cs">
       <DependentUpon>装备基本信息.cs</DependentUpon>
+    </Compile>
+    <Compile Include="部门人员详细信息窗口.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="部门人员详细信息窗口.Designer.cs">
+      <DependentUpon>部门人员详细信息窗口.cs</DependentUpon>
+    </Compile>
+    <Compile Include="部门人员详细信息窗口确认按钮.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="部门人员详细信息窗口确认按钮.Designer.cs">
+      <DependentUpon>部门人员详细信息窗口确认按钮.cs</DependentUpon>
     </Compile>
     <Compile Include="部门基本信息.cs">
       <SubType>Form</SubType>
@@ -128,9 +155,48 @@
     <EmbeddedResource Include="装备基本信息.resx">
       <DependentUpon>装备基本信息.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="部门人员详细信息窗口.resx">
+      <DependentUpon>部门人员详细信息窗口.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="部门人员详细信息窗口确认按钮.resx">
+      <DependentUpon>部门人员详细信息窗口确认按钮.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="部门基本信息.resx">
       <DependentUpon>部门基本信息.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Equipment_Management_Information_SystemDataSet.xsc">
+      <DependentUpon>Equipment_Management_Information_SystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Equipment_Management_Information_SystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Equipment_Management_Information_SystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Equipment_Management_Information_SystemDataSet.xss">
+      <DependentUpon>Equipment_Management_Information_SystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="masterDataSet.xsc">
+      <DependentUpon>masterDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="masterDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>masterDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="masterDataSet.xss">
+      <DependentUpon>masterDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="modelDataSet.xsc">
+      <DependentUpon>modelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="modelDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>modelDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="modelDataSet.xss">
+      <DependentUpon>modelDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

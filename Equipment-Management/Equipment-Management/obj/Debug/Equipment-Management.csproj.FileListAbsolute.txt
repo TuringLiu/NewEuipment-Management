@@ -71,3 +71,5 @@ D:\AAA\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debu
 D:\AAA\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.csproj.CoreCompileInputs.cache
 D:\AAA\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.exe
 D:\AAA\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.pdb
+D:\AAA\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.部门人员详细信息窗口确认按钮.resources
+D:\AAA\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.部门人员详细信息窗口.resources
