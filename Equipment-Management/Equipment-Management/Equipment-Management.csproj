@@ -45,11 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormLogIn.Designer.cs">
+      <DependentUpon>FormLogIn.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -59,6 +59,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <Compile Include="人员基本信息.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +98,10 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="FormLogIn.resx">
+      <DependentUpon>FormLogIn.cs</DependentUpon>
+>>>>>>> lilang
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -109,6 +114,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="人员基本信息.resx">
       <DependentUpon>人员基本信息.cs</DependentUpon>
@@ -140,6 +146,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
