@@ -37,7 +37,6 @@
             this.删除账户ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.修改密码ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.日志管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.退出系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.基本信息管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.装备信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.部门基本信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -139,57 +138,7 @@
             this.textBoxPwdModifyOldPwd = new System.Windows.Forms.TextBox();
             this.labelPwdModifyOldPwd = new System.Windows.Forms.Label();
             this.装备维修调拨管理 = new System.Windows.Forms.Panel();
-            this.装备维修管理 = new System.Windows.Forms.Panel();
-            this.更新维修状态 = new System.Windows.Forms.Panel();
-            this.textBoxRepairManageStatusUpdateResult = new System.Windows.Forms.TextBox();
-            this.labelRepairManageStatusUpdateResult = new System.Windows.Forms.Label();
-            this.textBoxRepairManageStatusUpdateCost = new System.Windows.Forms.TextBox();
-            this.labelRepairManageStatusUpdateCost = new System.Windows.Forms.Label();
-            this.buttonRapirManageStatusUpdateCancel = new System.Windows.Forms.Button();
-            this.buttonRapirManageStatusUpdateConfirm = new System.Windows.Forms.Button();
-            this.查看维修记录 = new System.Windows.Forms.Panel();
-            this.buttonRepairManageTimeFlagClear = new System.Windows.Forms.Button();
-            this.dateTimePickerRepairManage = new System.Windows.Forms.DateTimePicker();
-            this.labelRepairManageSelectArms = new System.Windows.Forms.Label();
-            this.comboBoxRepairManageSelectRepairMan = new System.Windows.Forms.ComboBox();
-            this.labelRepairManageSelectManager = new System.Windows.Forms.Label();
-            this.labelRepairManageSelectDate = new System.Windows.Forms.Label();
-            this.dataGridViewRepairManage = new System.Windows.Forms.DataGridView();
-            this.comboBoxRepairManageSelectArms = new System.Windows.Forms.ComboBox();
-            this.添加修改维修记录 = new System.Windows.Forms.Panel();
-            this.textBoxRepairManageAddModifyResult = new System.Windows.Forms.TextBox();
-            this.buttonlRepairManageAddModifyTimeFlagClear = new System.Windows.Forms.Button();
-            this.dateTimePickerRepairManageAddModifySelectDate = new System.Windows.Forms.DateTimePicker();
-            this.labellRepairManageAddModifySelectResult = new System.Windows.Forms.Label();
-            this.textBoxRepairManageAddModifyCost = new System.Windows.Forms.TextBox();
-            this.labellRepairManageAddModifyCost = new System.Windows.Forms.Label();
-            this.comboBoxRepairManageAddModifySelectStatus = new System.Windows.Forms.ComboBox();
-            this.labellRepairManageAddModifySelectStatus = new System.Windows.Forms.Label();
-            this.labellRepairManageAddModifySelectRepairDate = new System.Windows.Forms.Label();
-            this.buttonlRepairManageAddModifyReturn = new System.Windows.Forms.Button();
-            this.buttonlRepairManageAddModifyConfirm = new System.Windows.Forms.Button();
-            this.labellRepairManageAddModifyErrorReason = new System.Windows.Forms.Label();
-            this.textBoxRepairManageAddModifyErrorReason = new System.Windows.Forms.TextBox();
-            this.comboBoxRepairManageAddModifySelectConfirmMan = new System.Windows.Forms.ComboBox();
-            this.labellRepairManageAddModifySelectConfirmMan = new System.Windows.Forms.Label();
-            this.comboBoxRepairManageAddModifySelectRepairMan = new System.Windows.Forms.ComboBox();
-            this.labellRepairManageAddModifySelectRepairMan = new System.Windows.Forms.Label();
-            this.comboBoxRepairManageAddModifySelectUnit = new System.Windows.Forms.ComboBox();
-            this.labellRepairManageAddModifySelectRepairUnit = new System.Windows.Forms.Label();
-            this.comboBoxRepairManageAddModifySelectArms = new System.Windows.Forms.ComboBox();
-            this.labelRepairManageAddModifySelectArmsName = new System.Windows.Forms.Label();
             this.装备调拨管理 = new System.Windows.Forms.Panel();
-            this.查看调拨记录 = new System.Windows.Forms.Panel();
-            this.comboBoxAllocationManageSelectInDep = new System.Windows.Forms.ComboBox();
-            this.labelAllocationManageSelectInDep = new System.Windows.Forms.Label();
-            this.buttonAllocationManageTimeFlagClear = new System.Windows.Forms.Button();
-            this.dateTimePickerAllocationManage = new System.Windows.Forms.DateTimePicker();
-            this.comboBoxAllocationManageSelectOutDep = new System.Windows.Forms.ComboBox();
-            this.labelAllocationManageSelectOutDep = new System.Windows.Forms.Label();
-            this.labelAllocationManageSlectDate = new System.Windows.Forms.Label();
-            this.dataGridViewAllocationManage = new System.Windows.Forms.DataGridView();
-            this.comboBoxAllocationManageSelectArms = new System.Windows.Forms.ComboBox();
-            this.labelAllocationManageSelectArms = new System.Windows.Forms.Label();
             this.添加修改调拨记录 = new System.Windows.Forms.Panel();
             this.textBoxAllocationManageAddModifyZbprice = new System.Windows.Forms.TextBox();
             this.labelAllocationManageAddModifyZbprice = new System.Windows.Forms.Label();
@@ -218,6 +167,56 @@
             this.labelAllocationManageAddModifyAllocationNum = new System.Windows.Forms.Label();
             this.comboBoxAllocationManageAddModifySelectArms = new System.Windows.Forms.ComboBox();
             this.labelAllocationManageAddModifySelectArmsName = new System.Windows.Forms.Label();
+            this.查看调拨记录 = new System.Windows.Forms.Panel();
+            this.comboBoxAllocationManageSelectInDep = new System.Windows.Forms.ComboBox();
+            this.labelAllocationManageSelectInDep = new System.Windows.Forms.Label();
+            this.buttonAllocationManageTimeFlagClear = new System.Windows.Forms.Button();
+            this.dateTimePickerAllocationManage = new System.Windows.Forms.DateTimePicker();
+            this.comboBoxAllocationManageSelectOutDep = new System.Windows.Forms.ComboBox();
+            this.labelAllocationManageSelectOutDep = new System.Windows.Forms.Label();
+            this.labelAllocationManageSlectDate = new System.Windows.Forms.Label();
+            this.dataGridViewAllocationManage = new System.Windows.Forms.DataGridView();
+            this.comboBoxAllocationManageSelectArms = new System.Windows.Forms.ComboBox();
+            this.labelAllocationManageSelectArms = new System.Windows.Forms.Label();
+            this.装备维修管理 = new System.Windows.Forms.Panel();
+            this.添加修改维修记录 = new System.Windows.Forms.Panel();
+            this.textBoxRepairManageAddModifyResult = new System.Windows.Forms.TextBox();
+            this.buttonlRepairManageAddModifyTimeFlagClear = new System.Windows.Forms.Button();
+            this.dateTimePickerRepairManageAddModifySelectDate = new System.Windows.Forms.DateTimePicker();
+            this.labellRepairManageAddModifySelectResult = new System.Windows.Forms.Label();
+            this.textBoxRepairManageAddModifyCost = new System.Windows.Forms.TextBox();
+            this.labellRepairManageAddModifyCost = new System.Windows.Forms.Label();
+            this.comboBoxRepairManageAddModifySelectStatus = new System.Windows.Forms.ComboBox();
+            this.labellRepairManageAddModifySelectStatus = new System.Windows.Forms.Label();
+            this.labellRepairManageAddModifySelectRepairDate = new System.Windows.Forms.Label();
+            this.buttonlRepairManageAddModifyReturn = new System.Windows.Forms.Button();
+            this.buttonlRepairManageAddModifyConfirm = new System.Windows.Forms.Button();
+            this.labellRepairManageAddModifyErrorReason = new System.Windows.Forms.Label();
+            this.textBoxRepairManageAddModifyErrorReason = new System.Windows.Forms.TextBox();
+            this.comboBoxRepairManageAddModifySelectConfirmMan = new System.Windows.Forms.ComboBox();
+            this.labellRepairManageAddModifySelectConfirmMan = new System.Windows.Forms.Label();
+            this.comboBoxRepairManageAddModifySelectRepairMan = new System.Windows.Forms.ComboBox();
+            this.labellRepairManageAddModifySelectRepairMan = new System.Windows.Forms.Label();
+            this.comboBoxRepairManageAddModifySelectUnit = new System.Windows.Forms.ComboBox();
+            this.labellRepairManageAddModifySelectRepairUnit = new System.Windows.Forms.Label();
+            this.comboBoxRepairManageAddModifySelectArms = new System.Windows.Forms.ComboBox();
+            this.labelRepairManageAddModifySelectArmsName = new System.Windows.Forms.Label();
+            this.更新维修状态 = new System.Windows.Forms.Panel();
+            this.textBoxRepairManageStatusUpdateResult = new System.Windows.Forms.TextBox();
+            this.labelRepairManageStatusUpdateResult = new System.Windows.Forms.Label();
+            this.textBoxRepairManageStatusUpdateCost = new System.Windows.Forms.TextBox();
+            this.labelRepairManageStatusUpdateCost = new System.Windows.Forms.Label();
+            this.buttonRapirManageStatusUpdateCancel = new System.Windows.Forms.Button();
+            this.buttonRapirManageStatusUpdateConfirm = new System.Windows.Forms.Button();
+            this.查看维修记录 = new System.Windows.Forms.Panel();
+            this.buttonRepairManageTimeFlagClear = new System.Windows.Forms.Button();
+            this.dateTimePickerRepairManage = new System.Windows.Forms.DateTimePicker();
+            this.labelRepairManageSelectArms = new System.Windows.Forms.Label();
+            this.comboBoxRepairManageSelectRepairMan = new System.Windows.Forms.ComboBox();
+            this.labelRepairManageSelectManager = new System.Windows.Forms.Label();
+            this.labelRepairManageSelectDate = new System.Windows.Forms.Label();
+            this.dataGridViewRepairManage = new System.Windows.Forms.DataGridView();
+            this.comboBoxRepairManageSelectArms = new System.Windows.Forms.ComboBox();
             this.统计与查询 = new System.Windows.Forms.Panel();
             this.装备经费汇总 = new System.Windows.Forms.Panel();
             this.部门人员查询 = new System.Windows.Forms.Panel();
@@ -236,20 +235,12 @@
             this.仓库信息添加 = new System.Windows.Forms.Panel();
             this.仓库信息修改 = new System.Windows.Forms.Panel();
             this.仓库信息删除 = new System.Windows.Forms.Panel();
-<<<<<<< HEAD
-            this.装备经费管理 = new System.Windows.Forms.Panel();
-            this.经费使用管理 = new System.Windows.Forms.Panel();
-            this.经费使用删除 = new System.Windows.Forms.Panel();
-            this.经费使用修改 = new System.Windows.Forms.Panel();
-            this.经费使用添加 = new System.Windows.Forms.Panel();
-=======
             this.出库信息修改 = new System.Windows.Forms.Panel();
             this.装备经费管理 = new System.Windows.Forms.Panel();
             this.经费使用管理 = new System.Windows.Forms.Panel();
             this.经费使用添加 = new System.Windows.Forms.Panel();
             this.经费使用删除 = new System.Windows.Forms.Panel();
             this.经费使用修改 = new System.Windows.Forms.Panel();
->>>>>>> lilang
             this.经费入账管理 = new System.Windows.Forms.Panel();
             this.经费入账删除 = new System.Windows.Forms.Panel();
             this.经费入账修改 = new System.Windows.Forms.Panel();
@@ -258,11 +249,9 @@
             this.经费明细删除 = new System.Windows.Forms.Panel();
             this.经费明细修改 = new System.Windows.Forms.Panel();
             this.经费明细添加 = new System.Windows.Forms.Panel();
-<<<<<<< HEAD
-=======
             this.WelcomePicture = new System.Windows.Forms.Panel();
+            this.buttonPwdResetCancel = new System.Windows.Forms.Button();
             查看账户ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
->>>>>>> lilang
             this.menuStrip1.SuspendLayout();
             this.系统管理.SuspendLayout();
             this.日志管理.SuspendLayout();
@@ -276,15 +265,15 @@
             this.groupBoxPwdReset.SuspendLayout();
             this.修改密码.SuspendLayout();
             this.装备维修调拨管理.SuspendLayout();
+            this.装备调拨管理.SuspendLayout();
+            this.添加修改调拨记录.SuspendLayout();
+            this.查看调拨记录.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllocationManage)).BeginInit();
             this.装备维修管理.SuspendLayout();
+            this.添加修改维修记录.SuspendLayout();
             this.更新维修状态.SuspendLayout();
             this.查看维修记录.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRepairManage)).BeginInit();
-            this.添加修改维修记录.SuspendLayout();
-            this.装备调拨管理.SuspendLayout();
-            this.查看调拨记录.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllocationManage)).BeginInit();
-            this.添加修改调拨记录.SuspendLayout();
             this.统计与查询.SuspendLayout();
             this.装备库存管理.SuspendLayout();
             this.出库信息管理.SuspendLayout();
@@ -293,17 +282,14 @@
             this.装备经费管理.SuspendLayout();
             this.经费使用管理.SuspendLayout();
             this.经费入账管理.SuspendLayout();
-<<<<<<< HEAD
-=======
             this.经费入账添加.SuspendLayout();
->>>>>>> lilang
             this.经费明细管理.SuspendLayout();
             this.SuspendLayout();
             // 
             // 查看账户ToolStripMenuItem
             // 
             查看账户ToolStripMenuItem.Name = "查看账户ToolStripMenuItem";
-            查看账户ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            查看账户ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             查看账户ToolStripMenuItem.Text = "查看账户";
             查看账户ToolStripMenuItem.Click += new System.EventHandler(this.查看账户ToolStripMenuItem_Click);
             // 
@@ -331,8 +317,7 @@
             this.系统管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.用户管理ToolStripMenuItem,
             this.修改密码ToolStripMenuItem,
-            this.日志管理ToolStripMenuItem,
-            this.退出系统ToolStripMenuItem});
+            this.日志管理ToolStripMenuItem});
             this.系统管理ToolStripMenuItem.Name = "系统管理ToolStripMenuItem";
             this.系统管理ToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
             this.系统管理ToolStripMenuItem.Text = "系统管理";
@@ -345,49 +330,43 @@
             this.重置密码ToolStripMenuItem,
             this.删除账户ToolStripMenuItem});
             this.用户管理ToolStripMenuItem.Name = "用户管理ToolStripMenuItem";
-            this.用户管理ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.用户管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.用户管理ToolStripMenuItem.Text = "用户管理";
             // 
             // 添加账户ToolStripMenuItem
             // 
             this.添加账户ToolStripMenuItem.Name = "添加账户ToolStripMenuItem";
-            this.添加账户ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.添加账户ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.添加账户ToolStripMenuItem.Text = "添加账户";
             this.添加账户ToolStripMenuItem.Click += new System.EventHandler(this.添加账户ToolStripMenuItem_Click);
             // 
             // 重置密码ToolStripMenuItem
             // 
             this.重置密码ToolStripMenuItem.Name = "重置密码ToolStripMenuItem";
-            this.重置密码ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.重置密码ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.重置密码ToolStripMenuItem.Text = "重置密码";
             this.重置密码ToolStripMenuItem.Click += new System.EventHandler(this.重置密码ToolStripMenuItem_Click);
             // 
             // 删除账户ToolStripMenuItem
             // 
             this.删除账户ToolStripMenuItem.Name = "删除账户ToolStripMenuItem";
-            this.删除账户ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.删除账户ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.删除账户ToolStripMenuItem.Text = "删除账户";
             this.删除账户ToolStripMenuItem.Click += new System.EventHandler(this.删除账户ToolStripMenuItem_Click);
             // 
             // 修改密码ToolStripMenuItem
             // 
             this.修改密码ToolStripMenuItem.Name = "修改密码ToolStripMenuItem";
-            this.修改密码ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.修改密码ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.修改密码ToolStripMenuItem.Text = "修改密码";
             this.修改密码ToolStripMenuItem.Click += new System.EventHandler(this.修改密码ToolStripMenuItem_Click);
             // 
             // 日志管理ToolStripMenuItem
             // 
             this.日志管理ToolStripMenuItem.Name = "日志管理ToolStripMenuItem";
-            this.日志管理ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.日志管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.日志管理ToolStripMenuItem.Text = "日志管理";
             this.日志管理ToolStripMenuItem.Click += new System.EventHandler(this.日志管理ToolStripMenuItem_Click);
-            // 
-            // 退出系统ToolStripMenuItem
-            // 
-            this.退出系统ToolStripMenuItem.Name = "退出系统ToolStripMenuItem";
-            this.退出系统ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
-            this.退出系统ToolStripMenuItem.Text = "退出系统";
             // 
             // 基本信息管理ToolStripMenuItem
             // 
@@ -402,32 +381,20 @@
             // 装备信息ToolStripMenuItem
             // 
             this.装备信息ToolStripMenuItem.Name = "装备信息ToolStripMenuItem";
-<<<<<<< HEAD
-            this.装备信息ToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-=======
             this.装备信息ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
->>>>>>> lilang
             this.装备信息ToolStripMenuItem.Text = "装备基本信息";
             // 
             // 部门基本信息ToolStripMenuItem
             // 
             this.部门基本信息ToolStripMenuItem.Name = "部门基本信息ToolStripMenuItem";
-<<<<<<< HEAD
-            this.部门基本信息ToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-=======
             this.部门基本信息ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
->>>>>>> lilang
             this.部门基本信息ToolStripMenuItem.Text = "部门基本信息";
             this.部门基本信息ToolStripMenuItem.Click += new System.EventHandler(this.部门基本信息ToolStripMenuItem_Click);
             // 
             // 人员基本信息ToolStripMenuItem
             // 
             this.人员基本信息ToolStripMenuItem.Name = "人员基本信息ToolStripMenuItem";
-<<<<<<< HEAD
-            this.人员基本信息ToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-=======
             this.人员基本信息ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
->>>>>>> lilang
             this.人员基本信息ToolStripMenuItem.Text = "人员基本信息";
             this.人员基本信息ToolStripMenuItem.Click += new System.EventHandler(this.人员基本信息ToolStripMenuItem_Click);
             // 
@@ -736,24 +703,6 @@
             this.删除ToolStripMenuItem3.Size = new System.Drawing.Size(114, 26);
             this.删除ToolStripMenuItem3.Text = "删除";
             // 
-            // 添加ToolStripMenuItem3
-            // 
-            this.添加ToolStripMenuItem3.Name = "添加ToolStripMenuItem3";
-            this.添加ToolStripMenuItem3.Size = new System.Drawing.Size(114, 26);
-            this.添加ToolStripMenuItem3.Text = "添加";
-            // 
-            // 修改ToolStripMenuItem3
-            // 
-            this.修改ToolStripMenuItem3.Name = "修改ToolStripMenuItem3";
-            this.修改ToolStripMenuItem3.Size = new System.Drawing.Size(114, 26);
-            this.修改ToolStripMenuItem3.Text = "修改";
-            // 
-            // 删除ToolStripMenuItem3
-            // 
-            this.删除ToolStripMenuItem3.Name = "删除ToolStripMenuItem3";
-            this.删除ToolStripMenuItem3.Size = new System.Drawing.Size(114, 26);
-            this.删除ToolStripMenuItem3.Text = "删除";
-            // 
             // 经费入账管理ToolStripMenuItem
             // 
             this.经费入账管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -826,8 +775,8 @@
             // 
             // 系统管理
             // 
-            this.系统管理.Controls.Add(this.日志管理);
             this.系统管理.Controls.Add(this.用户管理);
+            this.系统管理.Controls.Add(this.日志管理);
             this.系统管理.Controls.Add(this.修改密码);
             this.系统管理.Location = new System.Drawing.Point(0, 31);
             this.系统管理.Name = "系统管理";
@@ -970,10 +919,10 @@
             // 
             // 用户管理
             // 
+            this.用户管理.Controls.Add(this.重置密码);
             this.用户管理.Controls.Add(this.添加账户);
             this.用户管理.Controls.Add(this.删除账户);
             this.用户管理.Controls.Add(this.查看账户);
-            this.用户管理.Controls.Add(this.重置密码);
             this.用户管理.Location = new System.Drawing.Point(3, 3);
             this.用户管理.Name = "用户管理";
             this.用户管理.Size = new System.Drawing.Size(1236, 573);
@@ -1152,20 +1101,21 @@
             // 
             // groupBoxPwdReset
             // 
+            this.groupBoxPwdReset.Controls.Add(this.buttonPwdResetCancel);
             this.groupBoxPwdReset.Controls.Add(this.buttonPwdReset);
             this.groupBoxPwdReset.Controls.Add(this.listBoxPwdReset);
             this.groupBoxPwdReset.Location = new System.Drawing.Point(371, 84);
             this.groupBoxPwdReset.Name = "groupBoxPwdReset";
-            this.groupBoxPwdReset.Size = new System.Drawing.Size(221, 346);
+            this.groupBoxPwdReset.Size = new System.Drawing.Size(349, 346);
             this.groupBoxPwdReset.TabIndex = 2;
             this.groupBoxPwdReset.TabStop = false;
             this.groupBoxPwdReset.Text = "选择需要重置密码的用户";
             // 
             // buttonPwdReset
             // 
-            this.buttonPwdReset.Location = new System.Drawing.Point(55, 301);
+            this.buttonPwdReset.Location = new System.Drawing.Point(35, 301);
             this.buttonPwdReset.Name = "buttonPwdReset";
-            this.buttonPwdReset.Size = new System.Drawing.Size(112, 35);
+            this.buttonPwdReset.Size = new System.Drawing.Size(127, 35);
             this.buttonPwdReset.TabIndex = 2;
             this.buttonPwdReset.Text = "重置密码";
             this.buttonPwdReset.UseVisualStyleBackColor = true;
@@ -1177,7 +1127,7 @@
             this.listBoxPwdReset.ItemHeight = 15;
             this.listBoxPwdReset.Location = new System.Drawing.Point(34, 36);
             this.listBoxPwdReset.Name = "listBoxPwdReset";
-            this.listBoxPwdReset.Size = new System.Drawing.Size(154, 259);
+            this.listBoxPwdReset.Size = new System.Drawing.Size(267, 259);
             this.listBoxPwdReset.TabIndex = 1;
             // 
             // 修改密码
@@ -1274,385 +1224,6 @@
             this.装备维修调拨管理.TabIndex = 5;
             this.装备维修调拨管理.Visible = false;
             // 
-            // 装备维修管理
-            // 
-            this.装备维修管理.Controls.Add(this.添加修改维修记录);
-            this.装备维修管理.Controls.Add(this.更新维修状态);
-            this.装备维修管理.Controls.Add(this.查看维修记录);
-            this.装备维修管理.Location = new System.Drawing.Point(0, 0);
-            this.装备维修管理.Name = "装备维修管理";
-            this.装备维修管理.Size = new System.Drawing.Size(1242, 579);
-            this.装备维修管理.TabIndex = 7;
-            this.装备维修管理.Visible = false;
-            // 
-            // 更新维修状态
-            // 
-            this.更新维修状态.Controls.Add(this.textBoxRepairManageStatusUpdateResult);
-            this.更新维修状态.Controls.Add(this.labelRepairManageStatusUpdateResult);
-            this.更新维修状态.Controls.Add(this.textBoxRepairManageStatusUpdateCost);
-            this.更新维修状态.Controls.Add(this.labelRepairManageStatusUpdateCost);
-            this.更新维修状态.Controls.Add(this.buttonRapirManageStatusUpdateCancel);
-            this.更新维修状态.Controls.Add(this.buttonRapirManageStatusUpdateConfirm);
-            this.更新维修状态.Location = new System.Drawing.Point(8, 8);
-            this.更新维修状态.Name = "更新维修状态";
-            this.更新维修状态.Size = new System.Drawing.Size(1242, 579);
-            this.更新维修状态.TabIndex = 7;
-            this.更新维修状态.Visible = false;
-            // 
-            // textBoxRepairManageStatusUpdateResult
-            // 
-            this.textBoxRepairManageStatusUpdateResult.Location = new System.Drawing.Point(577, 220);
-            this.textBoxRepairManageStatusUpdateResult.Multiline = true;
-            this.textBoxRepairManageStatusUpdateResult.Name = "textBoxRepairManageStatusUpdateResult";
-            this.textBoxRepairManageStatusUpdateResult.Size = new System.Drawing.Size(331, 93);
-            this.textBoxRepairManageStatusUpdateResult.TabIndex = 16;
-            // 
-            // labelRepairManageStatusUpdateResult
-            // 
-            this.labelRepairManageStatusUpdateResult.AutoSize = true;
-            this.labelRepairManageStatusUpdateResult.Location = new System.Drawing.Point(504, 262);
-            this.labelRepairManageStatusUpdateResult.Name = "labelRepairManageStatusUpdateResult";
-            this.labelRepairManageStatusUpdateResult.Size = new System.Drawing.Size(67, 15);
-            this.labelRepairManageStatusUpdateResult.TabIndex = 15;
-            this.labelRepairManageStatusUpdateResult.Text = "维修结果";
-            // 
-            // textBoxRepairManageStatusUpdateCost
-            // 
-            this.textBoxRepairManageStatusUpdateCost.Location = new System.Drawing.Point(577, 170);
-            this.textBoxRepairManageStatusUpdateCost.Name = "textBoxRepairManageStatusUpdateCost";
-            this.textBoxRepairManageStatusUpdateCost.Size = new System.Drawing.Size(121, 25);
-            this.textBoxRepairManageStatusUpdateCost.TabIndex = 14;
-            // 
-            // labelRepairManageStatusUpdateCost
-            // 
-            this.labelRepairManageStatusUpdateCost.AutoSize = true;
-            this.labelRepairManageStatusUpdateCost.Location = new System.Drawing.Point(504, 173);
-            this.labelRepairManageStatusUpdateCost.Name = "labelRepairManageStatusUpdateCost";
-            this.labelRepairManageStatusUpdateCost.Size = new System.Drawing.Size(67, 15);
-            this.labelRepairManageStatusUpdateCost.TabIndex = 12;
-            this.labelRepairManageStatusUpdateCost.Text = "维修费用";
-            // 
-            // buttonRapirManageStatusUpdateCancel
-            // 
-            this.buttonRapirManageStatusUpdateCancel.Location = new System.Drawing.Point(833, 334);
-            this.buttonRapirManageStatusUpdateCancel.Name = "buttonRapirManageStatusUpdateCancel";
-            this.buttonRapirManageStatusUpdateCancel.Size = new System.Drawing.Size(75, 44);
-            this.buttonRapirManageStatusUpdateCancel.TabIndex = 11;
-            this.buttonRapirManageStatusUpdateCancel.Text = "取消";
-            this.buttonRapirManageStatusUpdateCancel.UseVisualStyleBackColor = true;
-            this.buttonRapirManageStatusUpdateCancel.Click += new System.EventHandler(this.buttonRapirManageStatusUpdateCancel_Click);
-            // 
-            // buttonRapirManageStatusUpdateConfirm
-            // 
-            this.buttonRapirManageStatusUpdateConfirm.Location = new System.Drawing.Point(577, 334);
-            this.buttonRapirManageStatusUpdateConfirm.Name = "buttonRapirManageStatusUpdateConfirm";
-            this.buttonRapirManageStatusUpdateConfirm.Size = new System.Drawing.Size(75, 44);
-            this.buttonRapirManageStatusUpdateConfirm.TabIndex = 10;
-            this.buttonRapirManageStatusUpdateConfirm.Text = "确认";
-            this.buttonRapirManageStatusUpdateConfirm.UseVisualStyleBackColor = true;
-            this.buttonRapirManageStatusUpdateConfirm.Click += new System.EventHandler(this.buttonRapirManageStatusUpdateConfirm_Click);
-            // 
-            // 查看维修记录
-            // 
-            this.查看维修记录.Controls.Add(this.buttonRepairManageTimeFlagClear);
-            this.查看维修记录.Controls.Add(this.dateTimePickerRepairManage);
-            this.查看维修记录.Controls.Add(this.labelRepairManageSelectArms);
-            this.查看维修记录.Controls.Add(this.comboBoxRepairManageSelectRepairMan);
-            this.查看维修记录.Controls.Add(this.labelRepairManageSelectManager);
-            this.查看维修记录.Controls.Add(this.labelRepairManageSelectDate);
-            this.查看维修记录.Controls.Add(this.dataGridViewRepairManage);
-            this.查看维修记录.Controls.Add(this.comboBoxRepairManageSelectArms);
-            this.查看维修记录.Location = new System.Drawing.Point(0, 0);
-            this.查看维修记录.Name = "查看维修记录";
-            this.查看维修记录.Size = new System.Drawing.Size(1242, 579);
-            this.查看维修记录.TabIndex = 6;
-            this.查看维修记录.Visible = false;
-            this.查看维修记录.VisibleChanged += new System.EventHandler(this.查看维修记录_VisibleChanged);
-            // 
-            // buttonRepairManageTimeFlagClear
-            // 
-            this.buttonRepairManageTimeFlagClear.Location = new System.Drawing.Point(660, 98);
-            this.buttonRepairManageTimeFlagClear.Name = "buttonRepairManageTimeFlagClear";
-            this.buttonRepairManageTimeFlagClear.Size = new System.Drawing.Size(89, 28);
-            this.buttonRepairManageTimeFlagClear.TabIndex = 15;
-            this.buttonRepairManageTimeFlagClear.Text = "清除日期";
-            this.buttonRepairManageTimeFlagClear.UseVisualStyleBackColor = true;
-            this.buttonRepairManageTimeFlagClear.Click += new System.EventHandler(this.buttonRepairManageTimeFlagClear_Click);
-            // 
-            // dateTimePickerRepairManage
-            // 
-            this.dateTimePickerRepairManage.Location = new System.Drawing.Point(448, 99);
-            this.dateTimePickerRepairManage.Name = "dateTimePickerRepairManage";
-            this.dateTimePickerRepairManage.Size = new System.Drawing.Size(179, 25);
-            this.dateTimePickerRepairManage.TabIndex = 14;
-            this.dateTimePickerRepairManage.CloseUp += new System.EventHandler(this.dateTimePickerRepairManageSelectDate_CloseUp);
-            // 
-            // labelRepairManageSelectArms
-            // 
-            this.labelRepairManageSelectArms.AutoSize = true;
-            this.labelRepairManageSelectArms.Location = new System.Drawing.Point(151, 102);
-            this.labelRepairManageSelectArms.Name = "labelRepairManageSelectArms";
-            this.labelRepairManageSelectArms.Size = new System.Drawing.Size(67, 15);
-            this.labelRepairManageSelectArms.TabIndex = 7;
-            this.labelRepairManageSelectArms.Text = "选择装备";
-            // 
-            // comboBoxRepairManageSelectRepairMan
-            // 
-            this.comboBoxRepairManageSelectRepairMan.FormattingEnabled = true;
-            this.comboBoxRepairManageSelectRepairMan.Location = new System.Drawing.Point(911, 103);
-            this.comboBoxRepairManageSelectRepairMan.Name = "comboBoxRepairManageSelectRepairMan";
-            this.comboBoxRepairManageSelectRepairMan.Size = new System.Drawing.Size(121, 23);
-            this.comboBoxRepairManageSelectRepairMan.TabIndex = 13;
-            this.comboBoxRepairManageSelectRepairMan.SelectionChangeCommitted += new System.EventHandler(this.comboBoxRepairManageSelectRepairMan_SelectionChangeCommitted);
-            // 
-            // labelRepairManageSelectManager
-            // 
-            this.labelRepairManageSelectManager.AutoSize = true;
-            this.labelRepairManageSelectManager.Location = new System.Drawing.Point(792, 107);
-            this.labelRepairManageSelectManager.Name = "labelRepairManageSelectManager";
-            this.labelRepairManageSelectManager.Size = new System.Drawing.Size(112, 15);
-            this.labelRepairManageSelectManager.TabIndex = 12;
-            this.labelRepairManageSelectManager.Text = "选择维修负责人";
-            // 
-            // labelRepairManageSelectDate
-            // 
-            this.labelRepairManageSelectDate.AutoSize = true;
-            this.labelRepairManageSelectDate.Location = new System.Drawing.Point(371, 102);
-            this.labelRepairManageSelectDate.Name = "labelRepairManageSelectDate";
-            this.labelRepairManageSelectDate.Size = new System.Drawing.Size(67, 15);
-            this.labelRepairManageSelectDate.TabIndex = 10;
-            this.labelRepairManageSelectDate.Text = "选择日期";
-            // 
-            // dataGridViewRepairManage
-            // 
-            this.dataGridViewRepairManage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewRepairManage.Location = new System.Drawing.Point(154, 154);
-            this.dataGridViewRepairManage.Name = "dataGridViewRepairManage";
-            this.dataGridViewRepairManage.RowTemplate.Height = 27;
-            this.dataGridViewRepairManage.Size = new System.Drawing.Size(878, 301);
-            this.dataGridViewRepairManage.TabIndex = 9;
-            // 
-            // comboBoxRepairManageSelectArms
-            // 
-            this.comboBoxRepairManageSelectArms.FormattingEnabled = true;
-            this.comboBoxRepairManageSelectArms.Location = new System.Drawing.Point(224, 99);
-            this.comboBoxRepairManageSelectArms.Name = "comboBoxRepairManageSelectArms";
-            this.comboBoxRepairManageSelectArms.Size = new System.Drawing.Size(121, 23);
-            this.comboBoxRepairManageSelectArms.TabIndex = 8;
-            this.comboBoxRepairManageSelectArms.SelectionChangeCommitted += new System.EventHandler(this.comboBoxRepairManageSelectArms_SelectionChangeCommitted);
-            // 
-            // 添加修改维修记录
-            // 
-            this.添加修改维修记录.Controls.Add(this.textBoxRepairManageAddModifyResult);
-            this.添加修改维修记录.Controls.Add(this.buttonlRepairManageAddModifyTimeFlagClear);
-            this.添加修改维修记录.Controls.Add(this.dateTimePickerRepairManageAddModifySelectDate);
-            this.添加修改维修记录.Controls.Add(this.labellRepairManageAddModifySelectResult);
-            this.添加修改维修记录.Controls.Add(this.textBoxRepairManageAddModifyCost);
-            this.添加修改维修记录.Controls.Add(this.labellRepairManageAddModifyCost);
-            this.添加修改维修记录.Controls.Add(this.comboBoxRepairManageAddModifySelectStatus);
-            this.添加修改维修记录.Controls.Add(this.labellRepairManageAddModifySelectStatus);
-            this.添加修改维修记录.Controls.Add(this.labellRepairManageAddModifySelectRepairDate);
-            this.添加修改维修记录.Controls.Add(this.buttonlRepairManageAddModifyReturn);
-            this.添加修改维修记录.Controls.Add(this.buttonlRepairManageAddModifyConfirm);
-            this.添加修改维修记录.Controls.Add(this.labellRepairManageAddModifyErrorReason);
-            this.添加修改维修记录.Controls.Add(this.textBoxRepairManageAddModifyErrorReason);
-            this.添加修改维修记录.Controls.Add(this.comboBoxRepairManageAddModifySelectConfirmMan);
-            this.添加修改维修记录.Controls.Add(this.labellRepairManageAddModifySelectConfirmMan);
-            this.添加修改维修记录.Controls.Add(this.comboBoxRepairManageAddModifySelectRepairMan);
-            this.添加修改维修记录.Controls.Add(this.labellRepairManageAddModifySelectRepairMan);
-            this.添加修改维修记录.Controls.Add(this.comboBoxRepairManageAddModifySelectUnit);
-            this.添加修改维修记录.Controls.Add(this.labellRepairManageAddModifySelectRepairUnit);
-            this.添加修改维修记录.Controls.Add(this.comboBoxRepairManageAddModifySelectArms);
-            this.添加修改维修记录.Controls.Add(this.labelRepairManageAddModifySelectArmsName);
-            this.添加修改维修记录.Location = new System.Drawing.Point(0, 0);
-            this.添加修改维修记录.Name = "添加修改维修记录";
-            this.添加修改维修记录.Size = new System.Drawing.Size(1242, 579);
-            this.添加修改维修记录.TabIndex = 6;
-            this.添加修改维修记录.Visible = false;
-            this.添加修改维修记录.VisibleChanged += new System.EventHandler(this.添加修改维修记录_VisibleChanged);
-            // 
-            // textBoxRepairManageAddModifyResult
-            // 
-            this.textBoxRepairManageAddModifyResult.Location = new System.Drawing.Point(351, 236);
-            this.textBoxRepairManageAddModifyResult.Multiline = true;
-            this.textBoxRepairManageAddModifyResult.Name = "textBoxRepairManageAddModifyResult";
-            this.textBoxRepairManageAddModifyResult.Size = new System.Drawing.Size(619, 120);
-            this.textBoxRepairManageAddModifyResult.TabIndex = 57;
-            // 
-            // buttonlRepairManageAddModifyTimeFlagClear
-            // 
-            this.buttonlRepairManageAddModifyTimeFlagClear.Location = new System.Drawing.Point(786, 85);
-            this.buttonlRepairManageAddModifyTimeFlagClear.Name = "buttonlRepairManageAddModifyTimeFlagClear";
-            this.buttonlRepairManageAddModifyTimeFlagClear.Size = new System.Drawing.Size(109, 28);
-            this.buttonlRepairManageAddModifyTimeFlagClear.TabIndex = 56;
-            this.buttonlRepairManageAddModifyTimeFlagClear.Text = "清除日期";
-            this.buttonlRepairManageAddModifyTimeFlagClear.UseVisualStyleBackColor = true;
-            this.buttonlRepairManageAddModifyTimeFlagClear.Click += new System.EventHandler(this.buttonlRepairManageAddModifyTimeFlagClear_Click);
-            // 
-            // dateTimePickerRepairManageAddModifySelectDate
-            // 
-            this.dateTimePickerRepairManageAddModifySelectDate.Location = new System.Drawing.Point(585, 85);
-            this.dateTimePickerRepairManageAddModifySelectDate.Name = "dateTimePickerRepairManageAddModifySelectDate";
-            this.dateTimePickerRepairManageAddModifySelectDate.Size = new System.Drawing.Size(161, 25);
-            this.dateTimePickerRepairManageAddModifySelectDate.TabIndex = 55;
-            this.dateTimePickerRepairManageAddModifySelectDate.CloseUp += new System.EventHandler(this.dateTimePickerRepairManageAddModifySelectDate_CloseUp);
-            // 
-            // labellRepairManageAddModifySelectResult
-            // 
-            this.labellRepairManageAddModifySelectResult.AutoSize = true;
-            this.labellRepairManageAddModifySelectResult.Location = new System.Drawing.Point(278, 297);
-            this.labellRepairManageAddModifySelectResult.Name = "labellRepairManageAddModifySelectResult";
-            this.labellRepairManageAddModifySelectResult.Size = new System.Drawing.Size(67, 15);
-            this.labellRepairManageAddModifySelectResult.TabIndex = 53;
-            this.labellRepairManageAddModifySelectResult.Text = "维修结果";
-            // 
-            // textBoxRepairManageAddModifyCost
-            // 
-            this.textBoxRepairManageAddModifyCost.Location = new System.Drawing.Point(374, 191);
-            this.textBoxRepairManageAddModifyCost.Name = "textBoxRepairManageAddModifyCost";
-            this.textBoxRepairManageAddModifyCost.Size = new System.Drawing.Size(98, 25);
-            this.textBoxRepairManageAddModifyCost.TabIndex = 52;
-            // 
-            // labellRepairManageAddModifyCost
-            // 
-            this.labellRepairManageAddModifyCost.AutoSize = true;
-            this.labellRepairManageAddModifyCost.Location = new System.Drawing.Point(278, 194);
-            this.labellRepairManageAddModifyCost.Name = "labellRepairManageAddModifyCost";
-            this.labellRepairManageAddModifyCost.Size = new System.Drawing.Size(90, 15);
-            this.labellRepairManageAddModifyCost.TabIndex = 51;
-            this.labellRepairManageAddModifyCost.Text = "维修费用/元";
-            // 
-            // comboBoxRepairManageAddModifySelectStatus
-            // 
-            this.comboBoxRepairManageAddModifySelectStatus.FormattingEnabled = true;
-            this.comboBoxRepairManageAddModifySelectStatus.Location = new System.Drawing.Point(585, 144);
-            this.comboBoxRepairManageAddModifySelectStatus.Name = "comboBoxRepairManageAddModifySelectStatus";
-            this.comboBoxRepairManageAddModifySelectStatus.Size = new System.Drawing.Size(143, 23);
-            this.comboBoxRepairManageAddModifySelectStatus.TabIndex = 50;
-            // 
-            // labellRepairManageAddModifySelectStatus
-            // 
-            this.labellRepairManageAddModifySelectStatus.AutoSize = true;
-            this.labellRepairManageAddModifySelectStatus.Location = new System.Drawing.Point(512, 147);
-            this.labellRepairManageAddModifySelectStatus.Name = "labellRepairManageAddModifySelectStatus";
-            this.labellRepairManageAddModifySelectStatus.Size = new System.Drawing.Size(67, 15);
-            this.labellRepairManageAddModifySelectStatus.TabIndex = 49;
-            this.labellRepairManageAddModifySelectStatus.Text = "维修状态";
-            // 
-            // labellRepairManageAddModifySelectRepairDate
-            // 
-            this.labellRepairManageAddModifySelectRepairDate.AutoSize = true;
-            this.labellRepairManageAddModifySelectRepairDate.Location = new System.Drawing.Point(512, 93);
-            this.labellRepairManageAddModifySelectRepairDate.Name = "labellRepairManageAddModifySelectRepairDate";
-            this.labellRepairManageAddModifySelectRepairDate.Size = new System.Drawing.Size(67, 15);
-            this.labellRepairManageAddModifySelectRepairDate.TabIndex = 47;
-            this.labellRepairManageAddModifySelectRepairDate.Text = "维修日期";
-            // 
-            // buttonlRepairManageAddModifyReturn
-            // 
-            this.buttonlRepairManageAddModifyReturn.Location = new System.Drawing.Point(705, 511);
-            this.buttonlRepairManageAddModifyReturn.Name = "buttonlRepairManageAddModifyReturn";
-            this.buttonlRepairManageAddModifyReturn.Size = new System.Drawing.Size(139, 39);
-            this.buttonlRepairManageAddModifyReturn.TabIndex = 46;
-            this.buttonlRepairManageAddModifyReturn.Text = "返回上一级";
-            this.buttonlRepairManageAddModifyReturn.UseVisualStyleBackColor = true;
-            this.buttonlRepairManageAddModifyReturn.Click += new System.EventHandler(this.buttonlRepairManageAddModifyReturn_Click);
-            // 
-            // buttonlRepairManageAddModifyConfirm
-            // 
-            this.buttonlRepairManageAddModifyConfirm.Location = new System.Drawing.Point(351, 511);
-            this.buttonlRepairManageAddModifyConfirm.Name = "buttonlRepairManageAddModifyConfirm";
-            this.buttonlRepairManageAddModifyConfirm.Size = new System.Drawing.Size(135, 39);
-            this.buttonlRepairManageAddModifyConfirm.TabIndex = 45;
-            this.buttonlRepairManageAddModifyConfirm.Text = "确认";
-            this.buttonlRepairManageAddModifyConfirm.UseVisualStyleBackColor = true;
-            this.buttonlRepairManageAddModifyConfirm.Click += new System.EventHandler(this.buttonlRepairManageAddModifyConfirm_Click);
-            // 
-            // labellRepairManageAddModifyErrorReason
-            // 
-            this.labellRepairManageAddModifyErrorReason.AutoSize = true;
-            this.labellRepairManageAddModifyErrorReason.Location = new System.Drawing.Point(278, 422);
-            this.labellRepairManageAddModifyErrorReason.Name = "labellRepairManageAddModifyErrorReason";
-            this.labellRepairManageAddModifyErrorReason.Size = new System.Drawing.Size(67, 15);
-            this.labellRepairManageAddModifyErrorReason.TabIndex = 44;
-            this.labellRepairManageAddModifyErrorReason.Text = "故障原因";
-            // 
-            // textBoxRepairManageAddModifyErrorReason
-            // 
-            this.textBoxRepairManageAddModifyErrorReason.Location = new System.Drawing.Point(351, 376);
-            this.textBoxRepairManageAddModifyErrorReason.Multiline = true;
-            this.textBoxRepairManageAddModifyErrorReason.Name = "textBoxRepairManageAddModifyErrorReason";
-            this.textBoxRepairManageAddModifyErrorReason.Size = new System.Drawing.Size(619, 120);
-            this.textBoxRepairManageAddModifyErrorReason.TabIndex = 43;
-            // 
-            // comboBoxRepairManageAddModifySelectConfirmMan
-            // 
-            this.comboBoxRepairManageAddModifySelectConfirmMan.FormattingEnabled = true;
-            this.comboBoxRepairManageAddModifySelectConfirmMan.Location = new System.Drawing.Point(608, 194);
-            this.comboBoxRepairManageAddModifySelectConfirmMan.Name = "comboBoxRepairManageAddModifySelectConfirmMan";
-            this.comboBoxRepairManageAddModifySelectConfirmMan.Size = new System.Drawing.Size(121, 23);
-            this.comboBoxRepairManageAddModifySelectConfirmMan.TabIndex = 42;
-            // 
-            // labellRepairManageAddModifySelectConfirmMan
-            // 
-            this.labellRepairManageAddModifySelectConfirmMan.AutoSize = true;
-            this.labellRepairManageAddModifySelectConfirmMan.Location = new System.Drawing.Point(512, 197);
-            this.labellRepairManageAddModifySelectConfirmMan.Name = "labellRepairManageAddModifySelectConfirmMan";
-            this.labellRepairManageAddModifySelectConfirmMan.Size = new System.Drawing.Size(82, 15);
-            this.labellRepairManageAddModifySelectConfirmMan.TabIndex = 41;
-            this.labellRepairManageAddModifySelectConfirmMan.Text = "送修验收人";
-            // 
-            // comboBoxRepairManageAddModifySelectRepairMan
-            // 
-            this.comboBoxRepairManageAddModifySelectRepairMan.FormattingEnabled = true;
-            this.comboBoxRepairManageAddModifySelectRepairMan.Location = new System.Drawing.Point(846, 144);
-            this.comboBoxRepairManageAddModifySelectRepairMan.Name = "comboBoxRepairManageAddModifySelectRepairMan";
-            this.comboBoxRepairManageAddModifySelectRepairMan.Size = new System.Drawing.Size(121, 23);
-            this.comboBoxRepairManageAddModifySelectRepairMan.TabIndex = 40;
-            // 
-            // labellRepairManageAddModifySelectRepairMan
-            // 
-            this.labellRepairManageAddModifySelectRepairMan.AutoSize = true;
-            this.labellRepairManageAddModifySelectRepairMan.Location = new System.Drawing.Point(750, 147);
-            this.labellRepairManageAddModifySelectRepairMan.Name = "labellRepairManageAddModifySelectRepairMan";
-            this.labellRepairManageAddModifySelectRepairMan.Size = new System.Drawing.Size(82, 15);
-            this.labellRepairManageAddModifySelectRepairMan.TabIndex = 39;
-            this.labellRepairManageAddModifySelectRepairMan.Text = "维修负责人";
-            // 
-            // comboBoxRepairManageAddModifySelectUnit
-            // 
-            this.comboBoxRepairManageAddModifySelectUnit.FormattingEnabled = true;
-            this.comboBoxRepairManageAddModifySelectUnit.Location = new System.Drawing.Point(351, 141);
-            this.comboBoxRepairManageAddModifySelectUnit.Name = "comboBoxRepairManageAddModifySelectUnit";
-            this.comboBoxRepairManageAddModifySelectUnit.Size = new System.Drawing.Size(121, 23);
-            this.comboBoxRepairManageAddModifySelectUnit.TabIndex = 38;
-            // 
-            // labellRepairManageAddModifySelectRepairUnit
-            // 
-            this.labellRepairManageAddModifySelectRepairUnit.AutoSize = true;
-            this.labellRepairManageAddModifySelectRepairUnit.Location = new System.Drawing.Point(278, 144);
-            this.labellRepairManageAddModifySelectRepairUnit.Name = "labellRepairManageAddModifySelectRepairUnit";
-            this.labellRepairManageAddModifySelectRepairUnit.Size = new System.Drawing.Size(67, 15);
-            this.labellRepairManageAddModifySelectRepairUnit.TabIndex = 37;
-            this.labellRepairManageAddModifySelectRepairUnit.Text = "维修单位";
-            // 
-            // comboBoxRepairManageAddModifySelectArms
-            // 
-            this.comboBoxRepairManageAddModifySelectArms.FormattingEnabled = true;
-            this.comboBoxRepairManageAddModifySelectArms.Location = new System.Drawing.Point(351, 90);
-            this.comboBoxRepairManageAddModifySelectArms.Name = "comboBoxRepairManageAddModifySelectArms";
-            this.comboBoxRepairManageAddModifySelectArms.Size = new System.Drawing.Size(121, 23);
-            this.comboBoxRepairManageAddModifySelectArms.TabIndex = 36;
-            // 
-            // labelRepairManageAddModifySelectArmsName
-            // 
-            this.labelRepairManageAddModifySelectArmsName.AutoSize = true;
-            this.labelRepairManageAddModifySelectArmsName.Location = new System.Drawing.Point(278, 93);
-            this.labelRepairManageAddModifySelectArmsName.Name = "labelRepairManageAddModifySelectArmsName";
-            this.labelRepairManageAddModifySelectArmsName.Size = new System.Drawing.Size(67, 15);
-            this.labelRepairManageAddModifySelectArmsName.TabIndex = 35;
-            this.labelRepairManageAddModifySelectArmsName.Text = "装备名称";
-            // 
             // 装备调拨管理
             // 
             this.装备调拨管理.Controls.Add(this.添加修改调拨记录);
@@ -1662,114 +1233,6 @@
             this.装备调拨管理.Size = new System.Drawing.Size(1242, 579);
             this.装备调拨管理.TabIndex = 6;
             this.装备调拨管理.Visible = false;
-            // 
-            // 查看调拨记录
-            // 
-            this.查看调拨记录.Controls.Add(this.comboBoxAllocationManageSelectInDep);
-            this.查看调拨记录.Controls.Add(this.labelAllocationManageSelectInDep);
-            this.查看调拨记录.Controls.Add(this.buttonAllocationManageTimeFlagClear);
-            this.查看调拨记录.Controls.Add(this.dateTimePickerAllocationManage);
-            this.查看调拨记录.Controls.Add(this.comboBoxAllocationManageSelectOutDep);
-            this.查看调拨记录.Controls.Add(this.labelAllocationManageSelectOutDep);
-            this.查看调拨记录.Controls.Add(this.labelAllocationManageSlectDate);
-            this.查看调拨记录.Controls.Add(this.dataGridViewAllocationManage);
-            this.查看调拨记录.Controls.Add(this.comboBoxAllocationManageSelectArms);
-            this.查看调拨记录.Controls.Add(this.labelAllocationManageSelectArms);
-            this.查看调拨记录.Location = new System.Drawing.Point(0, 0);
-            this.查看调拨记录.Name = "查看调拨记录";
-            this.查看调拨记录.Size = new System.Drawing.Size(1242, 579);
-            this.查看调拨记录.TabIndex = 6;
-            this.查看调拨记录.Visible = false;
-            // 
-            // comboBoxAllocationManageSelectInDep
-            // 
-            this.comboBoxAllocationManageSelectInDep.FormattingEnabled = true;
-            this.comboBoxAllocationManageSelectInDep.Location = new System.Drawing.Point(1064, 97);
-            this.comboBoxAllocationManageSelectInDep.Name = "comboBoxAllocationManageSelectInDep";
-            this.comboBoxAllocationManageSelectInDep.Size = new System.Drawing.Size(121, 23);
-            this.comboBoxAllocationManageSelectInDep.TabIndex = 28;
-            this.comboBoxAllocationManageSelectInDep.SelectionChangeCommitted += new System.EventHandler(this.comboBoxAllocationManageSelectInDep_SelectionChangeCommitted);
-            // 
-            // labelAllocationManageSelectInDep
-            // 
-            this.labelAllocationManageSelectInDep.AutoSize = true;
-            this.labelAllocationManageSelectInDep.Location = new System.Drawing.Point(961, 100);
-            this.labelAllocationManageSelectInDep.Name = "labelAllocationManageSelectInDep";
-            this.labelAllocationManageSelectInDep.Size = new System.Drawing.Size(97, 15);
-            this.labelAllocationManageSelectInDep.TabIndex = 27;
-            this.labelAllocationManageSelectInDep.Text = "选择拨入单位";
-            // 
-            // buttonAllocationManageTimeFlagClear
-            // 
-            this.buttonAllocationManageTimeFlagClear.Location = new System.Drawing.Point(602, 93);
-            this.buttonAllocationManageTimeFlagClear.Name = "buttonAllocationManageTimeFlagClear";
-            this.buttonAllocationManageTimeFlagClear.Size = new System.Drawing.Size(95, 28);
-            this.buttonAllocationManageTimeFlagClear.TabIndex = 26;
-            this.buttonAllocationManageTimeFlagClear.Text = "清除日期";
-            this.buttonAllocationManageTimeFlagClear.UseVisualStyleBackColor = true;
-            this.buttonAllocationManageTimeFlagClear.Click += new System.EventHandler(this.buttonAllocationManageTimeFlagClear_Click);
-            // 
-            // dateTimePickerAllocationManage
-            // 
-            this.dateTimePickerAllocationManage.Location = new System.Drawing.Point(429, 95);
-            this.dateTimePickerAllocationManage.Name = "dateTimePickerAllocationManage";
-            this.dateTimePickerAllocationManage.Size = new System.Drawing.Size(155, 25);
-            this.dateTimePickerAllocationManage.TabIndex = 25;
-            this.dateTimePickerAllocationManage.CloseUp += new System.EventHandler(this.dateTimePickerAllocationManage_CloseUp);
-            // 
-            // comboBoxAllocationManageSelectOutDep
-            // 
-            this.comboBoxAllocationManageSelectOutDep.FormattingEnabled = true;
-            this.comboBoxAllocationManageSelectOutDep.Location = new System.Drawing.Point(820, 97);
-            this.comboBoxAllocationManageSelectOutDep.Name = "comboBoxAllocationManageSelectOutDep";
-            this.comboBoxAllocationManageSelectOutDep.Size = new System.Drawing.Size(121, 23);
-            this.comboBoxAllocationManageSelectOutDep.TabIndex = 24;
-            this.comboBoxAllocationManageSelectOutDep.SelectionChangeCommitted += new System.EventHandler(this.comboBoxAllocationManageSelectOutDep_SelectionChangeCommitted);
-            // 
-            // labelAllocationManageSelectOutDep
-            // 
-            this.labelAllocationManageSelectOutDep.AutoSize = true;
-            this.labelAllocationManageSelectOutDep.Location = new System.Drawing.Point(717, 100);
-            this.labelAllocationManageSelectOutDep.Name = "labelAllocationManageSelectOutDep";
-            this.labelAllocationManageSelectOutDep.Size = new System.Drawing.Size(97, 15);
-            this.labelAllocationManageSelectOutDep.TabIndex = 23;
-            this.labelAllocationManageSelectOutDep.Text = "选择拨出单位";
-            // 
-            // labelAllocationManageSlectDate
-            // 
-            this.labelAllocationManageSlectDate.AutoSize = true;
-            this.labelAllocationManageSlectDate.Location = new System.Drawing.Point(356, 100);
-            this.labelAllocationManageSlectDate.Name = "labelAllocationManageSlectDate";
-            this.labelAllocationManageSlectDate.Size = new System.Drawing.Size(67, 15);
-            this.labelAllocationManageSlectDate.TabIndex = 21;
-            this.labelAllocationManageSlectDate.Text = "选择日期";
-            // 
-            // dataGridViewAllocationManage
-            // 
-            this.dataGridViewAllocationManage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAllocationManage.Location = new System.Drawing.Point(133, 153);
-            this.dataGridViewAllocationManage.Name = "dataGridViewAllocationManage";
-            this.dataGridViewAllocationManage.RowTemplate.Height = 27;
-            this.dataGridViewAllocationManage.Size = new System.Drawing.Size(1052, 387);
-            this.dataGridViewAllocationManage.TabIndex = 20;
-            // 
-            // comboBoxAllocationManageSelectArms
-            // 
-            this.comboBoxAllocationManageSelectArms.FormattingEnabled = true;
-            this.comboBoxAllocationManageSelectArms.Location = new System.Drawing.Point(209, 97);
-            this.comboBoxAllocationManageSelectArms.Name = "comboBoxAllocationManageSelectArms";
-            this.comboBoxAllocationManageSelectArms.Size = new System.Drawing.Size(121, 23);
-            this.comboBoxAllocationManageSelectArms.TabIndex = 19;
-            this.comboBoxAllocationManageSelectArms.SelectionChangeCommitted += new System.EventHandler(this.comboBoxAllocationManageSelectArms_SelectionChangeCommitted);
-            // 
-            // labelAllocationManageSelectArms
-            // 
-            this.labelAllocationManageSelectArms.AutoSize = true;
-            this.labelAllocationManageSelectArms.Location = new System.Drawing.Point(136, 100);
-            this.labelAllocationManageSelectArms.Name = "labelAllocationManageSelectArms";
-            this.labelAllocationManageSelectArms.Size = new System.Drawing.Size(67, 15);
-            this.labelAllocationManageSelectArms.TabIndex = 18;
-            this.labelAllocationManageSelectArms.Text = "选择装备";
             // 
             // 添加修改调拨记录
             // 
@@ -2041,6 +1504,493 @@
             this.labelAllocationManageAddModifySelectArmsName.TabIndex = 27;
             this.labelAllocationManageAddModifySelectArmsName.Text = "装备名称";
             // 
+            // 查看调拨记录
+            // 
+            this.查看调拨记录.Controls.Add(this.comboBoxAllocationManageSelectInDep);
+            this.查看调拨记录.Controls.Add(this.labelAllocationManageSelectInDep);
+            this.查看调拨记录.Controls.Add(this.buttonAllocationManageTimeFlagClear);
+            this.查看调拨记录.Controls.Add(this.dateTimePickerAllocationManage);
+            this.查看调拨记录.Controls.Add(this.comboBoxAllocationManageSelectOutDep);
+            this.查看调拨记录.Controls.Add(this.labelAllocationManageSelectOutDep);
+            this.查看调拨记录.Controls.Add(this.labelAllocationManageSlectDate);
+            this.查看调拨记录.Controls.Add(this.dataGridViewAllocationManage);
+            this.查看调拨记录.Controls.Add(this.comboBoxAllocationManageSelectArms);
+            this.查看调拨记录.Controls.Add(this.labelAllocationManageSelectArms);
+            this.查看调拨记录.Location = new System.Drawing.Point(0, 0);
+            this.查看调拨记录.Name = "查看调拨记录";
+            this.查看调拨记录.Size = new System.Drawing.Size(1242, 579);
+            this.查看调拨记录.TabIndex = 6;
+            this.查看调拨记录.Visible = false;
+            // 
+            // comboBoxAllocationManageSelectInDep
+            // 
+            this.comboBoxAllocationManageSelectInDep.FormattingEnabled = true;
+            this.comboBoxAllocationManageSelectInDep.Location = new System.Drawing.Point(1064, 97);
+            this.comboBoxAllocationManageSelectInDep.Name = "comboBoxAllocationManageSelectInDep";
+            this.comboBoxAllocationManageSelectInDep.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxAllocationManageSelectInDep.TabIndex = 28;
+            this.comboBoxAllocationManageSelectInDep.SelectionChangeCommitted += new System.EventHandler(this.comboBoxAllocationManageSelectInDep_SelectionChangeCommitted);
+            // 
+            // labelAllocationManageSelectInDep
+            // 
+            this.labelAllocationManageSelectInDep.AutoSize = true;
+            this.labelAllocationManageSelectInDep.Location = new System.Drawing.Point(961, 100);
+            this.labelAllocationManageSelectInDep.Name = "labelAllocationManageSelectInDep";
+            this.labelAllocationManageSelectInDep.Size = new System.Drawing.Size(97, 15);
+            this.labelAllocationManageSelectInDep.TabIndex = 27;
+            this.labelAllocationManageSelectInDep.Text = "选择拨入单位";
+            // 
+            // buttonAllocationManageTimeFlagClear
+            // 
+            this.buttonAllocationManageTimeFlagClear.Location = new System.Drawing.Point(602, 93);
+            this.buttonAllocationManageTimeFlagClear.Name = "buttonAllocationManageTimeFlagClear";
+            this.buttonAllocationManageTimeFlagClear.Size = new System.Drawing.Size(95, 28);
+            this.buttonAllocationManageTimeFlagClear.TabIndex = 26;
+            this.buttonAllocationManageTimeFlagClear.Text = "清除日期";
+            this.buttonAllocationManageTimeFlagClear.UseVisualStyleBackColor = true;
+            this.buttonAllocationManageTimeFlagClear.Click += new System.EventHandler(this.buttonAllocationManageTimeFlagClear_Click);
+            // 
+            // dateTimePickerAllocationManage
+            // 
+            this.dateTimePickerAllocationManage.Location = new System.Drawing.Point(429, 95);
+            this.dateTimePickerAllocationManage.Name = "dateTimePickerAllocationManage";
+            this.dateTimePickerAllocationManage.Size = new System.Drawing.Size(155, 25);
+            this.dateTimePickerAllocationManage.TabIndex = 25;
+            this.dateTimePickerAllocationManage.CloseUp += new System.EventHandler(this.dateTimePickerAllocationManage_CloseUp);
+            // 
+            // comboBoxAllocationManageSelectOutDep
+            // 
+            this.comboBoxAllocationManageSelectOutDep.FormattingEnabled = true;
+            this.comboBoxAllocationManageSelectOutDep.Location = new System.Drawing.Point(820, 97);
+            this.comboBoxAllocationManageSelectOutDep.Name = "comboBoxAllocationManageSelectOutDep";
+            this.comboBoxAllocationManageSelectOutDep.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxAllocationManageSelectOutDep.TabIndex = 24;
+            this.comboBoxAllocationManageSelectOutDep.SelectionChangeCommitted += new System.EventHandler(this.comboBoxAllocationManageSelectOutDep_SelectionChangeCommitted);
+            // 
+            // labelAllocationManageSelectOutDep
+            // 
+            this.labelAllocationManageSelectOutDep.AutoSize = true;
+            this.labelAllocationManageSelectOutDep.Location = new System.Drawing.Point(717, 100);
+            this.labelAllocationManageSelectOutDep.Name = "labelAllocationManageSelectOutDep";
+            this.labelAllocationManageSelectOutDep.Size = new System.Drawing.Size(97, 15);
+            this.labelAllocationManageSelectOutDep.TabIndex = 23;
+            this.labelAllocationManageSelectOutDep.Text = "选择拨出单位";
+            // 
+            // labelAllocationManageSlectDate
+            // 
+            this.labelAllocationManageSlectDate.AutoSize = true;
+            this.labelAllocationManageSlectDate.Location = new System.Drawing.Point(356, 100);
+            this.labelAllocationManageSlectDate.Name = "labelAllocationManageSlectDate";
+            this.labelAllocationManageSlectDate.Size = new System.Drawing.Size(67, 15);
+            this.labelAllocationManageSlectDate.TabIndex = 21;
+            this.labelAllocationManageSlectDate.Text = "选择日期";
+            // 
+            // dataGridViewAllocationManage
+            // 
+            this.dataGridViewAllocationManage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAllocationManage.Location = new System.Drawing.Point(133, 153);
+            this.dataGridViewAllocationManage.Name = "dataGridViewAllocationManage";
+            this.dataGridViewAllocationManage.RowTemplate.Height = 27;
+            this.dataGridViewAllocationManage.Size = new System.Drawing.Size(1052, 387);
+            this.dataGridViewAllocationManage.TabIndex = 20;
+            // 
+            // comboBoxAllocationManageSelectArms
+            // 
+            this.comboBoxAllocationManageSelectArms.FormattingEnabled = true;
+            this.comboBoxAllocationManageSelectArms.Location = new System.Drawing.Point(209, 97);
+            this.comboBoxAllocationManageSelectArms.Name = "comboBoxAllocationManageSelectArms";
+            this.comboBoxAllocationManageSelectArms.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxAllocationManageSelectArms.TabIndex = 19;
+            this.comboBoxAllocationManageSelectArms.SelectionChangeCommitted += new System.EventHandler(this.comboBoxAllocationManageSelectArms_SelectionChangeCommitted);
+            // 
+            // labelAllocationManageSelectArms
+            // 
+            this.labelAllocationManageSelectArms.AutoSize = true;
+            this.labelAllocationManageSelectArms.Location = new System.Drawing.Point(136, 100);
+            this.labelAllocationManageSelectArms.Name = "labelAllocationManageSelectArms";
+            this.labelAllocationManageSelectArms.Size = new System.Drawing.Size(67, 15);
+            this.labelAllocationManageSelectArms.TabIndex = 18;
+            this.labelAllocationManageSelectArms.Text = "选择装备";
+            // 
+            // 装备维修管理
+            // 
+            this.装备维修管理.Controls.Add(this.添加修改维修记录);
+            this.装备维修管理.Controls.Add(this.更新维修状态);
+            this.装备维修管理.Controls.Add(this.查看维修记录);
+            this.装备维修管理.Location = new System.Drawing.Point(0, 0);
+            this.装备维修管理.Name = "装备维修管理";
+            this.装备维修管理.Size = new System.Drawing.Size(1242, 579);
+            this.装备维修管理.TabIndex = 7;
+            this.装备维修管理.Visible = false;
+            // 
+            // 添加修改维修记录
+            // 
+            this.添加修改维修记录.Controls.Add(this.textBoxRepairManageAddModifyResult);
+            this.添加修改维修记录.Controls.Add(this.buttonlRepairManageAddModifyTimeFlagClear);
+            this.添加修改维修记录.Controls.Add(this.dateTimePickerRepairManageAddModifySelectDate);
+            this.添加修改维修记录.Controls.Add(this.labellRepairManageAddModifySelectResult);
+            this.添加修改维修记录.Controls.Add(this.textBoxRepairManageAddModifyCost);
+            this.添加修改维修记录.Controls.Add(this.labellRepairManageAddModifyCost);
+            this.添加修改维修记录.Controls.Add(this.comboBoxRepairManageAddModifySelectStatus);
+            this.添加修改维修记录.Controls.Add(this.labellRepairManageAddModifySelectStatus);
+            this.添加修改维修记录.Controls.Add(this.labellRepairManageAddModifySelectRepairDate);
+            this.添加修改维修记录.Controls.Add(this.buttonlRepairManageAddModifyReturn);
+            this.添加修改维修记录.Controls.Add(this.buttonlRepairManageAddModifyConfirm);
+            this.添加修改维修记录.Controls.Add(this.labellRepairManageAddModifyErrorReason);
+            this.添加修改维修记录.Controls.Add(this.textBoxRepairManageAddModifyErrorReason);
+            this.添加修改维修记录.Controls.Add(this.comboBoxRepairManageAddModifySelectConfirmMan);
+            this.添加修改维修记录.Controls.Add(this.labellRepairManageAddModifySelectConfirmMan);
+            this.添加修改维修记录.Controls.Add(this.comboBoxRepairManageAddModifySelectRepairMan);
+            this.添加修改维修记录.Controls.Add(this.labellRepairManageAddModifySelectRepairMan);
+            this.添加修改维修记录.Controls.Add(this.comboBoxRepairManageAddModifySelectUnit);
+            this.添加修改维修记录.Controls.Add(this.labellRepairManageAddModifySelectRepairUnit);
+            this.添加修改维修记录.Controls.Add(this.comboBoxRepairManageAddModifySelectArms);
+            this.添加修改维修记录.Controls.Add(this.labelRepairManageAddModifySelectArmsName);
+            this.添加修改维修记录.Location = new System.Drawing.Point(0, 0);
+            this.添加修改维修记录.Name = "添加修改维修记录";
+            this.添加修改维修记录.Size = new System.Drawing.Size(1242, 579);
+            this.添加修改维修记录.TabIndex = 6;
+            this.添加修改维修记录.Visible = false;
+            this.添加修改维修记录.VisibleChanged += new System.EventHandler(this.添加修改维修记录_VisibleChanged);
+            // 
+            // textBoxRepairManageAddModifyResult
+            // 
+            this.textBoxRepairManageAddModifyResult.Location = new System.Drawing.Point(351, 236);
+            this.textBoxRepairManageAddModifyResult.Multiline = true;
+            this.textBoxRepairManageAddModifyResult.Name = "textBoxRepairManageAddModifyResult";
+            this.textBoxRepairManageAddModifyResult.Size = new System.Drawing.Size(619, 120);
+            this.textBoxRepairManageAddModifyResult.TabIndex = 57;
+            // 
+            // buttonlRepairManageAddModifyTimeFlagClear
+            // 
+            this.buttonlRepairManageAddModifyTimeFlagClear.Location = new System.Drawing.Point(786, 85);
+            this.buttonlRepairManageAddModifyTimeFlagClear.Name = "buttonlRepairManageAddModifyTimeFlagClear";
+            this.buttonlRepairManageAddModifyTimeFlagClear.Size = new System.Drawing.Size(109, 28);
+            this.buttonlRepairManageAddModifyTimeFlagClear.TabIndex = 56;
+            this.buttonlRepairManageAddModifyTimeFlagClear.Text = "清除日期";
+            this.buttonlRepairManageAddModifyTimeFlagClear.UseVisualStyleBackColor = true;
+            this.buttonlRepairManageAddModifyTimeFlagClear.Click += new System.EventHandler(this.buttonlRepairManageAddModifyTimeFlagClear_Click);
+            // 
+            // dateTimePickerRepairManageAddModifySelectDate
+            // 
+            this.dateTimePickerRepairManageAddModifySelectDate.Location = new System.Drawing.Point(585, 85);
+            this.dateTimePickerRepairManageAddModifySelectDate.Name = "dateTimePickerRepairManageAddModifySelectDate";
+            this.dateTimePickerRepairManageAddModifySelectDate.Size = new System.Drawing.Size(161, 25);
+            this.dateTimePickerRepairManageAddModifySelectDate.TabIndex = 55;
+            this.dateTimePickerRepairManageAddModifySelectDate.CloseUp += new System.EventHandler(this.dateTimePickerRepairManageAddModifySelectDate_CloseUp);
+            // 
+            // labellRepairManageAddModifySelectResult
+            // 
+            this.labellRepairManageAddModifySelectResult.AutoSize = true;
+            this.labellRepairManageAddModifySelectResult.Location = new System.Drawing.Point(278, 297);
+            this.labellRepairManageAddModifySelectResult.Name = "labellRepairManageAddModifySelectResult";
+            this.labellRepairManageAddModifySelectResult.Size = new System.Drawing.Size(67, 15);
+            this.labellRepairManageAddModifySelectResult.TabIndex = 53;
+            this.labellRepairManageAddModifySelectResult.Text = "维修结果";
+            // 
+            // textBoxRepairManageAddModifyCost
+            // 
+            this.textBoxRepairManageAddModifyCost.Location = new System.Drawing.Point(374, 191);
+            this.textBoxRepairManageAddModifyCost.Name = "textBoxRepairManageAddModifyCost";
+            this.textBoxRepairManageAddModifyCost.Size = new System.Drawing.Size(98, 25);
+            this.textBoxRepairManageAddModifyCost.TabIndex = 52;
+            // 
+            // labellRepairManageAddModifyCost
+            // 
+            this.labellRepairManageAddModifyCost.AutoSize = true;
+            this.labellRepairManageAddModifyCost.Location = new System.Drawing.Point(278, 194);
+            this.labellRepairManageAddModifyCost.Name = "labellRepairManageAddModifyCost";
+            this.labellRepairManageAddModifyCost.Size = new System.Drawing.Size(90, 15);
+            this.labellRepairManageAddModifyCost.TabIndex = 51;
+            this.labellRepairManageAddModifyCost.Text = "维修费用/元";
+            // 
+            // comboBoxRepairManageAddModifySelectStatus
+            // 
+            this.comboBoxRepairManageAddModifySelectStatus.FormattingEnabled = true;
+            this.comboBoxRepairManageAddModifySelectStatus.Location = new System.Drawing.Point(585, 144);
+            this.comboBoxRepairManageAddModifySelectStatus.Name = "comboBoxRepairManageAddModifySelectStatus";
+            this.comboBoxRepairManageAddModifySelectStatus.Size = new System.Drawing.Size(143, 23);
+            this.comboBoxRepairManageAddModifySelectStatus.TabIndex = 50;
+            // 
+            // labellRepairManageAddModifySelectStatus
+            // 
+            this.labellRepairManageAddModifySelectStatus.AutoSize = true;
+            this.labellRepairManageAddModifySelectStatus.Location = new System.Drawing.Point(512, 147);
+            this.labellRepairManageAddModifySelectStatus.Name = "labellRepairManageAddModifySelectStatus";
+            this.labellRepairManageAddModifySelectStatus.Size = new System.Drawing.Size(67, 15);
+            this.labellRepairManageAddModifySelectStatus.TabIndex = 49;
+            this.labellRepairManageAddModifySelectStatus.Text = "维修状态";
+            // 
+            // labellRepairManageAddModifySelectRepairDate
+            // 
+            this.labellRepairManageAddModifySelectRepairDate.AutoSize = true;
+            this.labellRepairManageAddModifySelectRepairDate.Location = new System.Drawing.Point(512, 93);
+            this.labellRepairManageAddModifySelectRepairDate.Name = "labellRepairManageAddModifySelectRepairDate";
+            this.labellRepairManageAddModifySelectRepairDate.Size = new System.Drawing.Size(67, 15);
+            this.labellRepairManageAddModifySelectRepairDate.TabIndex = 47;
+            this.labellRepairManageAddModifySelectRepairDate.Text = "维修日期";
+            // 
+            // buttonlRepairManageAddModifyReturn
+            // 
+            this.buttonlRepairManageAddModifyReturn.Location = new System.Drawing.Point(705, 511);
+            this.buttonlRepairManageAddModifyReturn.Name = "buttonlRepairManageAddModifyReturn";
+            this.buttonlRepairManageAddModifyReturn.Size = new System.Drawing.Size(139, 39);
+            this.buttonlRepairManageAddModifyReturn.TabIndex = 46;
+            this.buttonlRepairManageAddModifyReturn.Text = "返回上一级";
+            this.buttonlRepairManageAddModifyReturn.UseVisualStyleBackColor = true;
+            this.buttonlRepairManageAddModifyReturn.Click += new System.EventHandler(this.buttonlRepairManageAddModifyReturn_Click);
+            // 
+            // buttonlRepairManageAddModifyConfirm
+            // 
+            this.buttonlRepairManageAddModifyConfirm.Location = new System.Drawing.Point(351, 511);
+            this.buttonlRepairManageAddModifyConfirm.Name = "buttonlRepairManageAddModifyConfirm";
+            this.buttonlRepairManageAddModifyConfirm.Size = new System.Drawing.Size(135, 39);
+            this.buttonlRepairManageAddModifyConfirm.TabIndex = 45;
+            this.buttonlRepairManageAddModifyConfirm.Text = "确认";
+            this.buttonlRepairManageAddModifyConfirm.UseVisualStyleBackColor = true;
+            this.buttonlRepairManageAddModifyConfirm.Click += new System.EventHandler(this.buttonlRepairManageAddModifyConfirm_Click);
+            // 
+            // labellRepairManageAddModifyErrorReason
+            // 
+            this.labellRepairManageAddModifyErrorReason.AutoSize = true;
+            this.labellRepairManageAddModifyErrorReason.Location = new System.Drawing.Point(278, 422);
+            this.labellRepairManageAddModifyErrorReason.Name = "labellRepairManageAddModifyErrorReason";
+            this.labellRepairManageAddModifyErrorReason.Size = new System.Drawing.Size(67, 15);
+            this.labellRepairManageAddModifyErrorReason.TabIndex = 44;
+            this.labellRepairManageAddModifyErrorReason.Text = "故障原因";
+            // 
+            // textBoxRepairManageAddModifyErrorReason
+            // 
+            this.textBoxRepairManageAddModifyErrorReason.Location = new System.Drawing.Point(351, 376);
+            this.textBoxRepairManageAddModifyErrorReason.Multiline = true;
+            this.textBoxRepairManageAddModifyErrorReason.Name = "textBoxRepairManageAddModifyErrorReason";
+            this.textBoxRepairManageAddModifyErrorReason.Size = new System.Drawing.Size(619, 120);
+            this.textBoxRepairManageAddModifyErrorReason.TabIndex = 43;
+            // 
+            // comboBoxRepairManageAddModifySelectConfirmMan
+            // 
+            this.comboBoxRepairManageAddModifySelectConfirmMan.FormattingEnabled = true;
+            this.comboBoxRepairManageAddModifySelectConfirmMan.Location = new System.Drawing.Point(608, 194);
+            this.comboBoxRepairManageAddModifySelectConfirmMan.Name = "comboBoxRepairManageAddModifySelectConfirmMan";
+            this.comboBoxRepairManageAddModifySelectConfirmMan.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxRepairManageAddModifySelectConfirmMan.TabIndex = 42;
+            // 
+            // labellRepairManageAddModifySelectConfirmMan
+            // 
+            this.labellRepairManageAddModifySelectConfirmMan.AutoSize = true;
+            this.labellRepairManageAddModifySelectConfirmMan.Location = new System.Drawing.Point(512, 197);
+            this.labellRepairManageAddModifySelectConfirmMan.Name = "labellRepairManageAddModifySelectConfirmMan";
+            this.labellRepairManageAddModifySelectConfirmMan.Size = new System.Drawing.Size(82, 15);
+            this.labellRepairManageAddModifySelectConfirmMan.TabIndex = 41;
+            this.labellRepairManageAddModifySelectConfirmMan.Text = "送修验收人";
+            // 
+            // comboBoxRepairManageAddModifySelectRepairMan
+            // 
+            this.comboBoxRepairManageAddModifySelectRepairMan.FormattingEnabled = true;
+            this.comboBoxRepairManageAddModifySelectRepairMan.Location = new System.Drawing.Point(846, 144);
+            this.comboBoxRepairManageAddModifySelectRepairMan.Name = "comboBoxRepairManageAddModifySelectRepairMan";
+            this.comboBoxRepairManageAddModifySelectRepairMan.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxRepairManageAddModifySelectRepairMan.TabIndex = 40;
+            // 
+            // labellRepairManageAddModifySelectRepairMan
+            // 
+            this.labellRepairManageAddModifySelectRepairMan.AutoSize = true;
+            this.labellRepairManageAddModifySelectRepairMan.Location = new System.Drawing.Point(750, 147);
+            this.labellRepairManageAddModifySelectRepairMan.Name = "labellRepairManageAddModifySelectRepairMan";
+            this.labellRepairManageAddModifySelectRepairMan.Size = new System.Drawing.Size(82, 15);
+            this.labellRepairManageAddModifySelectRepairMan.TabIndex = 39;
+            this.labellRepairManageAddModifySelectRepairMan.Text = "维修负责人";
+            // 
+            // comboBoxRepairManageAddModifySelectUnit
+            // 
+            this.comboBoxRepairManageAddModifySelectUnit.FormattingEnabled = true;
+            this.comboBoxRepairManageAddModifySelectUnit.Location = new System.Drawing.Point(351, 141);
+            this.comboBoxRepairManageAddModifySelectUnit.Name = "comboBoxRepairManageAddModifySelectUnit";
+            this.comboBoxRepairManageAddModifySelectUnit.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxRepairManageAddModifySelectUnit.TabIndex = 38;
+            // 
+            // labellRepairManageAddModifySelectRepairUnit
+            // 
+            this.labellRepairManageAddModifySelectRepairUnit.AutoSize = true;
+            this.labellRepairManageAddModifySelectRepairUnit.Location = new System.Drawing.Point(278, 144);
+            this.labellRepairManageAddModifySelectRepairUnit.Name = "labellRepairManageAddModifySelectRepairUnit";
+            this.labellRepairManageAddModifySelectRepairUnit.Size = new System.Drawing.Size(67, 15);
+            this.labellRepairManageAddModifySelectRepairUnit.TabIndex = 37;
+            this.labellRepairManageAddModifySelectRepairUnit.Text = "维修单位";
+            // 
+            // comboBoxRepairManageAddModifySelectArms
+            // 
+            this.comboBoxRepairManageAddModifySelectArms.FormattingEnabled = true;
+            this.comboBoxRepairManageAddModifySelectArms.Location = new System.Drawing.Point(351, 90);
+            this.comboBoxRepairManageAddModifySelectArms.Name = "comboBoxRepairManageAddModifySelectArms";
+            this.comboBoxRepairManageAddModifySelectArms.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxRepairManageAddModifySelectArms.TabIndex = 36;
+            // 
+            // labelRepairManageAddModifySelectArmsName
+            // 
+            this.labelRepairManageAddModifySelectArmsName.AutoSize = true;
+            this.labelRepairManageAddModifySelectArmsName.Location = new System.Drawing.Point(278, 93);
+            this.labelRepairManageAddModifySelectArmsName.Name = "labelRepairManageAddModifySelectArmsName";
+            this.labelRepairManageAddModifySelectArmsName.Size = new System.Drawing.Size(67, 15);
+            this.labelRepairManageAddModifySelectArmsName.TabIndex = 35;
+            this.labelRepairManageAddModifySelectArmsName.Text = "装备名称";
+            // 
+            // 更新维修状态
+            // 
+            this.更新维修状态.Controls.Add(this.textBoxRepairManageStatusUpdateResult);
+            this.更新维修状态.Controls.Add(this.labelRepairManageStatusUpdateResult);
+            this.更新维修状态.Controls.Add(this.textBoxRepairManageStatusUpdateCost);
+            this.更新维修状态.Controls.Add(this.labelRepairManageStatusUpdateCost);
+            this.更新维修状态.Controls.Add(this.buttonRapirManageStatusUpdateCancel);
+            this.更新维修状态.Controls.Add(this.buttonRapirManageStatusUpdateConfirm);
+            this.更新维修状态.Location = new System.Drawing.Point(8, 8);
+            this.更新维修状态.Name = "更新维修状态";
+            this.更新维修状态.Size = new System.Drawing.Size(1242, 579);
+            this.更新维修状态.TabIndex = 7;
+            this.更新维修状态.Visible = false;
+            // 
+            // textBoxRepairManageStatusUpdateResult
+            // 
+            this.textBoxRepairManageStatusUpdateResult.Location = new System.Drawing.Point(577, 220);
+            this.textBoxRepairManageStatusUpdateResult.Multiline = true;
+            this.textBoxRepairManageStatusUpdateResult.Name = "textBoxRepairManageStatusUpdateResult";
+            this.textBoxRepairManageStatusUpdateResult.Size = new System.Drawing.Size(331, 93);
+            this.textBoxRepairManageStatusUpdateResult.TabIndex = 16;
+            // 
+            // labelRepairManageStatusUpdateResult
+            // 
+            this.labelRepairManageStatusUpdateResult.AutoSize = true;
+            this.labelRepairManageStatusUpdateResult.Location = new System.Drawing.Point(504, 262);
+            this.labelRepairManageStatusUpdateResult.Name = "labelRepairManageStatusUpdateResult";
+            this.labelRepairManageStatusUpdateResult.Size = new System.Drawing.Size(67, 15);
+            this.labelRepairManageStatusUpdateResult.TabIndex = 15;
+            this.labelRepairManageStatusUpdateResult.Text = "维修结果";
+            // 
+            // textBoxRepairManageStatusUpdateCost
+            // 
+            this.textBoxRepairManageStatusUpdateCost.Location = new System.Drawing.Point(577, 170);
+            this.textBoxRepairManageStatusUpdateCost.Name = "textBoxRepairManageStatusUpdateCost";
+            this.textBoxRepairManageStatusUpdateCost.Size = new System.Drawing.Size(121, 25);
+            this.textBoxRepairManageStatusUpdateCost.TabIndex = 14;
+            // 
+            // labelRepairManageStatusUpdateCost
+            // 
+            this.labelRepairManageStatusUpdateCost.AutoSize = true;
+            this.labelRepairManageStatusUpdateCost.Location = new System.Drawing.Point(504, 173);
+            this.labelRepairManageStatusUpdateCost.Name = "labelRepairManageStatusUpdateCost";
+            this.labelRepairManageStatusUpdateCost.Size = new System.Drawing.Size(67, 15);
+            this.labelRepairManageStatusUpdateCost.TabIndex = 12;
+            this.labelRepairManageStatusUpdateCost.Text = "维修费用";
+            // 
+            // buttonRapirManageStatusUpdateCancel
+            // 
+            this.buttonRapirManageStatusUpdateCancel.Location = new System.Drawing.Point(833, 334);
+            this.buttonRapirManageStatusUpdateCancel.Name = "buttonRapirManageStatusUpdateCancel";
+            this.buttonRapirManageStatusUpdateCancel.Size = new System.Drawing.Size(75, 44);
+            this.buttonRapirManageStatusUpdateCancel.TabIndex = 11;
+            this.buttonRapirManageStatusUpdateCancel.Text = "取消";
+            this.buttonRapirManageStatusUpdateCancel.UseVisualStyleBackColor = true;
+            this.buttonRapirManageStatusUpdateCancel.Click += new System.EventHandler(this.buttonRapirManageStatusUpdateCancel_Click);
+            // 
+            // buttonRapirManageStatusUpdateConfirm
+            // 
+            this.buttonRapirManageStatusUpdateConfirm.Location = new System.Drawing.Point(577, 334);
+            this.buttonRapirManageStatusUpdateConfirm.Name = "buttonRapirManageStatusUpdateConfirm";
+            this.buttonRapirManageStatusUpdateConfirm.Size = new System.Drawing.Size(75, 44);
+            this.buttonRapirManageStatusUpdateConfirm.TabIndex = 10;
+            this.buttonRapirManageStatusUpdateConfirm.Text = "确认";
+            this.buttonRapirManageStatusUpdateConfirm.UseVisualStyleBackColor = true;
+            this.buttonRapirManageStatusUpdateConfirm.Click += new System.EventHandler(this.buttonRapirManageStatusUpdateConfirm_Click);
+            // 
+            // 查看维修记录
+            // 
+            this.查看维修记录.Controls.Add(this.buttonRepairManageTimeFlagClear);
+            this.查看维修记录.Controls.Add(this.dateTimePickerRepairManage);
+            this.查看维修记录.Controls.Add(this.labelRepairManageSelectArms);
+            this.查看维修记录.Controls.Add(this.comboBoxRepairManageSelectRepairMan);
+            this.查看维修记录.Controls.Add(this.labelRepairManageSelectManager);
+            this.查看维修记录.Controls.Add(this.labelRepairManageSelectDate);
+            this.查看维修记录.Controls.Add(this.dataGridViewRepairManage);
+            this.查看维修记录.Controls.Add(this.comboBoxRepairManageSelectArms);
+            this.查看维修记录.Location = new System.Drawing.Point(0, 0);
+            this.查看维修记录.Name = "查看维修记录";
+            this.查看维修记录.Size = new System.Drawing.Size(1242, 579);
+            this.查看维修记录.TabIndex = 6;
+            this.查看维修记录.Visible = false;
+            this.查看维修记录.VisibleChanged += new System.EventHandler(this.查看维修记录_VisibleChanged);
+            // 
+            // buttonRepairManageTimeFlagClear
+            // 
+            this.buttonRepairManageTimeFlagClear.Location = new System.Drawing.Point(660, 98);
+            this.buttonRepairManageTimeFlagClear.Name = "buttonRepairManageTimeFlagClear";
+            this.buttonRepairManageTimeFlagClear.Size = new System.Drawing.Size(89, 28);
+            this.buttonRepairManageTimeFlagClear.TabIndex = 15;
+            this.buttonRepairManageTimeFlagClear.Text = "清除日期";
+            this.buttonRepairManageTimeFlagClear.UseVisualStyleBackColor = true;
+            this.buttonRepairManageTimeFlagClear.Click += new System.EventHandler(this.buttonRepairManageTimeFlagClear_Click);
+            // 
+            // dateTimePickerRepairManage
+            // 
+            this.dateTimePickerRepairManage.Location = new System.Drawing.Point(448, 99);
+            this.dateTimePickerRepairManage.Name = "dateTimePickerRepairManage";
+            this.dateTimePickerRepairManage.Size = new System.Drawing.Size(179, 25);
+            this.dateTimePickerRepairManage.TabIndex = 14;
+            this.dateTimePickerRepairManage.CloseUp += new System.EventHandler(this.dateTimePickerRepairManageSelectDate_CloseUp);
+            // 
+            // labelRepairManageSelectArms
+            // 
+            this.labelRepairManageSelectArms.AutoSize = true;
+            this.labelRepairManageSelectArms.Location = new System.Drawing.Point(151, 102);
+            this.labelRepairManageSelectArms.Name = "labelRepairManageSelectArms";
+            this.labelRepairManageSelectArms.Size = new System.Drawing.Size(67, 15);
+            this.labelRepairManageSelectArms.TabIndex = 7;
+            this.labelRepairManageSelectArms.Text = "选择装备";
+            // 
+            // comboBoxRepairManageSelectRepairMan
+            // 
+            this.comboBoxRepairManageSelectRepairMan.FormattingEnabled = true;
+            this.comboBoxRepairManageSelectRepairMan.Location = new System.Drawing.Point(911, 103);
+            this.comboBoxRepairManageSelectRepairMan.Name = "comboBoxRepairManageSelectRepairMan";
+            this.comboBoxRepairManageSelectRepairMan.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxRepairManageSelectRepairMan.TabIndex = 13;
+            this.comboBoxRepairManageSelectRepairMan.SelectionChangeCommitted += new System.EventHandler(this.comboBoxRepairManageSelectRepairMan_SelectionChangeCommitted);
+            // 
+            // labelRepairManageSelectManager
+            // 
+            this.labelRepairManageSelectManager.AutoSize = true;
+            this.labelRepairManageSelectManager.Location = new System.Drawing.Point(792, 107);
+            this.labelRepairManageSelectManager.Name = "labelRepairManageSelectManager";
+            this.labelRepairManageSelectManager.Size = new System.Drawing.Size(112, 15);
+            this.labelRepairManageSelectManager.TabIndex = 12;
+            this.labelRepairManageSelectManager.Text = "选择维修负责人";
+            // 
+            // labelRepairManageSelectDate
+            // 
+            this.labelRepairManageSelectDate.AutoSize = true;
+            this.labelRepairManageSelectDate.Location = new System.Drawing.Point(371, 102);
+            this.labelRepairManageSelectDate.Name = "labelRepairManageSelectDate";
+            this.labelRepairManageSelectDate.Size = new System.Drawing.Size(67, 15);
+            this.labelRepairManageSelectDate.TabIndex = 10;
+            this.labelRepairManageSelectDate.Text = "选择日期";
+            // 
+            // dataGridViewRepairManage
+            // 
+            this.dataGridViewRepairManage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewRepairManage.Location = new System.Drawing.Point(154, 154);
+            this.dataGridViewRepairManage.Name = "dataGridViewRepairManage";
+            this.dataGridViewRepairManage.RowTemplate.Height = 27;
+            this.dataGridViewRepairManage.Size = new System.Drawing.Size(878, 301);
+            this.dataGridViewRepairManage.TabIndex = 9;
+            // 
+            // comboBoxRepairManageSelectArms
+            // 
+            this.comboBoxRepairManageSelectArms.FormattingEnabled = true;
+            this.comboBoxRepairManageSelectArms.Location = new System.Drawing.Point(224, 99);
+            this.comboBoxRepairManageSelectArms.Name = "comboBoxRepairManageSelectArms";
+            this.comboBoxRepairManageSelectArms.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxRepairManageSelectArms.TabIndex = 8;
+            this.comboBoxRepairManageSelectArms.SelectionChangeCommitted += new System.EventHandler(this.comboBoxRepairManageSelectArms_SelectionChangeCommitted);
+            // 
             // 统计与查询
             // 
             this.统计与查询.Controls.Add(this.装备经费汇总);
@@ -2201,8 +2151,6 @@
             this.仓库信息删除.TabIndex = 0;
             this.仓库信息删除.Visible = false;
             // 
-<<<<<<< HEAD
-=======
             // 出库信息修改
             // 
             this.出库信息修改.Location = new System.Drawing.Point(0, 0);
@@ -2211,7 +2159,6 @@
             this.出库信息修改.TabIndex = 0;
             this.出库信息修改.Visible = false;
             // 
->>>>>>> lilang
             // 装备经费管理
             // 
             this.装备经费管理.Controls.Add(this.经费使用管理);
@@ -2221,10 +2168,7 @@
             this.装备经费管理.Name = "装备经费管理";
             this.装备经费管理.Size = new System.Drawing.Size(1242, 582);
             this.装备经费管理.TabIndex = 6;
-<<<<<<< HEAD
-=======
             this.装备经费管理.Visible = false;
->>>>>>> lilang
             // 
             // 经费使用管理
             // 
@@ -2237,10 +2181,8 @@
             this.经费使用管理.TabIndex = 2;
             this.经费使用管理.Visible = false;
             // 
-            // 经费使用删除
+            // 经费使用添加
             // 
-<<<<<<< HEAD
-=======
             this.经费使用添加.Location = new System.Drawing.Point(0, 0);
             this.经费使用添加.Name = "经费使用添加";
             this.经费使用添加.Size = new System.Drawing.Size(1242, 582);
@@ -2249,15 +2191,11 @@
             // 
             // 经费使用删除
             // 
->>>>>>> lilang
             this.经费使用删除.Location = new System.Drawing.Point(0, 0);
             this.经费使用删除.Name = "经费使用删除";
             this.经费使用删除.Size = new System.Drawing.Size(1242, 582);
             this.经费使用删除.TabIndex = 2;
-<<<<<<< HEAD
-=======
             this.经费使用删除.Visible = false;
->>>>>>> lilang
             // 
             // 经费使用修改
             // 
@@ -2267,27 +2205,6 @@
             this.经费使用修改.TabIndex = 1;
             this.经费使用修改.Visible = false;
             // 
-<<<<<<< HEAD
-            // 经费使用添加
-            // 
-            this.经费使用添加.Location = new System.Drawing.Point(0, 0);
-            this.经费使用添加.Name = "经费使用添加";
-            this.经费使用添加.Size = new System.Drawing.Size(1242, 582);
-            this.经费使用添加.TabIndex = 0;
-            // 
-            // 经费入账管理
-            // 
-            this.经费入账管理.Controls.Add(this.经费入账删除);
-            this.经费入账管理.Controls.Add(this.经费入账修改);
-            this.经费入账管理.Controls.Add(this.经费入账添加);
-            this.经费入账管理.Location = new System.Drawing.Point(0, 0);
-            this.经费入账管理.Name = "经费入账管理";
-            this.经费入账管理.Size = new System.Drawing.Size(1242, 582);
-            this.经费入账管理.TabIndex = 1;
-            // 
-            // 经费入账删除
-            // 
-=======
             // 经费入账管理
             // 
             this.经费入账管理.Controls.Add(this.经费入账删除);
@@ -2301,15 +2218,11 @@
             // 
             // 经费入账删除
             // 
->>>>>>> lilang
             this.经费入账删除.Location = new System.Drawing.Point(0, 0);
             this.经费入账删除.Name = "经费入账删除";
             this.经费入账删除.Size = new System.Drawing.Size(1242, 582);
             this.经费入账删除.TabIndex = 2;
-<<<<<<< HEAD
-=======
             this.经费入账删除.Visible = false;
->>>>>>> lilang
             // 
             // 经费入账修改
             // 
@@ -2321,18 +2234,12 @@
             // 
             // 经费入账添加
             // 
-<<<<<<< HEAD
-=======
             this.经费入账添加.Controls.Add(this.出库信息修改);
->>>>>>> lilang
             this.经费入账添加.Location = new System.Drawing.Point(0, 0);
             this.经费入账添加.Name = "经费入账添加";
             this.经费入账添加.Size = new System.Drawing.Size(1242, 582);
             this.经费入账添加.TabIndex = 0;
-<<<<<<< HEAD
-=======
             this.经费入账添加.Visible = false;
->>>>>>> lilang
             // 
             // 经费明细管理
             // 
@@ -2343,10 +2250,7 @@
             this.经费明细管理.Name = "经费明细管理";
             this.经费明细管理.Size = new System.Drawing.Size(1242, 582);
             this.经费明细管理.TabIndex = 0;
-<<<<<<< HEAD
-=======
             this.经费明细管理.Visible = false;
->>>>>>> lilang
             // 
             // 经费明细删除
             // 
@@ -2354,10 +2258,7 @@
             this.经费明细删除.Name = "经费明细删除";
             this.经费明细删除.Size = new System.Drawing.Size(1242, 582);
             this.经费明细删除.TabIndex = 2;
-<<<<<<< HEAD
-=======
             this.经费明细删除.Visible = false;
->>>>>>> lilang
             // 
             // 经费明细修改
             // 
@@ -2373,8 +2274,6 @@
             this.经费明细添加.Name = "经费明细添加";
             this.经费明细添加.Size = new System.Drawing.Size(1242, 582);
             this.经费明细添加.TabIndex = 0;
-<<<<<<< HEAD
-=======
             this.经费明细添加.Visible = false;
             // 
             // WelcomePicture
@@ -2383,15 +2282,24 @@
             this.WelcomePicture.Name = "WelcomePicture";
             this.WelcomePicture.Size = new System.Drawing.Size(1242, 582);
             this.WelcomePicture.TabIndex = 0;
->>>>>>> lilang
+            // 
+            // buttonPwdResetCancel
+            // 
+            this.buttonPwdResetCancel.Location = new System.Drawing.Point(184, 303);
+            this.buttonPwdResetCancel.Name = "buttonPwdResetCancel";
+            this.buttonPwdResetCancel.Size = new System.Drawing.Size(117, 35);
+            this.buttonPwdResetCancel.TabIndex = 3;
+            this.buttonPwdResetCancel.Text = "取消";
+            this.buttonPwdResetCancel.UseVisualStyleBackColor = true;
+            this.buttonPwdResetCancel.Click += new System.EventHandler(this.buttonPwdResetCancel_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1242, 615);
-            this.Controls.Add(this.装备维修调拨管理);
             this.Controls.Add(this.系统管理);
+            this.Controls.Add(this.装备维修调拨管理);
             this.Controls.Add(this.WelcomePicture);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.装备经费管理);
@@ -2419,20 +2327,20 @@
             this.修改密码.ResumeLayout(false);
             this.修改密码.PerformLayout();
             this.装备维修调拨管理.ResumeLayout(false);
+            this.装备调拨管理.ResumeLayout(false);
+            this.添加修改调拨记录.ResumeLayout(false);
+            this.添加修改调拨记录.PerformLayout();
+            this.查看调拨记录.ResumeLayout(false);
+            this.查看调拨记录.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllocationManage)).EndInit();
             this.装备维修管理.ResumeLayout(false);
+            this.添加修改维修记录.ResumeLayout(false);
+            this.添加修改维修记录.PerformLayout();
             this.更新维修状态.ResumeLayout(false);
             this.更新维修状态.PerformLayout();
             this.查看维修记录.ResumeLayout(false);
             this.查看维修记录.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRepairManage)).EndInit();
-            this.添加修改维修记录.ResumeLayout(false);
-            this.添加修改维修记录.PerformLayout();
-            this.装备调拨管理.ResumeLayout(false);
-            this.查看调拨记录.ResumeLayout(false);
-            this.查看调拨记录.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllocationManage)).EndInit();
-            this.添加修改调拨记录.ResumeLayout(false);
-            this.添加修改调拨记录.PerformLayout();
             this.统计与查询.ResumeLayout(false);
             this.装备库存管理.ResumeLayout(false);
             this.出库信息管理.ResumeLayout(false);
@@ -2441,10 +2349,7 @@
             this.装备经费管理.ResumeLayout(false);
             this.经费使用管理.ResumeLayout(false);
             this.经费入账管理.ResumeLayout(false);
-<<<<<<< HEAD
-=======
             this.经费入账添加.ResumeLayout(false);
->>>>>>> lilang
             this.经费明细管理.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -2458,7 +2363,6 @@
         private System.Windows.Forms.ToolStripMenuItem 用户管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 修改密码ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 日志管理ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 退出系统ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 基本信息管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 装备信息ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 部门基本信息ToolStripMenuItem;
@@ -2675,5 +2579,6 @@
         private System.Windows.Forms.Label labelRepairManageStatusUpdateCost;
         private System.Windows.Forms.Button buttonRapirManageStatusUpdateCancel;
         private System.Windows.Forms.Button buttonRapirManageStatusUpdateConfirm;
+        private System.Windows.Forms.Button buttonPwdResetCancel;
     }
 }

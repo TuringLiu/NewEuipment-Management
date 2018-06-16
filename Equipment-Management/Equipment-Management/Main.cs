@@ -13,13 +13,11 @@ namespace Equipment_Management
             InitializeComponent();
         }
 
+
+        //----------------------------李朗---------------------------------------
         //窗口加载时运行的代码
         private void Main_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            装备基本信息 to_zbjbxx = new 装备基本信息();
-            to_zbjbxx.Show();
-=======
             //将欢迎panel加入lastpanels中（欢迎panel默认第一个显示，其余均隐藏）
             MyPanel.lastpanels.Add(WelcomePicture);
             //判断登录的用户的权限，若权限不够则禁用功能
@@ -45,9 +43,9 @@ namespace Equipment_Management
             MyPanel.Show(new List<Panel>() { WelcomePicture });//调用mypanel的show方法显示欢迎panel
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)//检验数据库是否已连接
+                if (DBClass_lilang.conn.State != ConnectionState.Open)//检验数据库是否已连接
                 {
-                    DBClass.conn.Open();//连接数据库
+                    DBClass_lilang.conn.Open();//连接数据库
                 }
                 //将注销登录事件记录到syslog表内
                 string strcmd = String.Format("insert SysLog(LogId, LogDate, LogTime," +
@@ -55,9 +53,9 @@ namespace Equipment_Management
                         ",'{3}','{4}','{5}','{6}')", StreamCode.GetCode("LogId", "SysLog"),
                         DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(),
                         "注销登录", "用户注销登录成功", "用户名: " + LogInUser.userName, LogInUser.userName);
-                SqlCommand cmd = new SqlCommand(strcmd, DBClass.conn);
+                SqlCommand cmd = new SqlCommand(strcmd, DBClass_lilang.conn);
                 cmd.ExecuteNonQuery();
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
                 //显示登录窗口
                 this.Hide();
                 new FormLogIn().Show();
@@ -66,7 +64,6 @@ namespace Equipment_Management
             {
                 MessageBox.Show(ex.ToString() + "\n打开数据库失败");
             }
->>>>>>> lilang
         }
 
         //菜单点击退出
@@ -74,9 +71,9 @@ namespace Equipment_Management
         {
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 //将注销登录事件记录到syslog表内
                 string strcmd = String.Format("insert SysLog(LogId, LogDate, LogTime," +
@@ -84,9 +81,9 @@ namespace Equipment_Management
                         ",'{3}','{4}','{5}','{6}')", StreamCode.GetCode("LogId", "SysLog"),
                         DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(),
                         "注销登录", "用户注销登录成功", "用户名: " + LogInUser.userName, LogInUser.userName);
-                SqlCommand cmd = new SqlCommand(strcmd, DBClass.conn);
+                SqlCommand cmd = new SqlCommand(strcmd, DBClass_lilang.conn);
                 cmd.ExecuteNonQuery();
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
             }
             catch (Exception ex)
             {
@@ -104,12 +101,12 @@ namespace Equipment_Management
             listBoxUserInfo.Items.Clear();//先将items清空
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 //用datareader读数据库并写入listboxuserinfo
-                SqlCommand cmd = new SqlCommand("select * from ArmsUsers", DBClass.conn);
+                SqlCommand cmd = new SqlCommand("select * from ArmsUsers", DBClass_lilang.conn);
                 SqlDataReader dr = cmd.ExecuteReader();
                 listBoxUserInfo.Items.Add("用户名".PadRight(10) + "用户类型".PadRight(10));
                 while (dr.Read())
@@ -118,7 +115,7 @@ namespace Equipment_Management
                         + dr["User_type"].ToString().PadRight(14));
                 }
                 dr.Close();
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
             }
             catch (Exception ex)
             {
@@ -141,9 +138,9 @@ namespace Equipment_Management
         {
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 //添加注销登录的记录
                 string strcmd = String.Format("insert SysLog(LogId, LogDate, LogTime," +
@@ -151,9 +148,9 @@ namespace Equipment_Management
                         ",'{3}','{4}','{5}','{6}')", StreamCode.GetCode("LogId", "SysLog"),
                         DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(),
                         "注销登录", "用户注销登录成功", "用户名: " + LogInUser.userName, LogInUser.userName);
-                SqlCommand cmd = new SqlCommand(strcmd, DBClass.conn);
+                SqlCommand cmd = new SqlCommand(strcmd, DBClass_lilang.conn);
                 cmd.ExecuteNonQuery();
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
             }
             catch (Exception ex)
             {
@@ -173,17 +170,17 @@ namespace Equipment_Management
             }
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 //添加用户
                 string strcmd = String.Format("insert ArmsUsers(Usersname, Userspwd, User_type)" +
                     "values('{0}','{1}','{2}')", textBoxUserName.Text, textBoxPwd.Text, comboBoxUserType.Text);
-                SqlCommand cmd = new SqlCommand(strcmd, DBClass.conn);
+                SqlCommand cmd = new SqlCommand(strcmd, DBClass_lilang.conn);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("用户已添加", "提示");
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
             }
             catch (Exception ex)
             {
@@ -194,7 +191,10 @@ namespace Equipment_Management
         //添加用户取消按钮
         private void buttonUserAddCancel_Click(object sender, EventArgs e)
         {
-            MyPanel.Show(new List<Panel>() { WelcomePicture });
+            if (MessageBox.Show("你确定要退出吗？", "提示", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                MyPanel.Show(new List<Panel>() { WelcomePicture });
+            }
         }
 
         //判断用户名是否重复
@@ -207,14 +207,14 @@ namespace Equipment_Management
             }
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 string strCmd = "select UsersName from ArmsUsers where UsersName = '" 
                     + textBoxUserName.Text + "'";
                 string strTemp = "";
-                SqlCommand cmd = new SqlCommand(strCmd, DBClass.conn);
+                SqlCommand cmd = new SqlCommand(strCmd, DBClass_lilang.conn);
                 //结果为空时，strTemp也为空
                 if (cmd.ExecuteScalar().ToString() != "")
                 {
@@ -229,7 +229,7 @@ namespace Equipment_Management
                 {
                     LogInUser.addFlag = true;//用户名不存在时，标记为能注册
                 }
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
             }
             catch (Exception ex)
             {
@@ -262,12 +262,12 @@ namespace Equipment_Management
             listBoxPwdReset.Items.Clear();
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 //将所有用户列出
-                SqlCommand cmd = new SqlCommand("select [Usersname] from ArmsUsers", DBClass.conn);
+                SqlCommand cmd = new SqlCommand("select [Usersname] from ArmsUsers", DBClass_lilang.conn);
                 SqlDataReader dr = cmd.ExecuteReader();
                 listBoxPwdReset.Items.Add("用户名".PadRight(10));
                 while (dr.Read())
@@ -275,7 +275,7 @@ namespace Equipment_Management
                     listBoxPwdReset.Items.Add(dr["Usersname"].ToString().PadRight(10));
                 }
                 dr.Close();
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
             }
             catch (Exception ex)
             {
@@ -290,22 +290,31 @@ namespace Equipment_Management
             {
                 try
                 {
-                    if (DBClass.conn.State != ConnectionState.Open)
+                    if (DBClass_lilang.conn.State != ConnectionState.Open)
                     {
-                        DBClass.conn.Open();
+                        DBClass_lilang.conn.Open();
                     }
                     //将选中的用户的密码重置为123456
                     string strcmd = String.Format("update ArmsUsers set [Userspwd] = '{0}'" +
                         " where [Usersname] = '{1}'", "123456", listBoxPwdReset.SelectedItem.ToString());
-                    SqlCommand cmd = new SqlCommand(strcmd, DBClass.conn);
+                    SqlCommand cmd = new SqlCommand(strcmd, DBClass_lilang.conn);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("密码已重置为123456", "提示");
-                    DBClass.conn.Close();
+                    DBClass_lilang.conn.Close();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.ToString() + "\n打开数据库失败");
                 }
+            }
+        }
+
+        //重置密码退出
+        private void buttonPwdResetCancel_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("你确定要退出吗？", "提示", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                MyPanel.Show(new List<Panel>() { WelcomePicture });
             }
         }
 
@@ -316,18 +325,18 @@ namespace Equipment_Management
             {
                 try
                 {
-                    if (DBClass.conn.State != ConnectionState.Open)
+                    if (DBClass_lilang.conn.State != ConnectionState.Open)
                     {
-                        DBClass.conn.Open();
+                        DBClass_lilang.conn.Open();
                     }
                     string strcmd = String.Format("delete from ArmsUsers " +
                         " where [Usersname] = '{0}'", 
                         listBoxUserInfo.SelectedItem.ToString().Substring(0,13).Trim());
-                    SqlCommand cmd = new SqlCommand(strcmd, DBClass.conn);
+                    SqlCommand cmd = new SqlCommand(strcmd, DBClass_lilang.conn);
                     cmd.ExecuteNonQuery();
                     //删除后直接刷新
                     listBoxUserInfo.Items.Clear();
-                    SqlCommand cmd1 = new SqlCommand("select * from ArmsUsers", DBClass.conn);
+                    SqlCommand cmd1 = new SqlCommand("select * from ArmsUsers", DBClass_lilang.conn);
                     SqlDataReader dr = cmd1.ExecuteReader();
                     listBoxUserInfo.Items.Add("用户名".PadRight(10) + "用户类型".PadRight(10));
                     while (dr.Read())
@@ -336,7 +345,7 @@ namespace Equipment_Management
                             + dr["User_type"].ToString().PadRight(14));
                     }
                     dr.Close();
-                    DBClass.conn.Close();
+                    DBClass_lilang.conn.Close();
                 }
                 catch (Exception ex)
                 {
@@ -356,18 +365,18 @@ namespace Equipment_Management
         {
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 //修改密码
                 string strcmd = String.Format("update ArmsUsers set [Userspwd] = '{0}'" +
                         " where [Usersname] = '{1}'", 
                         textBoxPwdModifyConfirmNewPwd.Text, LogInUser.userName);
-                SqlCommand cmd = new SqlCommand(strcmd, DBClass.conn);
+                SqlCommand cmd = new SqlCommand(strcmd, DBClass_lilang.conn);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("密码已修改", "提示");
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
             }
             catch (Exception ex)
             {
@@ -378,19 +387,22 @@ namespace Equipment_Management
         //修改密码点击取消
         private void buttonPwdModifyCancel_Click(object sender, EventArgs e)
         {
-            MyPanel.Show(new List<Panel>() { WelcomePicture });
+            if (MessageBox.Show("你确定要退出吗？", "提示", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                MyPanel.Show(new List<Panel>() { WelcomePicture });
+            }
         }
 
         //日志管理刷新
         private void LogManageRefresh()
         {
             //读数据到datagridview里
-            SqlDataAdapter da = new SqlDataAdapter("select * from SysLog", DBClass.conn);
+            SqlDataAdapter da = new SqlDataAdapter("select * from SysLog", DBClass_lilang.conn);
             DataSet ds = new DataSet();
             da.Fill(ds, "SysLog");
             dataGridViewLogManage.DataSource = ds.Tables["SysLog"];
             //读数据到combobox里
-            da = new SqlDataAdapter("select distinct [LogType] from SysLog", DBClass.conn);
+            da = new SqlDataAdapter("select distinct [LogType] from SysLog", DBClass_lilang.conn);
             da.Fill(ds, "LogType");
             //向ds的logtype表内添加“空”行
             DataRow row1 = ds.Tables["LogType"].NewRow();
@@ -400,7 +412,7 @@ namespace Equipment_Management
             comboBoxLogManageSelectGenre.ValueMember = "LogType";
             comboBoxLogManageSelectGenre.DataSource = ds.Tables["LogType"];
             //读数据到combobox里
-            da = new SqlDataAdapter("select distinct [UserName] from SysLog", DBClass.conn);
+            da = new SqlDataAdapter("select distinct [UserName] from SysLog", DBClass_lilang.conn);
             da.Fill(ds, "UserName");
             DataRow row2 = ds.Tables["UserName"].NewRow();
             row2["UserName"] = "空";
@@ -416,15 +428,15 @@ namespace Equipment_Management
             MyPanel.Show(new List<Panel>() { 系统管理, 日志管理 });
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 //调用刷新函数
                 LogManageRefresh();
                 comboBoxLogManageSelectGenre.SelectedValue = "空";
                 comboBoxLogManageSelectUser.SelectedValue = "空";
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
             }
             catch (Exception ex)
             {
@@ -442,9 +454,9 @@ namespace Equipment_Management
                 comboBoxLogManageSelectUser.SelectedValue.ToString()});
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 string strda = "select * from SysLog where 1 = 1";
                 //若数据不为"空"，则添加到select语句中
@@ -460,11 +472,11 @@ namespace Equipment_Management
                 {
                     strda += " and [UserName] = '" + StrList.items[2] + "'";
                 }
-                SqlDataAdapter da = new SqlDataAdapter(strda, DBClass.conn);
+                SqlDataAdapter da = new SqlDataAdapter(strda, DBClass_lilang.conn);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "SysLog");
                 dataGridViewLogManage.DataSource = ds.Tables["SysLog"];//绑定数据源
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
             }
             catch (Exception ex)
             {
@@ -484,9 +496,9 @@ namespace Equipment_Management
                 comboBoxLogManageSelectUser.SelectedValue.ToString()});
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 string strda = "select * from SysLog where 1 = 1";
                 if (StrList.items[0] != "空")
@@ -501,11 +513,11 @@ namespace Equipment_Management
                 {
                     strda += " and [UserName] = '" + StrList.items[2] + "'";
                 }
-                SqlDataAdapter da = new SqlDataAdapter(strda, DBClass.conn);
+                SqlDataAdapter da = new SqlDataAdapter(strda, DBClass_lilang.conn);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "SysLog");
                 dataGridViewLogManage.DataSource = ds.Tables["SysLog"];
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
             }
             catch (Exception ex)
             {
@@ -523,9 +535,9 @@ namespace Equipment_Management
                 comboBoxLogManageSelectUser.SelectedValue.ToString()});
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 string strda = "select * from SysLog where 1 = 1";
                 if (StrList.items[0] != "空")
@@ -540,11 +552,11 @@ namespace Equipment_Management
                 {
                     strda += " and [UserName] = '" + StrList.items[2] + "'";
                 }
-                SqlDataAdapter da = new SqlDataAdapter(strda, DBClass.conn);
+                SqlDataAdapter da = new SqlDataAdapter(strda, DBClass_lilang.conn);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "SysLog");
                 dataGridViewLogManage.DataSource = ds.Tables["SysLog"];
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
             }
             catch (Exception ex)
             {
@@ -565,9 +577,9 @@ namespace Equipment_Management
                 comboBoxLogManageSelectUser.SelectedValue.ToString()});
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 string strda = "select * from SysLog where 1 = 1";
                 if (StrList.items[0] != "空")
@@ -582,11 +594,11 @@ namespace Equipment_Management
                 {
                     strda += " and [UserName] = '" + StrList.items[2] + "'";
                 }
-                SqlDataAdapter da = new SqlDataAdapter(strda, DBClass.conn);
+                SqlDataAdapter da = new SqlDataAdapter(strda, DBClass_lilang.conn);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "SysLog");
                 dataGridViewLogManage.DataSource = ds.Tables["SysLog"];
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
             }
             catch (Exception ex)
             {
@@ -613,16 +625,16 @@ namespace Equipment_Management
                 }
                 try
                 {
-                    if (DBClass.conn.State != ConnectionState.Open)
+                    if (DBClass_lilang.conn.State != ConnectionState.Open)
                     {
-                        DBClass.conn.Open();
+                        DBClass_lilang.conn.Open();
                     }
                     string strcmd = "delete from SysLog where 1 = 1 and [LogId] = '" +
                         dataGridViewLogManage.CurrentRow.Cells[0].Value.ToString() + "'";
-                    SqlCommand cmd = new SqlCommand(strcmd, DBClass.conn);
+                    SqlCommand cmd = new SqlCommand(strcmd, DBClass_lilang.conn);
                     cmd.ExecuteNonQuery();
                     LogManageRefresh();
-                    DBClass.conn.Close();
+                    DBClass_lilang.conn.Close();
                 }
                 catch (Exception ex)
                 {
@@ -638,9 +650,9 @@ namespace Equipment_Management
             {
                 try
                 {
-                    if (DBClass.conn.State != ConnectionState.Open)
+                    if (DBClass_lilang.conn.State != ConnectionState.Open)
                     {
-                        DBClass.conn.Open();
+                        DBClass_lilang.conn.Open();
                     }
                     string strcmd = "delete from SysLog where 1 = 1";
                     if (StrList.items[0] != "空")
@@ -655,10 +667,11 @@ namespace Equipment_Management
                     {
                         strcmd += " and [UserName] = '" + StrList.items[2] + "'";
                     }
-                    SqlCommand cmd = new SqlCommand(strcmd, DBClass.conn);
+                    SqlCommand cmd = new SqlCommand(strcmd, DBClass_lilang.conn);
                     cmd.ExecuteNonQuery();
+                    dateTimePickerLogManage.Value = DateTime.Now;
                     LogManageRefresh();
-                    DBClass.conn.Close();
+                    DBClass_lilang.conn.Close();
                 }
                 catch (Exception ex)
                 {
@@ -674,17 +687,18 @@ namespace Equipment_Management
             {
                 try
                 {
-                    if (DBClass.conn.State != ConnectionState.Open)
+                    if (DBClass_lilang.conn.State != ConnectionState.Open)
                     {
-                        DBClass.conn.Open();
+                        DBClass_lilang.conn.Open();
                     }
                     //不管选没选中日期，都执行删除
                     string strcmd = "delete from SysLog where [LogDate] = '" +
                         dateTimePickerLogManage.Value.ToShortDateString() + "'";
-                    SqlCommand cmd = new SqlCommand(strcmd, DBClass.conn);
+                    SqlCommand cmd = new SqlCommand(strcmd, DBClass_lilang.conn);
                     cmd.ExecuteNonQuery();
+                    dateTimePickerLogManage.Value = DateTime.Now;
                     LogManageRefresh();
-                    DBClass.conn.Close();
+                    DBClass_lilang.conn.Close();
                 }
                 catch (Exception ex)
                 {
@@ -708,14 +722,14 @@ namespace Equipment_Management
             MyPanel.Show(new List<Panel>() { 装备维修调拨管理, 装备维修管理, 查看维修记录 });
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 RepairManageRefresh();
                 comboBoxRepairManageSelectArms.Text = "空";
                 comboBoxRepairManageSelectRepairMan.Text = "空";
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
             }
             catch (Exception ex)
             {
@@ -730,12 +744,12 @@ namespace Equipment_Management
                 "ar.[RepairDate], ar.[Unit], ar.[Reason], ar.[Status], ar.[Cost], " +
                 "ar.[Result], ar.[Ryname], ar.[Ryname1], ar.[PostDate] " +
                 "from ArmsRepair ar, ArmsInfo ai " +
-                "where ar.[Zbid] = ai.[Zbid]", DBClass.conn);
+                "where ar.[Zbid] = ai.[Zbid]", DBClass_lilang.conn);
             DataSet ds = new DataSet();
             da.Fill(ds, "ArmsRepair");
             dataGridViewRepairManage.DataSource = ds.Tables["ArmsRepair"];
             da = new SqlDataAdapter("select distinct ai.[Zbname] from ArmsInfo ai, ArmsRepair ar" +
-                " where ai.[Zbid] = ar.[Zbid]", DBClass.conn);
+                " where ai.[Zbid] = ar.[Zbid]", DBClass_lilang.conn);
             da.Fill(ds, "ArmsName");
             DataRow row1 = ds.Tables["ArmsName"].NewRow();
             row1["Zbname"] = "空";
@@ -743,7 +757,7 @@ namespace Equipment_Management
             comboBoxRepairManageSelectArms.DisplayMember = "Zbname";
             comboBoxRepairManageSelectArms.ValueMember = "Zbname";
             comboBoxRepairManageSelectArms.DataSource = ds.Tables["ArmsName"];
-            da = new SqlDataAdapter("select distinct [Ryname] from ArmsRepair", DBClass.conn);
+            da = new SqlDataAdapter("select distinct [Ryname] from ArmsRepair", DBClass_lilang.conn);
             da.Fill(ds, "RepairMan");
             DataRow row2 = ds.Tables["RepairMan"].NewRow();
             row2["Ryname"] = "空";
@@ -764,14 +778,14 @@ namespace Equipment_Management
                 comboBoxRepairManageSelectRepairMan.SelectedValue.ToString()});
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 if (StrList.items[0] != "空")
                 {
                     SqlCommand cmd = new SqlCommand("select [Zbid] from ArmsInfo " +
-                    "where [Zbname] = '" + StrList.items[0] + "'", DBClass.conn);
+                    "where [Zbname] = '" + StrList.items[0] + "'", DBClass_lilang.conn);
                     StrList.items[0] = cmd.ExecuteScalar().ToString();
                 }
                 string strda = "select ar.[RepId], ai.[Zbname], " +
@@ -790,11 +804,11 @@ namespace Equipment_Management
                 {
                     strda += " and ar.[Ryname] = '" + StrList.items[2] + "'";
                 }
-                SqlDataAdapter da = new SqlDataAdapter(strda, DBClass.conn);
+                SqlDataAdapter da = new SqlDataAdapter(strda, DBClass_lilang.conn);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "RepairLog");
                 dataGridViewRepairManage.DataSource = ds.Tables["RepairLog"];
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
             }
             catch (Exception ex)
             {
@@ -813,14 +827,14 @@ namespace Equipment_Management
                 comboBoxRepairManageSelectRepairMan.SelectedValue.ToString()});
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 if (StrList.items[0] != "空")
                 {
                     SqlCommand cmd = new SqlCommand("select [Zbid] from ArmsInfo " +
-                    "where [Zbname] = '" + StrList.items[0] + "'", DBClass.conn);
+                    "where [Zbname] = '" + StrList.items[0] + "'", DBClass_lilang.conn);
                     StrList.items[0] = cmd.ExecuteScalar().ToString();
                 }
                 string strda = "select ar.[RepId], ai.[Zbname], " +
@@ -839,11 +853,11 @@ namespace Equipment_Management
                 {
                     strda += " and ar.[Ryname] = '" + StrList.items[2] + "'";
                 }
-                SqlDataAdapter da = new SqlDataAdapter(strda, DBClass.conn);
+                SqlDataAdapter da = new SqlDataAdapter(strda, DBClass_lilang.conn);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "RepairLog");
                 dataGridViewRepairManage.DataSource = ds.Tables["RepairLog"];
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
             }
             catch (Exception ex)
             {
@@ -863,14 +877,14 @@ namespace Equipment_Management
                 comboBoxRepairManageSelectRepairMan.SelectedValue.ToString()});
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 if (StrList.items[0] != "空")
                 {
                     SqlCommand cmd = new SqlCommand("select [Zbid] from ArmsInfo " +
-                    "where [Zbname] = '" + StrList.items[0] + "'", DBClass.conn);
+                    "where [Zbname] = '" + StrList.items[0] + "'", DBClass_lilang.conn);
                     StrList.items[0] = cmd.ExecuteScalar().ToString();
                 }
                 string strda = "select ar.[RepId], ai.[Zbname], " +
@@ -889,11 +903,11 @@ namespace Equipment_Management
                 {
                     strda += " and ar.[Ryname] = '" + StrList.items[2] + "'";
                 }
-                SqlDataAdapter da = new SqlDataAdapter(strda, DBClass.conn);
+                SqlDataAdapter da = new SqlDataAdapter(strda, DBClass_lilang.conn);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "RepairLog");
                 dataGridViewRepairManage.DataSource = ds.Tables["RepairLog"];
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
             }
             catch (Exception ex)
             {
@@ -911,14 +925,14 @@ namespace Equipment_Management
                 comboBoxRepairManageSelectRepairMan.SelectedValue.ToString()});
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 if (StrList.items[0] != "空")
                 {
                     SqlCommand cmd = new SqlCommand("select [Zbid] from ArmsInfo " +
-                    "where [Zbname] = '" + StrList.items[0] + "'", DBClass.conn);
+                    "where [Zbname] = '" + StrList.items[0] + "'", DBClass_lilang.conn);
                     StrList.items[0] = cmd.ExecuteScalar().ToString();
                 }
                 string strda = "select ar.[RepId], ai.[Zbname], " +
@@ -937,11 +951,11 @@ namespace Equipment_Management
                 {
                     strda += " and ar.[Ryname] = '" + StrList.items[2] + "'";
                 }
-                SqlDataAdapter da = new SqlDataAdapter(strda, DBClass.conn);
+                SqlDataAdapter da = new SqlDataAdapter(strda, DBClass_lilang.conn);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "RepairLog");
                 dataGridViewRepairManage.DataSource = ds.Tables["RepairLog"];
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
             }
             catch (Exception ex)
             {
@@ -967,16 +981,16 @@ namespace Equipment_Management
             {
                 try
                 {
-                    if (DBClass.conn.State != ConnectionState.Open)
+                    if (DBClass_lilang.conn.State != ConnectionState.Open)
                     {
-                        DBClass.conn.Open();
+                        DBClass_lilang.conn.Open();
                     }
                     string strcmd = "delete from ArmsRepair where [RepId] = '" +
                         dataGridViewRepairManage.CurrentRow.Cells[0].Value.ToString() + "'";
-                    SqlCommand cmd = new SqlCommand(strcmd, DBClass.conn);
+                    SqlCommand cmd = new SqlCommand(strcmd, DBClass_lilang.conn);
                     cmd.ExecuteNonQuery();
                     RepairManageRefresh();
-                    DBClass.conn.Close();
+                    DBClass_lilang.conn.Close();
                 }
                 catch (Exception ex)
                 {
@@ -1047,9 +1061,9 @@ namespace Equipment_Management
             string confirmMan = "";
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 //添加
                 if (AddModify.AddModifyFlag)
@@ -1059,7 +1073,7 @@ namespace Equipment_Management
                     {
                         string strcmd1 = String.Format("select [Zbid] from ArmsInfo where [Zbname] = '{0}'",
                              comboBoxRepairManageAddModifySelectArms.Text);
-                        SqlCommand cmd1 = new SqlCommand(strcmd1, DBClass.conn);
+                        SqlCommand cmd1 = new SqlCommand(strcmd1, DBClass_lilang.conn);
                         zbid = cmd1.ExecuteScalar().ToString();
                     }
                     if(StrList.timeFlag)
@@ -1100,7 +1114,7 @@ namespace Equipment_Management
                                 StreamCode.GetCode("RepId", "ArmsRepair"), zbid,
                                 repairDate,unit,reason,status,cost,result,repairMan,confirmMan,
                                 DateTime.Now.ToShortDateString());
-                    SqlCommand cmd2 = new SqlCommand(strcmd2, DBClass.conn);
+                    SqlCommand cmd2 = new SqlCommand(strcmd2, DBClass_lilang.conn);
                     cmd2.ExecuteNonQuery();
                     MessageBox.Show("添加完成", "提示");
                 }
@@ -1111,7 +1125,7 @@ namespace Equipment_Management
                     {
                         string strcmd1 = String.Format("select [Zbid] from ArmsInfo where [Zbname] = '{0}'",
                              comboBoxRepairManageAddModifySelectArms.Text);
-                        SqlCommand cmd1 = new SqlCommand(strcmd1, DBClass.conn);
+                        SqlCommand cmd1 = new SqlCommand(strcmd1, DBClass_lilang.conn);
                         zbid = cmd1.ExecuteScalar().ToString();
                     }
                     if (StrList.timeFlag)
@@ -1152,12 +1166,12 @@ namespace Equipment_Management
                         "where [RepId] = '{9}'",
                                 zbid,repairDate,unit,reason,status,cost,result,repairMan,confirmMan,
                                 dataGridViewRepairManage.CurrentRow.Cells[0].Value.ToString());
-                    SqlCommand cmd2 = new SqlCommand(strcmd2, DBClass.conn);
+                    SqlCommand cmd2 = new SqlCommand(strcmd2, DBClass_lilang.conn);
                     cmd2.ExecuteNonQuery();
                     MessageBox.Show("修改成功", "提示");
                 }
                 RepairManageRefresh();
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
             }
             catch (Exception ex)
             {
@@ -1178,16 +1192,16 @@ namespace Equipment_Management
             {
                 try
                 {
-                    if (DBClass.conn.State != ConnectionState.Open)
+                    if (DBClass_lilang.conn.State != ConnectionState.Open)
                     {
-                        DBClass.conn.Open();
+                        DBClass_lilang.conn.Open();
                     }
                     string strcmd = "select [RepairDate] from ArmsReepair where [RepId] = '" +
                         dataGridViewRepairManage.CurrentRow.Cells[0].Value.ToString() + "'";
-                    SqlCommand cmd = new SqlCommand(strcmd, DBClass.conn);
+                    SqlCommand cmd = new SqlCommand(strcmd, DBClass_lilang.conn);
                     dateTimePickerRepairManageAddModifySelectDate.Value =
                         DateTime.Parse(cmd.ExecuteScalar().ToString());
-                    DBClass.conn.Close();
+                    DBClass_lilang.conn.Close();
                 }
                 catch (Exception ex)
                 {
@@ -1209,7 +1223,7 @@ namespace Equipment_Management
         private void 添加修改维修记录_VisibleChanged(object sender, EventArgs e)
         {
             string strda = "select distinct [Zbname] from ArmsInfo";
-            SqlDataAdapter da1 = new SqlDataAdapter(strda, DBClass.conn);
+            SqlDataAdapter da1 = new SqlDataAdapter(strda, DBClass_lilang.conn);
             DataSet ds = new DataSet();
             da1.Fill(ds, "Zbname");
             DataRow row1 = ds.Tables["Zbname"].NewRow();
@@ -1224,7 +1238,7 @@ namespace Equipment_Management
             dateTimePickerRepairManageAddModifySelectDate.Value = DateTime.Now;
 
             strda = "select distinct [DepName] from Departments";
-            SqlDataAdapter da2 = new SqlDataAdapter(strda, DBClass.conn);
+            SqlDataAdapter da2 = new SqlDataAdapter(strda, DBClass_lilang.conn);
             da2.Fill(ds, "Unit");
             DataRow row2 = ds.Tables["Unit"].NewRow();
             row2["DepName"] = "空";
@@ -1239,7 +1253,7 @@ namespace Equipment_Management
 
             //要将选人员的控件绑定到不同的表上，否则选一个，另一个也会变
             strda = "select distinct [Ryname] from ArmsPerson";
-            SqlDataAdapter da3 = new SqlDataAdapter(strda, DBClass.conn);
+            SqlDataAdapter da3 = new SqlDataAdapter(strda, DBClass_lilang.conn);
             da3.Fill(ds, "Ryname");
             da3.Fill(ds, "Ryname1");
             DataRow row3 = ds.Tables["Ryname"].NewRow();
@@ -1268,13 +1282,13 @@ namespace Equipment_Management
             }
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 string strcmd = "select [Status] from ArmsRepair where 1 = 1 and [RepId] = " +
                     dataGridViewRepairManage.CurrentRow.Cells[0].Value.ToString();
-                SqlCommand cmd = new SqlCommand(strcmd, DBClass.conn);
+                SqlCommand cmd = new SqlCommand(strcmd, DBClass_lilang.conn);
                 if (cmd.ExecuteScalar().ToString() == "维修完成")
                 {
                     MessageBox.Show("维修已完成无需再设置!", "提示");
@@ -1285,7 +1299,7 @@ namespace Equipment_Management
                     dataGridViewRepairManage.CurrentRow.Cells[6].Value.ToString();
                 textBoxRepairManageStatusUpdateResult.Text =
                     dataGridViewRepairManage.CurrentRow.Cells[7].Value.ToString();
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
             }
             catch (Exception ex)
             {
@@ -1298,20 +1312,20 @@ namespace Equipment_Management
         {
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 string strcmd = String.Format("update ArmsRepair set [Status] = '{0}', [Cost] = '{1}'," +
                     " [Result] = '{2}' where [RepId] = '{3}'", "维修完成", 
                     textBoxRepairManageStatusUpdateCost.Text,
                     textBoxRepairManageStatusUpdateResult.Text, 
                     dataGridViewRepairManage.CurrentRow.Cells[0].Value.ToString());
-                SqlCommand cmd = new SqlCommand(strcmd, DBClass.conn);
+                SqlCommand cmd = new SqlCommand(strcmd, DBClass_lilang.conn);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("设置完成", "提示");
                 RepairManageRefresh();
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
             }
             catch (Exception ex)
             {
@@ -1332,12 +1346,12 @@ namespace Equipment_Management
                 "aa.[ANum], aa.[Zbprice], aa.[OutDep], aa.[InDep], aa.[AType], " +
                 "aa.[Person], aa.[UsefulDate], aa.[Ryname1], aa.[Ryname], " +
                 "aa.[ADate], aa.[Memo] from ArmsAllo aa, ArmsInfo ai " +
-                "where aa.[Zbid] = ai.[Zbid]", DBClass.conn);
+                "where aa.[Zbid] = ai.[Zbid]", DBClass_lilang.conn);
             DataSet ds = new DataSet();
             da.Fill(ds, "ArmsAllo");
             dataGridViewAllocationManage.DataSource = ds.Tables["ArmsAllo"];
             da = new SqlDataAdapter("select distinct ai.[Zbname] from ArmsInfo ai, ArmsAllo aa" +
-                " where ai.[Zbid] = aa.[Zbid]", DBClass.conn);
+                " where ai.[Zbid] = aa.[Zbid]", DBClass_lilang.conn);
             da.Fill(ds, "ArmsName");
             DataRow row1 = ds.Tables["ArmsName"].NewRow();
             row1["Zbname"] = "空";
@@ -1345,7 +1359,7 @@ namespace Equipment_Management
             comboBoxAllocationManageSelectArms.DisplayMember = "Zbname";
             comboBoxAllocationManageSelectArms.ValueMember = "Zbname";
             comboBoxAllocationManageSelectArms.DataSource = ds.Tables["ArmsName"];
-            da = new SqlDataAdapter("select distinct [OutDep] from ArmsAllo", DBClass.conn);
+            da = new SqlDataAdapter("select distinct [OutDep] from ArmsAllo", DBClass_lilang.conn);
             da.Fill(ds, "OutDep");
             DataRow row2 = ds.Tables["OutDep"].NewRow();
             row2["OutDep"] = "空";
@@ -1353,7 +1367,7 @@ namespace Equipment_Management
             comboBoxAllocationManageSelectOutDep.DisplayMember = "OutDep";
             comboBoxAllocationManageSelectOutDep.ValueMember = "OutDep";
             comboBoxAllocationManageSelectOutDep.DataSource = ds.Tables["OutDep"];
-            da = new SqlDataAdapter("select distinct [InDep] from ArmsAllo", DBClass.conn);
+            da = new SqlDataAdapter("select distinct [InDep] from ArmsAllo", DBClass_lilang.conn);
             da.Fill(ds, "InDep");
             DataRow row3 = ds.Tables["InDep"].NewRow();
             row3["InDep"] = "空";
@@ -1369,15 +1383,15 @@ namespace Equipment_Management
             MyPanel.Show(new List<Panel>() { 装备维修调拨管理, 装备调拨管理, 查看调拨记录 });
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 AllocationManageRefresh();
                 comboBoxAllocationManageSelectArms.SelectedValue= "空";
                 comboBoxAllocationManageSelectOutDep.SelectedValue = "空";
                 comboBoxAllocationManageSelectInDep.SelectedValue = "空";
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
             }
             catch (Exception ex)
             {
@@ -1396,14 +1410,14 @@ namespace Equipment_Management
                 comboBoxAllocationManageSelectOutDep.SelectedValue.ToString()});
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 if (StrList.items[0] != "空")
                 {
                     SqlCommand cmd = new SqlCommand("select [Zbid] from ArmsInfo " +
-                    "where [Zbname] = '" + StrList.items[0] + "'", DBClass.conn);
+                    "where [Zbname] = '" + StrList.items[0] + "'", DBClass_lilang.conn);
                     StrList.items[0] = cmd.ExecuteScalar().ToString();
                 }
                 string strda = "select aa.[Id], ai.[Zbname], " +
@@ -1426,11 +1440,11 @@ namespace Equipment_Management
                 {
                     strda += " and aa.[OutDep] = '" + StrList.items[3] + "'";
                 }
-                SqlDataAdapter da = new SqlDataAdapter(strda, DBClass.conn);
+                SqlDataAdapter da = new SqlDataAdapter(strda, DBClass_lilang.conn);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "ArmsAllo");
                 dataGridViewAllocationManage.DataSource = ds.Tables["ArmsAllo"];
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
             }
             catch (Exception ex)
             {
@@ -1450,14 +1464,14 @@ namespace Equipment_Management
                 comboBoxAllocationManageSelectOutDep.SelectedValue.ToString()});
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 if (StrList.items[0] != "空")
                 {
                     SqlCommand cmd = new SqlCommand("select [Zbid] from ArmsInfo " +
-                    "where [Zbname] = '" + StrList.items[0] + "'", DBClass.conn);
+                    "where [Zbname] = '" + StrList.items[0] + "'", DBClass_lilang.conn);
                     StrList.items[0] = cmd.ExecuteScalar().ToString();
                 }
                 string strda = "select aa.[Id], ai.[Zbname], " +
@@ -1480,11 +1494,11 @@ namespace Equipment_Management
                 {
                     strda += " and aa.[OutDep] = '" + StrList.items[3] + "'";
                 }
-                SqlDataAdapter da = new SqlDataAdapter(strda, DBClass.conn);
+                SqlDataAdapter da = new SqlDataAdapter(strda, DBClass_lilang.conn);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "ArmsAllo");
                 dataGridViewAllocationManage.DataSource = ds.Tables["ArmsAllo"];
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
             }
             catch (Exception ex)
             {
@@ -1506,14 +1520,14 @@ namespace Equipment_Management
                 comboBoxAllocationManageSelectOutDep.SelectedValue.ToString()});
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 if (StrList.items[0] != "空")
                 {
                     SqlCommand cmd = new SqlCommand("select [Zbid] from ArmsInfo " +
-                    "where [Zbname] = '" + StrList.items[0] + "'", DBClass.conn);
+                    "where [Zbname] = '" + StrList.items[0] + "'", DBClass_lilang.conn);
                     StrList.items[0] = cmd.ExecuteScalar().ToString();
                 }
                 string strda = "select aa.[Id], ai.[Zbname], " +
@@ -1536,11 +1550,11 @@ namespace Equipment_Management
                 {
                     strda += " and aa.[OutDep] = '" + StrList.items[3] + "'";
                 }
-                SqlDataAdapter da = new SqlDataAdapter(strda, DBClass.conn);
+                SqlDataAdapter da = new SqlDataAdapter(strda, DBClass_lilang.conn);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "ArmsAllo");
                 dataGridViewAllocationManage.DataSource = ds.Tables["ArmsAllo"];
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
             }
             catch (Exception ex)
             {
@@ -1559,14 +1573,14 @@ namespace Equipment_Management
                 comboBoxAllocationManageSelectOutDep.SelectedValue.ToString()});
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 if (StrList.items[0] != "空")
                 {
                     SqlCommand cmd = new SqlCommand("select [Zbid] from ArmsInfo " +
-                    "where [Zbname] = '" + StrList.items[0] + "'", DBClass.conn);
+                    "where [Zbname] = '" + StrList.items[0] + "'", DBClass_lilang.conn);
                     StrList.items[0] = cmd.ExecuteScalar().ToString();
                 }
                 string strda = "select aa.[Id], ai.[Zbname], " +
@@ -1589,11 +1603,11 @@ namespace Equipment_Management
                 {
                     strda += " and aa.[OutDep] = '" + StrList.items[3] + "'";
                 }
-                SqlDataAdapter da = new SqlDataAdapter(strda, DBClass.conn);
+                SqlDataAdapter da = new SqlDataAdapter(strda, DBClass_lilang.conn);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "ArmsAllo");
                 dataGridViewAllocationManage.DataSource = ds.Tables["ArmsAllo"];
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
             }
             catch (Exception ex)
             {
@@ -1612,14 +1626,14 @@ namespace Equipment_Management
                 comboBoxAllocationManageSelectOutDep.SelectedValue.ToString()});
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 if (StrList.items[0] != "空")
                 {
                     SqlCommand cmd = new SqlCommand("select [Zbid] from ArmsInfo " +
-                    "where [Zbname] = '" + StrList.items[0] + "'", DBClass.conn);
+                    "where [Zbname] = '" + StrList.items[0] + "'", DBClass_lilang.conn);
                     StrList.items[0] = cmd.ExecuteScalar().ToString();
                 }
                 string strda = "select aa.[Id], ai.[Zbname], " +
@@ -1642,11 +1656,11 @@ namespace Equipment_Management
                 {
                     strda += " and aa.[OutDep] = '" + StrList.items[3] + "'";
                 }
-                SqlDataAdapter da = new SqlDataAdapter(strda, DBClass.conn);
+                SqlDataAdapter da = new SqlDataAdapter(strda, DBClass_lilang.conn);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "ArmsAllo");
                 dataGridViewAllocationManage.DataSource = ds.Tables["ArmsAllo"];
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
             }
             catch (Exception ex)
             {
@@ -1665,16 +1679,16 @@ namespace Equipment_Management
         {
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 string strcmd = "select [ADate] from ArmsAllo where [Id] = '" +
                     dataGridViewAllocationManage.CurrentRow.Cells[0].Value.ToString() + "'";
-                SqlCommand cmd = new SqlCommand(strcmd, DBClass.conn);
+                SqlCommand cmd = new SqlCommand(strcmd, DBClass_lilang.conn);
                 dateTimePickerAllocationManageAddModifySelectDate.Value =
                     DateTime.Parse(cmd.ExecuteScalar().ToString());
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
             }
             catch (Exception ex)
             {
@@ -1699,9 +1713,9 @@ namespace Equipment_Management
             string userfulTime = "";
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 if (AddModify.AddModifyFlag)
                 {
@@ -1709,7 +1723,7 @@ namespace Equipment_Management
                     {
                         string strcmd1 = String.Format("select [Zbid] from ArmsInfo where [Zbname] = '{0}'",
                              comboBoxAllocationManageAddModifySelectArms.Text);
-                        SqlCommand cmd1 = new SqlCommand(strcmd1, DBClass.conn);
+                        SqlCommand cmd1 = new SqlCommand(strcmd1, DBClass_lilang.conn);
                         zbid = cmd1.ExecuteScalar().ToString();
                     }
                     if (dateTimePickerAllocationManageAddModifySelectDate.Value.ToShortDateString() != "")
@@ -1762,7 +1776,7 @@ namespace Equipment_Management
                                 "'{11}','{12}')",
                                 StreamCode.GetCode("Id", "ArmsAllo"), zbid, aNum, zbprice, outDep
                                 , inDep, aType, pickMan, userfulTime, confirmMan, hostMan, aDate, memo);
-                    SqlCommand cmd3 = new SqlCommand(strcmd2, DBClass.conn);
+                    SqlCommand cmd3 = new SqlCommand(strcmd2, DBClass_lilang.conn);
                     cmd3.ExecuteNonQuery();
                     MessageBox.Show("添加完成", "提示");
                 }
@@ -1772,7 +1786,7 @@ namespace Equipment_Management
                     {
                         string strcmd1 = String.Format("select [Zbid] from ArmsInfo where [Zbname] = '{0}'",
                              comboBoxAllocationManageAddModifySelectArms.Text);
-                        SqlCommand cmd1 = new SqlCommand(strcmd1, DBClass.conn);
+                        SqlCommand cmd1 = new SqlCommand(strcmd1, DBClass_lilang.conn);
                         zbid = cmd1.ExecuteScalar().ToString();
                     }
                     if (StrList.timeFlag)
@@ -1827,12 +1841,12 @@ namespace Equipment_Management
                                 zbid, aNum, inDep, outDep, aType, pickMan, userfulTime,
                                 confirmMan, hostMan, aDate, memo, zbprice, 
                                 dataGridViewAllocationManage.CurrentRow.Cells[0].Value.ToString());
-                    SqlCommand cmd2 = new SqlCommand(strcmd2, DBClass.conn);
+                    SqlCommand cmd2 = new SqlCommand(strcmd2, DBClass_lilang.conn);
                     cmd2.ExecuteNonQuery();
                     MessageBox.Show("修改完成", "提示");
                 }
                 AllocationManageRefresh();
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
             }
             catch (Exception ex)
             {
@@ -1869,16 +1883,16 @@ namespace Equipment_Management
             {
                 try
                 {
-                    if (DBClass.conn.State != ConnectionState.Open)
+                    if (DBClass_lilang.conn.State != ConnectionState.Open)
                     {
-                        DBClass.conn.Open();
+                        DBClass_lilang.conn.Open();
                     }
                     string strcmd = "delete from ArmsAllo where [Id] = '" +
                         dataGridViewAllocationManage.CurrentRow.Cells[0].Value.ToString() + "'";
-                    SqlCommand cmd = new SqlCommand(strcmd, DBClass.conn);
+                    SqlCommand cmd = new SqlCommand(strcmd, DBClass_lilang.conn);
                     cmd.ExecuteNonQuery();
                     AllocationManageRefresh();
-                    DBClass.conn.Close();
+                    DBClass_lilang.conn.Close();
                 }
                 catch (Exception ex)
                 {
@@ -1930,7 +1944,7 @@ namespace Equipment_Management
         private void 添加修改调拨记录_VisibleChanged(object sender, EventArgs e)
         {
             string strda = "select distinct [Zbname] from ArmsInfo";
-            SqlDataAdapter da1 = new SqlDataAdapter(strda, DBClass.conn);
+            SqlDataAdapter da1 = new SqlDataAdapter(strda, DBClass_lilang.conn);
             DataSet ds = new DataSet();
             da1.Fill(ds, "Zbname");
             DataRow row1 = ds.Tables["Zbname"].NewRow();
@@ -1945,7 +1959,7 @@ namespace Equipment_Management
             dateTimePickerRepairManageAddModifySelectDate.Value = DateTime.Now;
 
             strda = "select distinct [DepName] from Departments";
-            SqlDataAdapter da2 = new SqlDataAdapter(strda, DBClass.conn);
+            SqlDataAdapter da2 = new SqlDataAdapter(strda, DBClass_lilang.conn);
             da2.Fill(ds, "Unit");
             DataRow row2 = ds.Tables["Unit"].NewRow();
             row2["DepName"] = "空";
@@ -1968,7 +1982,7 @@ namespace Equipment_Management
                 new List<string>() { "空", "调拨", "价拨" }.ToArray());
 
             strda = "select distinct [Ryname] from ArmsPerson";
-            SqlDataAdapter da3 = new SqlDataAdapter(strda, DBClass.conn);
+            SqlDataAdapter da3 = new SqlDataAdapter(strda, DBClass_lilang.conn);
             da3.Fill(ds, "Ryname1");
             DataRow row4 = ds.Tables["Ryname1"].NewRow();
             row4["Ryname"] = "空";
@@ -2000,6 +2014,8 @@ namespace Equipment_Management
             textBoxAllocationManageAddModifyZbprice.Text = "";
         }
 
+        //--------------------------------李朗-----------------------------------------
+
         private void 经费明细管理ToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -2016,5 +2032,7 @@ namespace Equipment_Management
             人员基本信息 to_ryjbxx = new 人员基本信息();
             to_ryjbxx.Show();
         }
+
+
     }
 }

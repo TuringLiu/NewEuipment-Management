@@ -1,39 +1,17 @@
-D:\Visual Studio\Equipment-Management\Equipment-Management\bin\Debug\Equipment-Management.exe.config
-D:\Visual Studio\Equipment-Management\Equipment-Management\bin\Debug\Equipment-Management.exe
-D:\Visual Studio\Equipment-Management\Equipment-Management\bin\Debug\Equipment-Management.pdb
-D:\Visual Studio\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.csprojResolveAssemblyReference.cache
-D:\Visual Studio\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.Load.resources
-D:\Visual Studio\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.Properties.Resources.resources
-D:\Visual Studio\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.csproj.GenerateResource.cache
-D:\Visual Studio\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.csproj.CoreCompileInputs.cache
-D:\Visual Studio\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.exe
-D:\Visual Studio\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.pdb
-D:\Visual Studio\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.Main.resources
-D:\Git\NewEuipment-Management\Equipment-Management\Equipment-Management\bin\Debug\Equipment-Management.exe.config
-D:\Git\NewEuipment-Management\Equipment-Management\Equipment-Management\bin\Debug\Equipment-Management.exe
-D:\Git\NewEuipment-Management\Equipment-Management\Equipment-Management\bin\Debug\Equipment-Management.pdb
-D:\Git\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.csprojResolveAssemblyReference.cache
-D:\Git\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.Load.resources
-D:\Git\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.Main.resources
-D:\Git\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.Properties.Resources.resources
-D:\Git\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.csproj.GenerateResource.cache
-D:\Git\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.csproj.CoreCompileInputs.cache
-D:\Git\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.exe
-D:\Git\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.pdb
-D:\a million code\github\NewEuipment-Management-master\NewEuipment-Management\Equipment-Management\Equipment-Management\bin\Debug\Equipment-Management.exe.config
-D:\a million code\github\NewEuipment-Management-master\NewEuipment-Management\Equipment-Management\Equipment-Management\bin\Debug\Equipment-Management.exe
-D:\a million code\github\NewEuipment-Management-master\NewEuipment-Management\Equipment-Management\Equipment-Management\bin\Debug\Equipment-Management.pdb
-D:\a million code\github\NewEuipment-Management-master\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.csprojResolveAssemblyReference.cache
-D:\a million code\github\NewEuipment-Management-master\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.Load.resources
-D:\a million code\github\NewEuipment-Management-master\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.Main.resources
-D:\a million code\github\NewEuipment-Management-master\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.Properties.Resources.resources
-D:\a million code\github\NewEuipment-Management-master\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.csproj.GenerateResource.Cache
-D:\a million code\github\NewEuipment-Management-master\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.csproj.CoreCompileInputs.cache
-D:\a million code\github\NewEuipment-Management-master\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.exe
-D:\a million code\github\NewEuipment-Management-master\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.pdb
-D:\a million code\github\NewEuipment-Management-master\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.人员基本信息.resources
-D:\a million code\github\NewEuipment-Management-master\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.编辑人员信息.resources
-D:\a million code\github\NewEuipment-Management-master\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.编辑装备信息.resources
-D:\a million code\github\NewEuipment-Management-master\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.编辑部门信息.resources
-D:\a million code\github\NewEuipment-Management-master\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.装备基本信息.resources
-D:\a million code\github\NewEuipment-Management-master\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.部门基本信息.resources
+D:\GitHub\NewEuipment-Management\Equipment-Management\Equipment-Management\bin\Debug\Equipment-Management.exe.config
+D:\GitHub\NewEuipment-Management\Equipment-Management\Equipment-Management\bin\Debug\Equipment-Management.exe
+D:\GitHub\NewEuipment-Management\Equipment-Management\Equipment-Management\bin\Debug\Equipment-Management.pdb
+D:\GitHub\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.csprojAssemblyReference.cache
+D:\GitHub\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.FormLogIn.resources
+D:\GitHub\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.Main.resources
+D:\GitHub\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.Properties.Resources.resources
+D:\GitHub\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.人员基本信息.resources
+D:\GitHub\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.编辑人员信息.resources
+D:\GitHub\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.编辑装备信息.resources
+D:\GitHub\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.编辑部门信息.resources
+D:\GitHub\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.装备基本信息.resources
+D:\GitHub\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.部门基本信息.resources
+D:\GitHub\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.csproj.GenerateResource.cache
+D:\GitHub\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.csproj.CoreCompileInputs.cache
+D:\GitHub\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.exe
+D:\GitHub\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.pdb

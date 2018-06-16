@@ -25,17 +25,18 @@ namespace Equipment_Management
             if(textBoxUserName.Text =="" || textBoxPwd.Text == "")
             {
                 MessageBox.Show("用户名或密码为空", "提示");
+                return;
             }
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 //判断用户名是否存在，密码是否正确
                 string strcmd = "select [Usersname] from ArmsUsers " +
                     "where [Usersname] = '" + textBoxUserName.Text + "'";
-                SqlCommand cmd1 = new SqlCommand(strcmd, DBClass.conn);
+                SqlCommand cmd1 = new SqlCommand(strcmd, DBClass_lilang.conn);
                 if (cmd1.ExecuteScalar() == null)
                 {
                     MessageBox.Show("用户名不存在", "提示");
@@ -43,7 +44,7 @@ namespace Equipment_Management
                 }
                 strcmd = "select [Userspwd] from ArmsUsers " +
                     "where [Userspwd] = '" + textBoxPwd.Text + "'";
-                SqlCommand cmd2 = new SqlCommand(strcmd, DBClass.conn);
+                SqlCommand cmd2 = new SqlCommand(strcmd, DBClass_lilang.conn);
                 if (cmd2.ExecuteScalar().ToString().Trim() != textBoxPwd.Text)
                 {
                     MessageBox.Show("密码不正确", "提示");
@@ -54,7 +55,7 @@ namespace Equipment_Management
                         ",'{3}','{4}','{5}','{6}')", StreamCode.GetCode("LogId", "SysLog"),
                         DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(),
                         "登录", "用户登录密码错误", "用户名: " + LogInUser.userName, LogInUser.userName);
-                    SqlCommand cmd3 = new SqlCommand(strcmd, DBClass.conn);
+                    SqlCommand cmd3 = new SqlCommand(strcmd, DBClass_lilang.conn);
                     cmd3.ExecuteNonQuery();
                 }
                 if (LogInUser.logFlag)
@@ -63,7 +64,7 @@ namespace Equipment_Management
                     LogInUser.userName = textBoxUserName.Text;
                     strcmd = "select [User_type] from ArmsUsers " +
                         "where [Usersname] = '" + textBoxUserName.Text + "'";
-                    SqlCommand cmd3 = new SqlCommand(strcmd, DBClass.conn);
+                    SqlCommand cmd3 = new SqlCommand(strcmd, DBClass_lilang.conn);
                     LogInUser.userType = cmd3.ExecuteScalar().ToString().Trim();
                     //记录登录成功的信息
                     strcmd = String.Format("insert SysLog(LogId, LogDate, LogTime," +
@@ -71,9 +72,9 @@ namespace Equipment_Management
                         ",'{3}','{4}','{5}','{6}')", StreamCode.GetCode("LogId", "SysLog"),
                         DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(),
                         "登录", "用户登录成功", "用户名: " + LogInUser.userName, LogInUser.userName);
-                    SqlCommand cmd4 = new SqlCommand(strcmd, DBClass.conn);
+                    SqlCommand cmd4 = new SqlCommand(strcmd, DBClass_lilang.conn);
                     cmd4.ExecuteNonQuery();
-                    DBClass.conn.Close();
+                    DBClass_lilang.conn.Close();
                 }
             }
             catch (Exception ex)
@@ -93,9 +94,9 @@ namespace Equipment_Management
         {
             try
             {
-                if (DBClass.conn.State != ConnectionState.Open)
+                if (DBClass_lilang.conn.State != ConnectionState.Open)
                 {
-                    DBClass.conn.Open();
+                    DBClass_lilang.conn.Open();
                 }
                 //记录注销登录的信息
                 string strcmd = String.Format("insert SysLog(LogId, LogDate, LogTime," +
@@ -103,9 +104,9 @@ namespace Equipment_Management
                         ",'{3}','{4}','{5}','{6}')", StreamCode.GetCode("LogId", "SysLog"),
                         DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(),
                         "注销登录", "用户注销登录成功", "用户名: " + LogInUser.userName, LogInUser.userName);
-                SqlCommand cmd = new SqlCommand(strcmd, DBClass.conn);
+                SqlCommand cmd = new SqlCommand(strcmd, DBClass_lilang.conn);
                 cmd.ExecuteNonQuery();
-                DBClass.conn.Close();
+                DBClass_lilang.conn.Close();
             }
             catch (Exception ex)
             {

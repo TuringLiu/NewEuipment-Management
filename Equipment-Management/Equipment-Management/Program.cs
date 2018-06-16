@@ -31,7 +31,7 @@ namespace Equipment_Management
     }
 
     //连接数据库
-    public static class DBClass
+    public static class DBClass_lilang
     {
         public static string strConn = "Server = 25.24.20.180; Initial Catalog = " +
             "Equipment Management Information System; uid = lilang; pwd = 201608";
@@ -73,7 +73,7 @@ namespace Equipment_Management
         {
             id = DateTime.Now.Year;
             string strcmd = String.Format("select MAX(" + idName +") from " + libraryName);
-            SqlCommand cmd = new SqlCommand(strcmd, DBClass.conn);
+            SqlCommand cmd = new SqlCommand(strcmd, DBClass_lilang.conn);
             if(cmd.ExecuteScalar().ToString() != "")
             {
                 if(int.Parse(cmd.ExecuteScalar().ToString().Substring(0, 4)) >= DateTime.Now.Year)
