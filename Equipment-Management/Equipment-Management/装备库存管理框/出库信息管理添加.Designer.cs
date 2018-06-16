@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -40,16 +39,17 @@
             this.label10 = new System.Windows.Forms.Label();
             this.出库信息管理添加添加 = new System.Windows.Forms.Button();
             this.出库信息管理添加取消 = new System.Windows.Forms.Button();
-            this.出库管理添加装备名称 = new System.Windows.Forms.ComboBox();
-            this.出库管理添加选择仓库 = new System.Windows.Forms.ComboBox();
-            this.出库管理添加装备类别 = new System.Windows.Forms.ComboBox();
-            this.出库管理添加出库类型 = new System.Windows.Forms.ComboBox();
+            this.出库管理添加仓库编号 = new System.Windows.Forms.ComboBox();
             this.出库管理添加装备价格 = new System.Windows.Forms.Label();
             this.出库管理添加经办人 = new System.Windows.Forms.Label();
             this.出库管理添加库存数量 = new System.Windows.Forms.Label();
             this.出库管理添加出库日期 = new System.Windows.Forms.Label();
             this.出库管理添加出库数量 = new System.Windows.Forms.TextBox();
             this.出库管理添加批准人 = new System.Windows.Forms.TextBox();
+            this.出库管理添加出库类型 = new System.Windows.Forms.TextBox();
+            this.dateGridView出库信息管理添加库存装备信息 = new System.Windows.Forms.DataGridView();
+            this.出库管理添加装备编号 = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dateGridView出库信息管理添加库存装备信息)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -59,16 +59,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 12);
             this.label1.TabIndex = 0;
-            this.label1.Text = "装备类别";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(230, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "装备名称";
+            this.label1.Text = "装备编号";
             // 
             // label3
             // 
@@ -82,11 +73,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(230, 77);
+            this.label4.Location = new System.Drawing.Point(242, 38);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 12);
             this.label4.TabIndex = 3;
-            this.label4.Text = "选择仓库";
+            this.label4.Text = "仓库编号";
             // 
             // label5
             // 
@@ -150,6 +141,7 @@
             this.出库信息管理添加添加.TabIndex = 10;
             this.出库信息管理添加添加.Text = "添加";
             this.出库信息管理添加添加.UseVisualStyleBackColor = true;
+            this.出库信息管理添加添加.Click += new System.EventHandler(this.出库信息管理添加添加_Click);
             // 
             // 出库信息管理添加取消
             // 
@@ -159,38 +151,17 @@
             this.出库信息管理添加取消.TabIndex = 11;
             this.出库信息管理添加取消.Text = "取消";
             this.出库信息管理添加取消.UseVisualStyleBackColor = true;
+            this.出库信息管理添加取消.Click += new System.EventHandler(this.出库信息管理添加取消_Click);
             // 
-            // 出库管理添加装备名称
+            // 出库管理添加仓库编号
             // 
-            this.出库管理添加装备名称.FormattingEnabled = true;
-            this.出库管理添加装备名称.Location = new System.Drawing.Point(289, 35);
-            this.出库管理添加装备名称.Name = "出库管理添加装备名称";
-            this.出库管理添加装备名称.Size = new System.Drawing.Size(121, 20);
-            this.出库管理添加装备名称.TabIndex = 12;
-            // 
-            // 出库管理添加选择仓库
-            // 
-            this.出库管理添加选择仓库.FormattingEnabled = true;
-            this.出库管理添加选择仓库.Location = new System.Drawing.Point(289, 74);
-            this.出库管理添加选择仓库.Name = "出库管理添加选择仓库";
-            this.出库管理添加选择仓库.Size = new System.Drawing.Size(121, 20);
-            this.出库管理添加选择仓库.TabIndex = 13;
-            // 
-            // 出库管理添加装备类别
-            // 
-            this.出库管理添加装备类别.FormattingEnabled = true;
-            this.出库管理添加装备类别.Location = new System.Drawing.Point(92, 35);
-            this.出库管理添加装备类别.Name = "出库管理添加装备类别";
-            this.出库管理添加装备类别.Size = new System.Drawing.Size(121, 20);
-            this.出库管理添加装备类别.TabIndex = 14;
-            // 
-            // 出库管理添加出库类型
-            // 
-            this.出库管理添加出库类型.FormattingEnabled = true;
-            this.出库管理添加出库类型.Location = new System.Drawing.Point(92, 74);
-            this.出库管理添加出库类型.Name = "出库管理添加出库类型";
-            this.出库管理添加出库类型.Size = new System.Drawing.Size(121, 20);
-            this.出库管理添加出库类型.TabIndex = 15;
+            this.出库管理添加仓库编号.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.出库管理添加仓库编号.FormattingEnabled = true;
+            this.出库管理添加仓库编号.Location = new System.Drawing.Point(301, 35);
+            this.出库管理添加仓库编号.Name = "出库管理添加仓库编号";
+            this.出库管理添加仓库编号.Size = new System.Drawing.Size(121, 20);
+            this.出库管理添加仓库编号.TabIndex = 13;
+            this.出库管理添加仓库编号.SelectionChangeCommitted += new System.EventHandler(this.出库管理添加仓库编号_SelectionChangeCommitted);
             // 
             // 出库管理添加装备价格
             // 
@@ -242,21 +213,50 @@
             this.出库管理添加批准人.Size = new System.Drawing.Size(66, 21);
             this.出库管理添加批准人.TabIndex = 21;
             // 
+            // 出库管理添加出库类型
+            // 
+            this.出库管理添加出库类型.Location = new System.Drawing.Point(92, 73);
+            this.出库管理添加出库类型.Name = "出库管理添加出库类型";
+            this.出库管理添加出库类型.Size = new System.Drawing.Size(121, 21);
+            this.出库管理添加出库类型.TabIndex = 22;
+            // 
+            // dateGridView出库信息管理添加库存装备信息
+            // 
+            this.dateGridView出库信息管理添加库存装备信息.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dateGridView出库信息管理添加库存装备信息.Location = new System.Drawing.Point(12, 113);
+            this.dateGridView出库信息管理添加库存装备信息.Name = "dateGridView出库信息管理添加库存装备信息";
+            this.dateGridView出库信息管理添加库存装备信息.RowTemplate.Height = 23;
+            this.dateGridView出库信息管理添加库存装备信息.Size = new System.Drawing.Size(460, 193);
+            this.dateGridView出库信息管理添加库存装备信息.TabIndex = 23;
+            this.dateGridView出库信息管理添加库存装备信息.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dateGridView出库信息管理添加库存装备信息_CellClick);
+            this.dateGridView出库信息管理添加库存装备信息.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dateGridView出库信息管理添加库存装备信息_RowEnter);
+            // 
+            // 出库管理添加装备编号
+            // 
+            this.出库管理添加装备编号.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.出库管理添加装备编号.FormattingEnabled = true;
+            this.出库管理添加装备编号.Location = new System.Drawing.Point(92, 35);
+            this.出库管理添加装备编号.Name = "出库管理添加装备编号";
+            this.出库管理添加装备编号.Size = new System.Drawing.Size(121, 20);
+            this.出库管理添加装备编号.TabIndex = 14;
+            this.出库管理添加装备编号.SelectedIndexChanged += new System.EventHandler(this.出库管理添加装备类别_SelectedIndexChanged);
+            this.出库管理添加装备编号.SelectionChangeCommitted += new System.EventHandler(this.出库管理添加装备类别_SelectionChangeCommitted);
+            // 
             // 出库信息管理添加
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 461);
+            this.Controls.Add(this.dateGridView出库信息管理添加库存装备信息);
+            this.Controls.Add(this.出库管理添加出库类型);
             this.Controls.Add(this.出库管理添加批准人);
             this.Controls.Add(this.出库管理添加出库数量);
             this.Controls.Add(this.出库管理添加出库日期);
             this.Controls.Add(this.出库管理添加库存数量);
             this.Controls.Add(this.出库管理添加经办人);
             this.Controls.Add(this.出库管理添加装备价格);
-            this.Controls.Add(this.出库管理添加出库类型);
-            this.Controls.Add(this.出库管理添加装备类别);
-            this.Controls.Add(this.出库管理添加选择仓库);
-            this.Controls.Add(this.出库管理添加装备名称);
+            this.Controls.Add(this.出库管理添加装备编号);
+            this.Controls.Add(this.出库管理添加仓库编号);
             this.Controls.Add(this.出库信息管理添加取消);
             this.Controls.Add(this.出库信息管理添加添加);
             this.Controls.Add(this.label10);
@@ -267,10 +267,11 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "出库信息管理添加";
             this.Text = "出库信息管理添加";
+            this.Load += new System.EventHandler(this.出库信息管理添加_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dateGridView出库信息管理添加库存装备信息)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,7 +280,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -290,15 +290,15 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button 出库信息管理添加添加;
         private System.Windows.Forms.Button 出库信息管理添加取消;
-        private System.Windows.Forms.ComboBox 出库管理添加装备名称;
-        private System.Windows.Forms.ComboBox 出库管理添加选择仓库;
-        private System.Windows.Forms.ComboBox 出库管理添加装备类别;
-        private System.Windows.Forms.ComboBox 出库管理添加出库类型;
+        private System.Windows.Forms.ComboBox 出库管理添加仓库编号;
         private System.Windows.Forms.Label 出库管理添加装备价格;
         private System.Windows.Forms.Label 出库管理添加经办人;
         private System.Windows.Forms.Label 出库管理添加库存数量;
         private System.Windows.Forms.Label 出库管理添加出库日期;
         private System.Windows.Forms.TextBox 出库管理添加出库数量;
         private System.Windows.Forms.TextBox 出库管理添加批准人;
+        private System.Windows.Forms.TextBox 出库管理添加出库类型;
+        private System.Windows.Forms.DataGridView dateGridView出库信息管理添加库存装备信息;
+        private System.Windows.Forms.ComboBox 出库管理添加装备编号;
     }
 }
