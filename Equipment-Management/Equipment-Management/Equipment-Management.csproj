@@ -59,6 +59,47 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+
+    <Compile Include="人员基本信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="人员基本信息.Designer.cs">
+      <DependentUpon>人员基本信息.cs</DependentUpon>
+    </Compile>
+    <Compile Include="编辑人员信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="编辑人员信息.Designer.cs">
+      <DependentUpon>编辑人员信息.cs</DependentUpon>
+    </Compile>
+    <Compile Include="编辑装备信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="编辑装备信息.Designer.cs">
+      <DependentUpon>编辑装备信息.cs</DependentUpon>
+    </Compile>
+    <Compile Include="编辑部门信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="编辑部门信息.Designer.cs">
+      <DependentUpon>编辑部门信息.cs</DependentUpon>
+    </Compile>
+    <Compile Include="装备基本信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="装备基本信息.Designer.cs">
+      <DependentUpon>装备基本信息.cs</DependentUpon>
+    </Compile>
+    <Compile Include="部门基本信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="部门基本信息.Designer.cs">
+      <DependentUpon>部门基本信息.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormLogIn.resx">
+      <DependentUpon>FormLogIn.cs</DependentUpon>
+=======
+
     <Compile Include="装备库存管理框\入库信息管理修改.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +156,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+
+>>>>>>> ZhangliNew
+
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -128,6 +172,28 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+
+=======
+
+    <EmbeddedResource Include="人员基本信息.resx">
+      <DependentUpon>人员基本信息.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="编辑人员信息.resx">
+      <DependentUpon>编辑人员信息.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="编辑装备信息.resx">
+      <DependentUpon>编辑装备信息.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="编辑部门信息.resx">
+      <DependentUpon>编辑部门信息.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="装备基本信息.resx">
+      <DependentUpon>装备基本信息.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="部门基本信息.resx">
+      <DependentUpon>部门基本信息.cs</DependentUpon>
+=======
+
     <EmbeddedResource Include="装备库存管理框\入库信息管理修改.resx">
       <DependentUpon>入库信息管理修改.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,6 +220,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="装备库存管理框\出库信息管理添加.resx">
       <DependentUpon>出库信息管理添加.cs</DependentUpon>
+
+=======
+>>>>>>> ZhangliNew
+
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
