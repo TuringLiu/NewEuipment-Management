@@ -16,5 +16,14 @@ namespace Equipment_Management
         {
             InitializeComponent();
         }
+<<<<<<< HEAD:Equipment-Management/Equipment-Management/编辑人员信息.cs
+=======
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Main mainn = new Main();
+            mainn.Show(this);
+        }
+>>>>>>> zhaokangqiang:Equipment-Management/Equipment-Management/Form1.cs
     }
 }
