@@ -16,5 +16,11 @@ namespace Equipment_Management
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Main mainn = new Main();
+            mainn.Show(this);
+        }
     }
 }
