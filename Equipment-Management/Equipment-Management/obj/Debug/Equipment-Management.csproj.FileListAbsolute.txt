@@ -15,3 +15,6 @@ D:\GitHub\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\D
 D:\GitHub\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.csproj.CoreCompileInputs.cache
 D:\GitHub\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.exe
 D:\GitHub\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.pdb
+E:\Github\NewEuipment-Management\Equipment-Management\Equipment-Management\bin\Debug\Equipment-Management.exe.config
+E:\Github\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.exe
+E:\Github\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.pdb
