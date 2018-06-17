@@ -59,6 +59,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <Compile Include="人员基本信息.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +98,64 @@
     </Compile>
     <EmbeddedResource Include="FormLogIn.resx">
       <DependentUpon>FormLogIn.cs</DependentUpon>
+=======
+    <Compile Include="装备库存管理框\入库信息管理修改.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="装备库存管理框\入库信息管理修改.Designer.cs">
+      <DependentUpon>入库信息管理修改.cs</DependentUpon>
+    </Compile>
+    <Compile Include="装备库存管理框\仓库信息管理删除.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="装备库存管理框\仓库信息管理删除.Designer.cs">
+      <DependentUpon>仓库信息管理删除.cs</DependentUpon>
+    </Compile>
+    <Compile Include="装备库存管理框\仓库信息管理修改.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="装备库存管理框\仓库信息管理修改.Designer.cs">
+      <DependentUpon>仓库信息管理修改.cs</DependentUpon>
+    </Compile>
+    <Compile Include="装备库存管理框\仓库信息管理添加.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="装备库存管理框\仓库信息管理添加.Designer.cs">
+      <DependentUpon>仓库信息管理添加.cs</DependentUpon>
+    </Compile>
+    <Compile Include="装备库存管理框\入库信息管理删除.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="装备库存管理框\入库信息管理删除.Designer.cs">
+      <DependentUpon>入库信息管理删除.cs</DependentUpon>
+    </Compile>
+    <Compile Include="装备库存管理框\入库信息管理添加.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="装备库存管理框\入库信息管理添加.Designer.cs">
+      <DependentUpon>入库信息管理添加.cs</DependentUpon>
+    </Compile>
+    <Compile Include="装备库存管理框\出库信息管理修改.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="装备库存管理框\出库信息管理修改.Designer.cs">
+      <DependentUpon>出库信息管理修改.cs</DependentUpon>
+    </Compile>
+    <Compile Include="装备库存管理框\出库信息管理删除.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="装备库存管理框\出库信息管理删除.Designer.cs">
+      <DependentUpon>出库信息管理删除.cs</DependentUpon>
+    </Compile>
+    <Compile Include="装备库存管理框\出库信息管理添加.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="装备库存管理框\出库信息管理添加.Designer.cs">
+      <DependentUpon>出库信息管理添加.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+>>>>>>> ZhangliNew
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -111,6 +170,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+<<<<<<< HEAD
     <EmbeddedResource Include="人员基本信息.resx">
       <DependentUpon>人员基本信息.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +188,34 @@
     </EmbeddedResource>
     <EmbeddedResource Include="部门基本信息.resx">
       <DependentUpon>部门基本信息.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="装备库存管理框\入库信息管理修改.resx">
+      <DependentUpon>入库信息管理修改.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="装备库存管理框\仓库信息管理删除.resx">
+      <DependentUpon>仓库信息管理删除.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="装备库存管理框\仓库信息管理修改.resx">
+      <DependentUpon>仓库信息管理修改.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="装备库存管理框\仓库信息管理添加.resx">
+      <DependentUpon>仓库信息管理添加.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="装备库存管理框\入库信息管理删除.resx">
+      <DependentUpon>入库信息管理删除.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="装备库存管理框\入库信息管理添加.resx">
+      <DependentUpon>入库信息管理添加.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="装备库存管理框\出库信息管理修改.resx">
+      <DependentUpon>出库信息管理修改.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="装备库存管理框\出库信息管理删除.resx">
+      <DependentUpon>出库信息管理删除.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="装备库存管理框\出库信息管理添加.resx">
+      <DependentUpon>出库信息管理添加.cs</DependentUpon>
+>>>>>>> ZhangliNew
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
