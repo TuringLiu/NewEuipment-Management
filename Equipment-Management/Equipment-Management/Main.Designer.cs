@@ -80,6 +80,8 @@
             this.统计查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.出入库统计表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.装备库存流水统计表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.出库查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.入库查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.部门人员查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.装备经费汇总ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.注销ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -90,29 +92,64 @@
             this.添加账户 = new System.Windows.Forms.Panel();
             this.统计与查询 = new System.Windows.Forms.Panel();
             this.库存装备流水统计表 = new System.Windows.Forms.Panel();
-            this.装备流水统计查询容器 = new System.Windows.Forms.GroupBox();
-            this.装备流水信息查询按钮 = new System.Windows.Forms.Button();
-            this.装备流水查询类型选择容器 = new System.Windows.Forms.GroupBox();
-            this.出库信息查询选择 = new System.Windows.Forms.RadioButton();
-            this.入库信息查询选择 = new System.Windows.Forms.RadioButton();
-            this.出入库信息查询选择 = new System.Windows.Forms.RadioButton();
-            this.装备出入库信息内容显示 = new System.Windows.Forms.Panel();
+            this.装备流水信息出库显示 = new System.Windows.Forms.Panel();
             this.装备流水信息文本至 = new System.Windows.Forms.Label();
             this.装备流水信息查询时间信息显示 = new System.Windows.Forms.Label();
-            this.装备流水信息日期选择按钮 = new System.Windows.Forms.Button();
+            this.装备出库流水日期选择按钮 = new System.Windows.Forms.Button();
             this.装备流水信息导出表格按钮 = new System.Windows.Forms.Button();
             this.装备流水信息时间查询选择2 = new System.Windows.Forms.DateTimePicker();
             this.装备流水信息时间查询选择1 = new System.Windows.Forms.DateTimePicker();
             this.装备流水信息数据显示 = new System.Windows.Forms.DataGridView();
-            this.出入库类型 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.装备流水出库编号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.装备流水出库类型 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.装备流水出库装备单价 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.出入库编号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.出入库数量 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.出入库装备生产日期 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.出入库经办人 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.出入库时间 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.出入库验收人 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.出入库仓库编号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.装备流水出库数量 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.装备流水出库仓库编号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.装备流水出库批准人 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.装备流水出库经办人 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.装备流水出库时间 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.装备流水出库备注 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zbidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zbpriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zbnumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ryname1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.optDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.memoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.takeoutBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.equipmentManagementInformationSystemDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.equipment_Management_Information_SystemDataSet = new Equipment_Management.Equipment_Management_Information_SystemDataSet();
             this.装备流水统计表标题 = new System.Windows.Forms.Label();
+            this.装备流水信息入库显示 = new System.Windows.Forms.Panel();
+            this.装备流水入库至 = new System.Windows.Forms.Label();
+            this.装备流水入库日期前缀 = new System.Windows.Forms.Label();
+            this.装备流水入库时间选择 = new System.Windows.Forms.Button();
+            this.装备流水入库导出表格 = new System.Windows.Forms.Button();
+            this.装备流水入库时间选择2 = new System.Windows.Forms.DateTimePicker();
+            this.装备流水入库时间选择1 = new System.Windows.Forms.DateTimePicker();
+            this.装备流水入库数据显示 = new System.Windows.Forms.DataGridView();
+            this.装备流水入库类型 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.装备流水入库装备编号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.装备流水入库入库编号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.装备流水入库数量 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.装备流水入库生产日期 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.装备流水入库经办人 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.装备流水入库时间 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.装备流水入库验收人 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.装备流水入库仓库编号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.装备流水入库备注 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.storelnBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.装备流水入库标题 = new System.Windows.Forms.Label();
             this.装备出入库统计表 = new System.Windows.Forms.Panel();
             this.装备出入库导出表格按钮 = new System.Windows.Forms.Button();
             this.装备出入库查询按钮 = new System.Windows.Forms.Button();
@@ -182,8 +219,6 @@
             this.masterDataSet = new Equipment_Management.masterDataSet();
             this.部门人员基本信息表标题 = new System.Windows.Forms.Label();
             this.outlaylnBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.equipmentManagementInformationSystemDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.equipment_Management_Information_SystemDataSet = new Equipment_Management.Equipment_Management_Information_SystemDataSet();
             this.armsPersonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.装备库存管理 = new System.Windows.Forms.Panel();
             this.装备库存盘点 = new System.Windows.Forms.Panel();
@@ -215,15 +250,21 @@
             this.outlaylnTableAdapter = new Equipment_Management.Equipment_Management_Information_SystemDataSetTableAdapters.OutlaylnTableAdapter();
             this.armsPersonTableAdapter = new Equipment_Management.masterDataSetTableAdapters.ArmsPersonTableAdapter();
             this.outlaylnBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.storelnTableAdapter = new Equipment_Management.Equipment_Management_Information_SystemDataSetTableAdapters.StorelnTableAdapter();
+            this.takeoutTableAdapter = new Equipment_Management.Equipment_Management_Information_SystemDataSetTableAdapters.TakeoutTableAdapter();
             this.menuStrip1.SuspendLayout();
             this.系统管理.SuspendLayout();
             this.用户管理.SuspendLayout();
             this.统计与查询.SuspendLayout();
             this.库存装备流水统计表.SuspendLayout();
-            this.装备流水统计查询容器.SuspendLayout();
-            this.装备流水查询类型选择容器.SuspendLayout();
-            this.装备出入库信息内容显示.SuspendLayout();
+            this.装备流水信息出库显示.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.装备流水信息数据显示)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.takeoutBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipmentManagementInformationSystemDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipment_Management_Information_SystemDataSet)).BeginInit();
+            this.装备流水信息入库显示.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.装备流水入库数据显示)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storelnBindingSource)).BeginInit();
             this.装备出入库统计表.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.装备出入库信息数据显示)).BeginInit();
             this.装备经费汇总.SuspendLayout();
@@ -237,8 +278,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.armsPersonBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.outlaylnBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.equipmentManagementInformationSystemDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.equipment_Management_Information_SystemDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.armsPersonBindingSource)).BeginInit();
             this.装备库存管理.SuspendLayout();
             this.出库信息管理.SuspendLayout();
@@ -633,10 +672,26 @@
             // 
             // 装备库存流水统计表ToolStripMenuItem
             // 
+            this.装备库存流水统计表ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.出库查询ToolStripMenuItem,
+            this.入库查询ToolStripMenuItem});
             this.装备库存流水统计表ToolStripMenuItem.Name = "装备库存流水统计表ToolStripMenuItem";
             this.装备库存流水统计表ToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.装备库存流水统计表ToolStripMenuItem.Text = "装备库存流水统计表";
-            this.装备库存流水统计表ToolStripMenuItem.Click += new System.EventHandler(this.装备库存流水统计表ToolStripMenuItem_Click);
+            // 
+            // 出库查询ToolStripMenuItem
+            // 
+            this.出库查询ToolStripMenuItem.Name = "出库查询ToolStripMenuItem";
+            this.出库查询ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.出库查询ToolStripMenuItem.Text = "出库查询";
+            this.出库查询ToolStripMenuItem.Click += new System.EventHandler(this.出库查询ToolStripMenuItem_Click);
+            // 
+            // 入库查询ToolStripMenuItem
+            // 
+            this.入库查询ToolStripMenuItem.Name = "入库查询ToolStripMenuItem";
+            this.入库查询ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.入库查询ToolStripMenuItem.Text = "入库查询";
+            this.入库查询ToolStripMenuItem.Click += new System.EventHandler(this.入库查询ToolStripMenuItem_Click);
             // 
             // 部门人员查询ToolStripMenuItem
             // 
@@ -703,10 +758,10 @@
             // 
             // 统计与查询
             // 
-            this.统计与查询.Controls.Add(this.库存装备流水统计表);
-            this.统计与查询.Controls.Add(this.装备出入库统计表);
             this.统计与查询.Controls.Add(this.装备经费汇总);
+            this.统计与查询.Controls.Add(this.装备出入库统计表);
             this.统计与查询.Controls.Add(this.部门人员查询);
+            this.统计与查询.Controls.Add(this.库存装备流水统计表);
             this.统计与查询.Dock = System.Windows.Forms.DockStyle.Fill;
             this.统计与查询.Location = new System.Drawing.Point(0, 25);
             this.统计与查询.Margin = new System.Windows.Forms.Padding(2);
@@ -716,8 +771,8 @@
             // 
             // 库存装备流水统计表
             // 
-            this.库存装备流水统计表.Controls.Add(this.装备流水统计查询容器);
-            this.库存装备流水统计表.Controls.Add(this.装备出入库信息内容显示);
+            this.库存装备流水统计表.Controls.Add(this.装备流水信息入库显示);
+            this.库存装备流水统计表.Controls.Add(this.装备流水信息出库显示);
             this.库存装备流水统计表.Dock = System.Windows.Forms.DockStyle.Fill;
             this.库存装备流水统计表.Location = new System.Drawing.Point(0, 0);
             this.库存装备流水统计表.Margin = new System.Windows.Forms.Padding(2);
@@ -725,101 +780,27 @@
             this.库存装备流水统计表.Size = new System.Drawing.Size(932, 425);
             this.库存装备流水统计表.TabIndex = 0;
             // 
-            // 装备流水统计查询容器
+            // 装备流水信息出库显示
             // 
-            this.装备流水统计查询容器.Controls.Add(this.装备流水信息查询按钮);
-            this.装备流水统计查询容器.Controls.Add(this.装备流水查询类型选择容器);
-            this.装备流水统计查询容器.Location = new System.Drawing.Point(777, 21);
-            this.装备流水统计查询容器.Margin = new System.Windows.Forms.Padding(2);
-            this.装备流水统计查询容器.Name = "装备流水统计查询容器";
-            this.装备流水统计查询容器.Padding = new System.Windows.Forms.Padding(2);
-            this.装备流水统计查询容器.Size = new System.Drawing.Size(150, 358);
-            this.装备流水统计查询容器.TabIndex = 0;
-            this.装备流水统计查询容器.TabStop = false;
-            this.装备流水统计查询容器.Text = "库存装备流水信息查询";
-            this.装备流水统计查询容器.Enter += new System.EventHandler(this.装备流水统计查询容器_Enter);
-            // 
-            // 装备流水信息查询按钮
-            // 
-            this.装备流水信息查询按钮.Location = new System.Drawing.Point(25, 235);
-            this.装备流水信息查询按钮.Margin = new System.Windows.Forms.Padding(2);
-            this.装备流水信息查询按钮.Name = "装备流水信息查询按钮";
-            this.装备流水信息查询按钮.Size = new System.Drawing.Size(100, 30);
-            this.装备流水信息查询按钮.TabIndex = 1;
-            this.装备流水信息查询按钮.Text = "点击查询";
-            this.装备流水信息查询按钮.UseVisualStyleBackColor = true;
-            this.装备流水信息查询按钮.Click += new System.EventHandler(this.出入库信息查询按钮_Click);
-            // 
-            // 装备流水查询类型选择容器
-            // 
-            this.装备流水查询类型选择容器.Controls.Add(this.出库信息查询选择);
-            this.装备流水查询类型选择容器.Controls.Add(this.入库信息查询选择);
-            this.装备流水查询类型选择容器.Controls.Add(this.出入库信息查询选择);
-            this.装备流水查询类型选择容器.Location = new System.Drawing.Point(4, 35);
-            this.装备流水查询类型选择容器.Margin = new System.Windows.Forms.Padding(2);
-            this.装备流水查询类型选择容器.Name = "装备流水查询类型选择容器";
-            this.装备流水查询类型选择容器.Padding = new System.Windows.Forms.Padding(2);
-            this.装备流水查询类型选择容器.Size = new System.Drawing.Size(141, 122);
-            this.装备流水查询类型选择容器.TabIndex = 3;
-            this.装备流水查询类型选择容器.TabStop = false;
-            this.装备流水查询类型选择容器.Text = "类型选择";
-            // 
-            // 出库信息查询选择
-            // 
-            this.出库信息查询选择.AutoSize = true;
-            this.出库信息查询选择.Location = new System.Drawing.Point(18, 24);
-            this.出库信息查询选择.Margin = new System.Windows.Forms.Padding(2);
-            this.出库信息查询选择.Name = "出库信息查询选择";
-            this.出库信息查询选择.Size = new System.Drawing.Size(95, 16);
-            this.出库信息查询选择.TabIndex = 0;
-            this.出库信息查询选择.TabStop = true;
-            this.出库信息查询选择.Text = "出库信息查询";
-            this.出库信息查询选择.UseVisualStyleBackColor = true;
-            // 
-            // 入库信息查询选择
-            // 
-            this.入库信息查询选择.AutoSize = true;
-            this.入库信息查询选择.Location = new System.Drawing.Point(18, 54);
-            this.入库信息查询选择.Margin = new System.Windows.Forms.Padding(2);
-            this.入库信息查询选择.Name = "入库信息查询选择";
-            this.入库信息查询选择.Size = new System.Drawing.Size(95, 16);
-            this.入库信息查询选择.TabIndex = 1;
-            this.入库信息查询选择.TabStop = true;
-            this.入库信息查询选择.Text = "入库信息查询";
-            this.入库信息查询选择.UseVisualStyleBackColor = true;
-            // 
-            // 出入库信息查询选择
-            // 
-            this.出入库信息查询选择.AutoSize = true;
-            this.出入库信息查询选择.Location = new System.Drawing.Point(18, 86);
-            this.出入库信息查询选择.Margin = new System.Windows.Forms.Padding(2);
-            this.出入库信息查询选择.Name = "出入库信息查询选择";
-            this.出入库信息查询选择.Size = new System.Drawing.Size(107, 16);
-            this.出入库信息查询选择.TabIndex = 2;
-            this.出入库信息查询选择.TabStop = true;
-            this.出入库信息查询选择.Text = "出入库信息查询";
-            this.出入库信息查询选择.UseVisualStyleBackColor = true;
-            // 
-            // 装备出入库信息内容显示
-            // 
-            this.装备出入库信息内容显示.Controls.Add(this.装备流水信息文本至);
-            this.装备出入库信息内容显示.Controls.Add(this.装备流水信息查询时间信息显示);
-            this.装备出入库信息内容显示.Controls.Add(this.装备流水信息日期选择按钮);
-            this.装备出入库信息内容显示.Controls.Add(this.装备流水信息导出表格按钮);
-            this.装备出入库信息内容显示.Controls.Add(this.装备流水信息时间查询选择2);
-            this.装备出入库信息内容显示.Controls.Add(this.装备流水信息时间查询选择1);
-            this.装备出入库信息内容显示.Controls.Add(this.装备流水信息数据显示);
-            this.装备出入库信息内容显示.Controls.Add(this.装备流水统计表标题);
-            this.装备出入库信息内容显示.Location = new System.Drawing.Point(0, 0);
-            this.装备出入库信息内容显示.Margin = new System.Windows.Forms.Padding(2);
-            this.装备出入库信息内容显示.Name = "装备出入库信息内容显示";
-            this.装备出入库信息内容显示.Size = new System.Drawing.Size(772, 427);
-            this.装备出入库信息内容显示.TabIndex = 1;
+            this.装备流水信息出库显示.Controls.Add(this.装备流水信息文本至);
+            this.装备流水信息出库显示.Controls.Add(this.装备流水信息查询时间信息显示);
+            this.装备流水信息出库显示.Controls.Add(this.装备出库流水日期选择按钮);
+            this.装备流水信息出库显示.Controls.Add(this.装备流水信息导出表格按钮);
+            this.装备流水信息出库显示.Controls.Add(this.装备流水信息时间查询选择2);
+            this.装备流水信息出库显示.Controls.Add(this.装备流水信息时间查询选择1);
+            this.装备流水信息出库显示.Controls.Add(this.装备流水信息数据显示);
+            this.装备流水信息出库显示.Controls.Add(this.装备流水统计表标题);
+            this.装备流水信息出库显示.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.装备流水信息出库显示.Location = new System.Drawing.Point(0, 0);
+            this.装备流水信息出库显示.Margin = new System.Windows.Forms.Padding(2);
+            this.装备流水信息出库显示.Name = "装备流水信息出库显示";
+            this.装备流水信息出库显示.Size = new System.Drawing.Size(932, 425);
+            this.装备流水信息出库显示.TabIndex = 1;
             // 
             // 装备流水信息文本至
             // 
             this.装备流水信息文本至.AutoSize = true;
-            this.装备流水信息文本至.Location = new System.Drawing.Point(221, 83);
+            this.装备流水信息文本至.Location = new System.Drawing.Point(241, 82);
             this.装备流水信息文本至.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.装备流水信息文本至.Name = "装备流水信息文本至";
             this.装备流水信息文本至.Size = new System.Drawing.Size(17, 12);
@@ -832,24 +813,24 @@
             this.装备流水信息查询时间信息显示.Location = new System.Drawing.Point(20, 83);
             this.装备流水信息查询时间信息显示.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.装备流水信息查询时间信息显示.Name = "装备流水信息查询时间信息显示";
-            this.装备流水信息查询时间信息显示.Size = new System.Drawing.Size(77, 12);
+            this.装备流水信息查询时间信息显示.Size = new System.Drawing.Size(101, 12);
             this.装备流水信息查询时间信息显示.TabIndex = 7;
-            this.装备流水信息查询时间信息显示.Text = "查询时间段：";
+            this.装备流水信息查询时间信息显示.Text = "查询出库时间段：";
             // 
-            // 装备流水信息日期选择按钮
+            // 装备出库流水日期选择按钮
             // 
-            this.装备流水信息日期选择按钮.Location = new System.Drawing.Point(382, 79);
-            this.装备流水信息日期选择按钮.Margin = new System.Windows.Forms.Padding(2);
-            this.装备流水信息日期选择按钮.Name = "装备流水信息日期选择按钮";
-            this.装备流水信息日期选择按钮.Size = new System.Drawing.Size(81, 20);
-            this.装备流水信息日期选择按钮.TabIndex = 6;
-            this.装备流水信息日期选择按钮.Text = "点击确认";
-            this.装备流水信息日期选择按钮.UseVisualStyleBackColor = true;
-            this.装备流水信息日期选择按钮.Click += new System.EventHandler(this.出入库信息日期选择按钮_Click);
+            this.装备出库流水日期选择按钮.Location = new System.Drawing.Point(402, 78);
+            this.装备出库流水日期选择按钮.Margin = new System.Windows.Forms.Padding(2);
+            this.装备出库流水日期选择按钮.Name = "装备出库流水日期选择按钮";
+            this.装备出库流水日期选择按钮.Size = new System.Drawing.Size(81, 20);
+            this.装备出库流水日期选择按钮.TabIndex = 6;
+            this.装备出库流水日期选择按钮.Text = "点击确认";
+            this.装备出库流水日期选择按钮.UseVisualStyleBackColor = true;
+            this.装备出库流水日期选择按钮.Click += new System.EventHandler(this.装备出库流水日期选择按钮_Click);
             // 
             // 装备流水信息导出表格按钮
             // 
-            this.装备流水信息导出表格按钮.Location = new System.Drawing.Point(666, 74);
+            this.装备流水信息导出表格按钮.Location = new System.Drawing.Point(834, 80);
             this.装备流水信息导出表格按钮.Margin = new System.Windows.Forms.Padding(2);
             this.装备流水信息导出表格按钮.Name = "装备流水信息导出表格按钮";
             this.装备流水信息导出表格按钮.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -861,7 +842,7 @@
             // 
             // 装备流水信息时间查询选择2
             // 
-            this.装备流水信息时间查询选择2.Location = new System.Drawing.Point(251, 79);
+            this.装备流水信息时间查询选择2.Location = new System.Drawing.Point(271, 78);
             this.装备流水信息时间查询选择2.Margin = new System.Windows.Forms.Padding(2);
             this.装备流水信息时间查询选择2.Name = "装备流水信息时间查询选择2";
             this.装备流水信息时间查询选择2.Size = new System.Drawing.Size(108, 21);
@@ -869,7 +850,7 @@
             // 
             // 装备流水信息时间查询选择1
             // 
-            this.装备流水信息时间查询选择1.Location = new System.Drawing.Point(104, 79);
+            this.装备流水信息时间查询选择1.Location = new System.Drawing.Point(124, 78);
             this.装备流水信息时间查询选择1.Margin = new System.Windows.Forms.Padding(2);
             this.装备流水信息时间查询选择1.Name = "装备流水信息时间查询选择1";
             this.装备流水信息时间查询选择1.Size = new System.Drawing.Size(105, 21);
@@ -877,81 +858,461 @@
             // 
             // 装备流水信息数据显示
             // 
+            this.装备流水信息数据显示.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.装备流水信息数据显示.AutoGenerateColumns = false;
             this.装备流水信息数据显示.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.装备流水信息数据显示.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.出入库类型,
+            this.装备流水出库编号,
+            this.装备流水出库类型,
+            this.装备流水出库装备单价,
             this.出入库编号,
-            this.出入库数量,
-            this.出入库装备生产日期,
-            this.出入库经办人,
-            this.出入库时间,
-            this.出入库验收人,
-            this.出入库仓库编号});
+            this.装备流水出库数量,
+            this.装备流水出库仓库编号,
+            this.装备流水出库批准人,
+            this.装备流水出库经办人,
+            this.装备流水出库时间,
+            this.装备流水出库备注,
+            this.zbidDataGridViewTextBoxColumn,
+            this.zbpriceDataGridViewTextBoxColumn,
+            this.zbnumDataGridViewTextBoxColumn,
+            this.sidDataGridViewTextBoxColumn,
+            this.ryname1DataGridViewTextBoxColumn,
+            this.rynameDataGridViewTextBoxColumn,
+            this.optDateDataGridViewTextBoxColumn,
+            this.memoDataGridViewTextBoxColumn});
+            this.装备流水信息数据显示.DataSource = this.takeoutBindingSource;
             this.装备流水信息数据显示.Location = new System.Drawing.Point(22, 118);
             this.装备流水信息数据显示.Margin = new System.Windows.Forms.Padding(2);
             this.装备流水信息数据显示.Name = "装备流水信息数据显示";
+            this.装备流水信息数据显示.ReadOnly = true;
             this.装备流水信息数据显示.RowTemplate.Height = 27;
-            this.装备流水信息数据显示.Size = new System.Drawing.Size(730, 300);
+            this.装备流水信息数据显示.Size = new System.Drawing.Size(899, 304);
             this.装备流水信息数据显示.TabIndex = 2;
             // 
-            // 出入库类型
+            // 装备流水出库编号
             // 
-            this.出入库类型.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.出入库类型.HeaderText = "类型";
-            this.出入库类型.Name = "出入库类型";
+            this.装备流水出库编号.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.装备流水出库编号.DataPropertyName = "ToId";
+            this.装备流水出库编号.HeaderText = "出库编号";
+            this.装备流水出库编号.Name = "装备流水出库编号";
+            this.装备流水出库编号.ReadOnly = true;
+            // 
+            // 装备流水出库类型
+            // 
+            this.装备流水出库类型.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.装备流水出库类型.DataPropertyName = "Ttype";
+            this.装备流水出库类型.HeaderText = "类型";
+            this.装备流水出库类型.Name = "装备流水出库类型";
+            this.装备流水出库类型.ReadOnly = true;
+            // 
+            // 装备流水出库装备单价
+            // 
+            this.装备流水出库装备单价.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.装备流水出库装备单价.DataPropertyName = "Zbprice";
+            this.装备流水出库装备单价.HeaderText = "装备单价";
+            this.装备流水出库装备单价.Name = "装备流水出库装备单价";
+            this.装备流水出库装备单价.ReadOnly = true;
             // 
             // 出入库编号
             // 
             this.出入库编号.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.出入库编号.HeaderText = "编号";
+            this.出入库编号.DataPropertyName = "Zbid";
+            this.出入库编号.HeaderText = "装备编号";
             this.出入库编号.Name = "出入库编号";
+            this.出入库编号.ReadOnly = true;
             // 
-            // 出入库数量
+            // 装备流水出库数量
             // 
-            this.出入库数量.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.出入库数量.HeaderText = "数量";
-            this.出入库数量.Name = "出入库数量";
+            this.装备流水出库数量.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.装备流水出库数量.DataPropertyName = "Zbnum";
+            this.装备流水出库数量.HeaderText = "数量";
+            this.装备流水出库数量.Name = "装备流水出库数量";
+            this.装备流水出库数量.ReadOnly = true;
             // 
-            // 出入库装备生产日期
+            // 装备流水出库仓库编号
             // 
-            this.出入库装备生产日期.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.出入库装备生产日期.HeaderText = "生产日期";
-            this.出入库装备生产日期.Name = "出入库装备生产日期";
+            this.装备流水出库仓库编号.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.装备流水出库仓库编号.DataPropertyName = "Sid";
+            this.装备流水出库仓库编号.HeaderText = "仓库编号";
+            this.装备流水出库仓库编号.Name = "装备流水出库仓库编号";
+            this.装备流水出库仓库编号.ReadOnly = true;
             // 
-            // 出入库经办人
+            // 装备流水出库批准人
             // 
-            this.出入库经办人.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.出入库经办人.HeaderText = "经办人";
-            this.出入库经办人.Name = "出入库经办人";
+            this.装备流水出库批准人.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.装备流水出库批准人.DataPropertyName = "Ryname1";
+            this.装备流水出库批准人.HeaderText = "批准人";
+            this.装备流水出库批准人.Name = "装备流水出库批准人";
+            this.装备流水出库批准人.ReadOnly = true;
             // 
-            // 出入库时间
+            // 装备流水出库经办人
             // 
-            this.出入库时间.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.出入库时间.HeaderText = "时间";
-            this.出入库时间.Name = "出入库时间";
+            this.装备流水出库经办人.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.装备流水出库经办人.DataPropertyName = "Ryname";
+            this.装备流水出库经办人.HeaderText = "经办人";
+            this.装备流水出库经办人.Name = "装备流水出库经办人";
+            this.装备流水出库经办人.ReadOnly = true;
             // 
-            // 出入库验收人
+            // 装备流水出库时间
             // 
-            this.出入库验收人.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.出入库验收人.HeaderText = "验收人";
-            this.出入库验收人.Name = "出入库验收人";
+            this.装备流水出库时间.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.装备流水出库时间.DataPropertyName = "OptDate";
+            this.装备流水出库时间.HeaderText = "出库时间";
+            this.装备流水出库时间.Name = "装备流水出库时间";
+            this.装备流水出库时间.ReadOnly = true;
             // 
-            // 出入库仓库编号
+            // 装备流水出库备注
             // 
-            this.出入库仓库编号.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.出入库仓库编号.HeaderText = "仓库编号";
-            this.出入库仓库编号.Name = "出入库仓库编号";
+            this.装备流水出库备注.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.装备流水出库备注.DataPropertyName = "Memo";
+            this.装备流水出库备注.HeaderText = "备注";
+            this.装备流水出库备注.Name = "装备流水出库备注";
+            this.装备流水出库备注.ReadOnly = true;
+            // 
+            // zbidDataGridViewTextBoxColumn
+            // 
+            this.zbidDataGridViewTextBoxColumn.DataPropertyName = "Zbid";
+            this.zbidDataGridViewTextBoxColumn.HeaderText = "Zbid";
+            this.zbidDataGridViewTextBoxColumn.Name = "zbidDataGridViewTextBoxColumn";
+            this.zbidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.zbidDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // zbpriceDataGridViewTextBoxColumn
+            // 
+            this.zbpriceDataGridViewTextBoxColumn.DataPropertyName = "Zbprice";
+            this.zbpriceDataGridViewTextBoxColumn.HeaderText = "Zbprice";
+            this.zbpriceDataGridViewTextBoxColumn.Name = "zbpriceDataGridViewTextBoxColumn";
+            this.zbpriceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.zbpriceDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // zbnumDataGridViewTextBoxColumn
+            // 
+            this.zbnumDataGridViewTextBoxColumn.DataPropertyName = "Zbnum";
+            this.zbnumDataGridViewTextBoxColumn.HeaderText = "Zbnum";
+            this.zbnumDataGridViewTextBoxColumn.Name = "zbnumDataGridViewTextBoxColumn";
+            this.zbnumDataGridViewTextBoxColumn.ReadOnly = true;
+            this.zbnumDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // sidDataGridViewTextBoxColumn
+            // 
+            this.sidDataGridViewTextBoxColumn.DataPropertyName = "Sid";
+            this.sidDataGridViewTextBoxColumn.HeaderText = "Sid";
+            this.sidDataGridViewTextBoxColumn.Name = "sidDataGridViewTextBoxColumn";
+            this.sidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sidDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // ryname1DataGridViewTextBoxColumn
+            // 
+            this.ryname1DataGridViewTextBoxColumn.DataPropertyName = "Ryname1";
+            this.ryname1DataGridViewTextBoxColumn.HeaderText = "Ryname1";
+            this.ryname1DataGridViewTextBoxColumn.Name = "ryname1DataGridViewTextBoxColumn";
+            this.ryname1DataGridViewTextBoxColumn.ReadOnly = true;
+            this.ryname1DataGridViewTextBoxColumn.Visible = false;
+            // 
+            // rynameDataGridViewTextBoxColumn
+            // 
+            this.rynameDataGridViewTextBoxColumn.DataPropertyName = "Ryname";
+            this.rynameDataGridViewTextBoxColumn.HeaderText = "Ryname";
+            this.rynameDataGridViewTextBoxColumn.Name = "rynameDataGridViewTextBoxColumn";
+            this.rynameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rynameDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // optDateDataGridViewTextBoxColumn
+            // 
+            this.optDateDataGridViewTextBoxColumn.DataPropertyName = "OptDate";
+            this.optDateDataGridViewTextBoxColumn.HeaderText = "OptDate";
+            this.optDateDataGridViewTextBoxColumn.Name = "optDateDataGridViewTextBoxColumn";
+            this.optDateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.optDateDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // memoDataGridViewTextBoxColumn
+            // 
+            this.memoDataGridViewTextBoxColumn.DataPropertyName = "Memo";
+            this.memoDataGridViewTextBoxColumn.HeaderText = "Memo";
+            this.memoDataGridViewTextBoxColumn.Name = "memoDataGridViewTextBoxColumn";
+            this.memoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.memoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // takeoutBindingSource
+            // 
+            this.takeoutBindingSource.DataMember = "Takeout";
+            this.takeoutBindingSource.DataSource = this.equipmentManagementInformationSystemDataSetBindingSource;
+            // 
+            // equipmentManagementInformationSystemDataSetBindingSource
+            // 
+            this.equipmentManagementInformationSystemDataSetBindingSource.DataSource = this.equipment_Management_Information_SystemDataSet;
+            this.equipmentManagementInformationSystemDataSetBindingSource.Position = 0;
+            // 
+            // equipment_Management_Information_SystemDataSet
+            // 
+            this.equipment_Management_Information_SystemDataSet.DataSetName = "Equipment_Management_Information_SystemDataSet";
+            this.equipment_Management_Information_SystemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // 装备流水统计表标题
             // 
             this.装备流水统计表标题.AutoSize = true;
             this.装备流水统计表标题.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.装备流水统计表标题.Location = new System.Drawing.Point(283, 21);
+            this.装备流水统计表标题.Location = new System.Drawing.Point(337, 17);
             this.装备流水统计表标题.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.装备流水统计表标题.Name = "装备流水统计表标题";
             this.装备流水统计表标题.Size = new System.Drawing.Size(154, 22);
             this.装备流水统计表标题.TabIndex = 0;
             this.装备流水统计表标题.Text = "库存装备流水统计表";
+            // 
+            // 装备流水信息入库显示
+            // 
+            this.装备流水信息入库显示.Controls.Add(this.装备流水入库至);
+            this.装备流水信息入库显示.Controls.Add(this.装备流水入库日期前缀);
+            this.装备流水信息入库显示.Controls.Add(this.装备流水入库时间选择);
+            this.装备流水信息入库显示.Controls.Add(this.装备流水入库导出表格);
+            this.装备流水信息入库显示.Controls.Add(this.装备流水入库时间选择2);
+            this.装备流水信息入库显示.Controls.Add(this.装备流水入库时间选择1);
+            this.装备流水信息入库显示.Controls.Add(this.装备流水入库数据显示);
+            this.装备流水信息入库显示.Controls.Add(this.装备流水入库标题);
+            this.装备流水信息入库显示.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.装备流水信息入库显示.Location = new System.Drawing.Point(0, 0);
+            this.装备流水信息入库显示.Name = "装备流水信息入库显示";
+            this.装备流水信息入库显示.Size = new System.Drawing.Size(932, 425);
+            this.装备流水信息入库显示.TabIndex = 2;
+            this.装备流水信息入库显示.Paint += new System.Windows.Forms.PaintEventHandler(this.装备流水信息入库显示_Paint);
+            // 
+            // 装备流水入库至
+            // 
+            this.装备流水入库至.AutoSize = true;
+            this.装备流水入库至.Location = new System.Drawing.Point(241, 83);
+            this.装备流水入库至.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.装备流水入库至.Name = "装备流水入库至";
+            this.装备流水入库至.Size = new System.Drawing.Size(17, 12);
+            this.装备流水入库至.TabIndex = 16;
+            this.装备流水入库至.Text = "至";
+            // 
+            // 装备流水入库日期前缀
+            // 
+            this.装备流水入库日期前缀.AutoSize = true;
+            this.装备流水入库日期前缀.Location = new System.Drawing.Point(20, 83);
+            this.装备流水入库日期前缀.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.装备流水入库日期前缀.Name = "装备流水入库日期前缀";
+            this.装备流水入库日期前缀.Size = new System.Drawing.Size(101, 12);
+            this.装备流水入库日期前缀.TabIndex = 15;
+            this.装备流水入库日期前缀.Text = "查询入库时间段：";
+            // 
+            // 装备流水入库时间选择
+            // 
+            this.装备流水入库时间选择.Location = new System.Drawing.Point(402, 79);
+            this.装备流水入库时间选择.Margin = new System.Windows.Forms.Padding(2);
+            this.装备流水入库时间选择.Name = "装备流水入库时间选择";
+            this.装备流水入库时间选择.Size = new System.Drawing.Size(81, 20);
+            this.装备流水入库时间选择.TabIndex = 14;
+            this.装备流水入库时间选择.Text = "点击确认";
+            this.装备流水入库时间选择.UseVisualStyleBackColor = true;
+            this.装备流水入库时间选择.Click += new System.EventHandler(this.装备流水入库时间选择_Click);
+            // 
+            // 装备流水入库导出表格
+            // 
+            this.装备流水入库导出表格.Location = new System.Drawing.Point(815, 74);
+            this.装备流水入库导出表格.Margin = new System.Windows.Forms.Padding(2);
+            this.装备流水入库导出表格.Name = "装备流水入库导出表格";
+            this.装备流水入库导出表格.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.装备流水入库导出表格.Size = new System.Drawing.Size(87, 26);
+            this.装备流水入库导出表格.TabIndex = 13;
+            this.装备流水入库导出表格.Text = "导出表格";
+            this.装备流水入库导出表格.UseVisualStyleBackColor = true;
+            this.装备流水入库导出表格.Click += new System.EventHandler(this.装备流水入库导出表格_Click);
+            // 
+            // 装备流水入库时间选择2
+            // 
+            this.装备流水入库时间选择2.Location = new System.Drawing.Point(271, 79);
+            this.装备流水入库时间选择2.Margin = new System.Windows.Forms.Padding(2);
+            this.装备流水入库时间选择2.Name = "装备流水入库时间选择2";
+            this.装备流水入库时间选择2.Size = new System.Drawing.Size(108, 21);
+            this.装备流水入库时间选择2.TabIndex = 12;
+            // 
+            // 装备流水入库时间选择1
+            // 
+            this.装备流水入库时间选择1.Location = new System.Drawing.Point(124, 79);
+            this.装备流水入库时间选择1.Margin = new System.Windows.Forms.Padding(2);
+            this.装备流水入库时间选择1.Name = "装备流水入库时间选择1";
+            this.装备流水入库时间选择1.Size = new System.Drawing.Size(105, 21);
+            this.装备流水入库时间选择1.TabIndex = 11;
+            // 
+            // 装备流水入库数据显示
+            // 
+            this.装备流水入库数据显示.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.装备流水入库数据显示.AutoGenerateColumns = false;
+            this.装备流水入库数据显示.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.装备流水入库数据显示.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.装备流水入库类型,
+            this.装备流水入库装备编号,
+            this.装备流水入库入库编号,
+            this.装备流水入库数量,
+            this.装备流水入库生产日期,
+            this.装备流水入库经办人,
+            this.装备流水入库时间,
+            this.装备流水入库验收人,
+            this.装备流水入库仓库编号,
+            this.装备流水入库备注,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18});
+            this.装备流水入库数据显示.DataSource = this.storelnBindingSource;
+            this.装备流水入库数据显示.Location = new System.Drawing.Point(22, 118);
+            this.装备流水入库数据显示.Margin = new System.Windows.Forms.Padding(2);
+            this.装备流水入库数据显示.Name = "装备流水入库数据显示";
+            this.装备流水入库数据显示.ReadOnly = true;
+            this.装备流水入库数据显示.RowTemplate.Height = 27;
+            this.装备流水入库数据显示.Size = new System.Drawing.Size(899, 304);
+            this.装备流水入库数据显示.TabIndex = 10;
+            // 
+            // 装备流水入库类型
+            // 
+            this.装备流水入库类型.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.装备流水入库类型.DataPropertyName = "SiType";
+            this.装备流水入库类型.HeaderText = "类型";
+            this.装备流水入库类型.Name = "装备流水入库类型";
+            // 
+            // 装备流水入库装备编号
+            // 
+            this.装备流水入库装备编号.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.装备流水入库装备编号.DataPropertyName = "Zbid";
+            this.装备流水入库装备编号.HeaderText = "装备编号";
+            this.装备流水入库装备编号.Name = "装备流水入库装备编号";
+            // 
+            // 装备流水入库入库编号
+            // 
+            this.装备流水入库入库编号.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.装备流水入库入库编号.DataPropertyName = "SiId";
+            this.装备流水入库入库编号.HeaderText = "入库编号";
+            this.装备流水入库入库编号.Name = "装备流水入库入库编号";
+            // 
+            // 装备流水入库数量
+            // 
+            this.装备流水入库数量.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.装备流水入库数量.DataPropertyName = "Zbnum";
+            this.装备流水入库数量.HeaderText = "数量";
+            this.装备流水入库数量.Name = "装备流水入库数量";
+            // 
+            // 装备流水入库生产日期
+            // 
+            this.装备流水入库生产日期.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.装备流水入库生产日期.DataPropertyName = "MakeDate";
+            this.装备流水入库生产日期.HeaderText = "生产日期";
+            this.装备流水入库生产日期.Name = "装备流水入库生产日期";
+            // 
+            // 装备流水入库经办人
+            // 
+            this.装备流水入库经办人.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.装备流水入库经办人.DataPropertyName = "Ryname";
+            this.装备流水入库经办人.HeaderText = "经办人";
+            this.装备流水入库经办人.Name = "装备流水入库经办人";
+            // 
+            // 装备流水入库时间
+            // 
+            this.装备流水入库时间.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.装备流水入库时间.DataPropertyName = "OptDate";
+            this.装备流水入库时间.HeaderText = "入库时间";
+            this.装备流水入库时间.Name = "装备流水入库时间";
+            // 
+            // 装备流水入库验收人
+            // 
+            this.装备流水入库验收人.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.装备流水入库验收人.DataPropertyName = "Ryname1";
+            this.装备流水入库验收人.HeaderText = "验收人";
+            this.装备流水入库验收人.Name = "装备流水入库验收人";
+            // 
+            // 装备流水入库仓库编号
+            // 
+            this.装备流水入库仓库编号.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.装备流水入库仓库编号.DataPropertyName = "Sid";
+            this.装备流水入库仓库编号.HeaderText = "仓库编号";
+            this.装备流水入库仓库编号.Name = "装备流水入库仓库编号";
+            // 
+            // 装备流水入库备注
+            // 
+            this.装备流水入库备注.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.装备流水入库备注.DataPropertyName = "Memo";
+            this.装备流水入库备注.HeaderText = "备注";
+            this.装备流水入库备注.Name = "装备流水入库备注";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Zbid";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Zbid";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Zbprice";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Zbprice";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "Zbnum";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Zbnum";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "Sid";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Sid";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "Ryname1";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Ryname1";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "Ryname";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Ryname";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "OptDate";
+            this.dataGridViewTextBoxColumn17.HeaderText = "OptDate";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "Memo";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Memo";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.Visible = false;
+            // 
+            // storelnBindingSource
+            // 
+            this.storelnBindingSource.DataMember = "Storeln";
+            this.storelnBindingSource.DataSource = this.equipmentManagementInformationSystemDataSetBindingSource;
+            // 
+            // 装备流水入库标题
+            // 
+            this.装备流水入库标题.AutoSize = true;
+            this.装备流水入库标题.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.装备流水入库标题.Location = new System.Drawing.Point(357, 17);
+            this.装备流水入库标题.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.装备流水入库标题.Name = "装备流水入库标题";
+            this.装备流水入库标题.Size = new System.Drawing.Size(154, 22);
+            this.装备流水入库标题.TabIndex = 9;
+            this.装备流水入库标题.Text = "库存装备流水统计表";
             // 
             // 装备出入库统计表
             // 
@@ -1131,6 +1492,9 @@
             // 
             // 装备经费汇总数据库表
             // 
+            this.装备经费汇总数据库表.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.装备经费汇总数据库表.AutoGenerateColumns = false;
             this.装备经费汇总数据库表.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.装备经费汇总数据库表.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1569,16 +1933,6 @@
             this.outlaylnBindingSource.DataMember = "Outlayln";
             this.outlaylnBindingSource.DataSource = this.equipmentManagementInformationSystemDataSetBindingSource;
             // 
-            // equipmentManagementInformationSystemDataSetBindingSource
-            // 
-            this.equipmentManagementInformationSystemDataSetBindingSource.DataSource = this.equipment_Management_Information_SystemDataSet;
-            this.equipmentManagementInformationSystemDataSetBindingSource.Position = 0;
-            // 
-            // equipment_Management_Information_SystemDataSet
-            // 
-            this.equipment_Management_Information_SystemDataSet.DataSetName = "Equipment_Management_Information_SystemDataSet";
-            this.equipment_Management_Information_SystemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // armsPersonBindingSource
             // 
             this.armsPersonBindingSource.DataMember = "ArmsPerson";
@@ -1840,6 +2194,14 @@
             this.outlaylnBindingSource1.DataMember = "Outlayln";
             this.outlaylnBindingSource1.DataSource = this.equipmentManagementInformationSystemDataSetBindingSource;
             // 
+            // storelnTableAdapter
+            // 
+            this.storelnTableAdapter.ClearBeforeFill = true;
+            // 
+            // takeoutTableAdapter
+            // 
+            this.takeoutTableAdapter.ClearBeforeFill = true;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1862,12 +2224,16 @@
             this.用户管理.ResumeLayout(false);
             this.统计与查询.ResumeLayout(false);
             this.库存装备流水统计表.ResumeLayout(false);
-            this.装备流水统计查询容器.ResumeLayout(false);
-            this.装备流水查询类型选择容器.ResumeLayout(false);
-            this.装备流水查询类型选择容器.PerformLayout();
-            this.装备出入库信息内容显示.ResumeLayout(false);
-            this.装备出入库信息内容显示.PerformLayout();
+            this.装备流水信息出库显示.ResumeLayout(false);
+            this.装备流水信息出库显示.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.装备流水信息数据显示)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.takeoutBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipmentManagementInformationSystemDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipment_Management_Information_SystemDataSet)).EndInit();
+            this.装备流水信息入库显示.ResumeLayout(false);
+            this.装备流水信息入库显示.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.装备流水入库数据显示)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storelnBindingSource)).EndInit();
             this.装备出入库统计表.ResumeLayout(false);
             this.装备出入库统计表.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.装备出入库信息数据显示)).EndInit();
@@ -1885,8 +2251,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.armsPersonBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.outlaylnBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.equipmentManagementInformationSystemDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.equipment_Management_Information_SystemDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.armsPersonBindingSource)).EndInit();
             this.装备库存管理.ResumeLayout(false);
             this.出库信息管理.ResumeLayout(false);
@@ -2001,29 +2365,15 @@
         private System.Windows.Forms.Button 人员信息查询按钮;
         private System.Windows.Forms.TextBox 人员信息查询输入;
         private System.Windows.Forms.DataGridView 部门人员信息数据显示;
-        private System.Windows.Forms.GroupBox 装备流水统计查询容器;
-        private System.Windows.Forms.Button 装备流水信息查询按钮;
-        private System.Windows.Forms.GroupBox 装备流水查询类型选择容器;
-        private System.Windows.Forms.RadioButton 出库信息查询选择;
-        private System.Windows.Forms.RadioButton 出入库信息查询选择;
-        private System.Windows.Forms.RadioButton 入库信息查询选择;
-        private System.Windows.Forms.Panel 装备出入库信息内容显示;
+        private System.Windows.Forms.Panel 装备流水信息出库显示;
         private System.Windows.Forms.Label 装备流水统计表标题;
         private System.Windows.Forms.DateTimePicker 装备流水信息时间查询选择2;
         private System.Windows.Forms.DateTimePicker 装备流水信息时间查询选择1;
         private System.Windows.Forms.DataGridView 装备流水信息数据显示;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 出入库类型;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 出入库编号;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 出入库数量;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 出入库装备生产日期;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 出入库经办人;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 出入库时间;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 出入库验收人;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 出入库仓库编号;
         private System.Windows.Forms.Button 装备流水信息导出表格按钮;
         private System.Windows.Forms.Label 装备流水信息文本至;
         private System.Windows.Forms.Label 装备流水信息查询时间信息显示;
-        private System.Windows.Forms.Button 装备流水信息日期选择按钮;
+        private System.Windows.Forms.Button 装备出库流水日期选择按钮;
         private System.Windows.Forms.Button 装备经费汇总表导出按钮;
         private System.Windows.Forms.DataGridView 装备经费汇总数据库表;
         private System.Windows.Forms.Label 装备经费汇总统计标题;
@@ -2090,5 +2440,56 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn 出入库统计经办人;
         private System.Windows.Forms.DataGridViewTextBoxColumn 出入库统计备注;
         private System.Windows.Forms.BindingSource outlaylnBindingSource1;
+        private System.Windows.Forms.BindingSource storelnBindingSource;
+        private Equipment_Management_Information_SystemDataSetTableAdapters.StorelnTableAdapter storelnTableAdapter;
+        private System.Windows.Forms.BindingSource takeoutBindingSource;
+        private Equipment_Management_Information_SystemDataSetTableAdapters.TakeoutTableAdapter takeoutTableAdapter;
+        private System.Windows.Forms.ToolStripMenuItem 出库查询ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 入库查询ToolStripMenuItem;
+        private System.Windows.Forms.Panel 装备流水信息入库显示;
+        private System.Windows.Forms.Label 装备流水入库至;
+        private System.Windows.Forms.Label 装备流水入库日期前缀;
+        private System.Windows.Forms.Button 装备流水入库时间选择;
+        private System.Windows.Forms.Button 装备流水入库导出表格;
+        private System.Windows.Forms.DateTimePicker 装备流水入库时间选择2;
+        private System.Windows.Forms.DateTimePicker 装备流水入库时间选择1;
+        private System.Windows.Forms.DataGridView 装备流水入库数据显示;
+        private System.Windows.Forms.Label 装备流水入库标题;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 装备流水入库类型;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 装备流水入库装备编号;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 装备流水入库入库编号;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 装备流水入库数量;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 装备流水入库生产日期;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 装备流水入库经办人;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 装备流水入库时间;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 装备流水入库验收人;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 装备流水入库仓库编号;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 装备流水入库备注;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 装备流水出库编号;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 装备流水出库类型;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 装备流水出库装备单价;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 出入库编号;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 装备流水出库数量;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 装备流水出库仓库编号;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 装备流水出库批准人;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 装备流水出库经办人;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 装备流水出库时间;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 装备流水出库备注;
+        private System.Windows.Forms.DataGridViewTextBoxColumn zbidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn zbpriceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn zbnumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ryname1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rynameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn optDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn memoDataGridViewTextBoxColumn;
     }
 }

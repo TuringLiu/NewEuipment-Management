@@ -30,6 +30,10 @@ namespace Equipment_Management
 
         private void Main_Load(object sender, EventArgs e)
         {
+            // TODO: 这行代码将数据加载到表“equipment_Management_Information_SystemDataSet.Takeout”中。您可以根据需要移动或删除它。
+            this.takeoutTableAdapter.Fill(this.equipment_Management_Information_SystemDataSet.Takeout);
+            // TODO: 这行代码将数据加载到表“equipment_Management_Information_SystemDataSet.Storeln”中。您可以根据需要移动或删除它。
+            this.storelnTableAdapter.Fill(this.equipment_Management_Information_SystemDataSet.Storeln);
             // TODO: 这行代码将数据加载到表“masterDataSet.ArmsPerson”中。您可以根据需要移动或删除它。
             this.armsPersonTableAdapter.Fill(this.masterDataSet.ArmsPerson);
             // TODO: 这行代码将数据加载到表“equipment_Management_Information_SystemDataSet.Outlayln”中。您可以根据需要移动或删除它。
@@ -129,118 +133,6 @@ namespace Equipment_Management
             部门人员查询.Visible = false;
             装备经费汇总.Visible = true;
             装备出入库统计表.Visible = false;
-        }
-
-        private void 装备库存流水统计表ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // 将其他层的panel隐藏
-            统计与查询.Visible = true;
-            装备经费管理.Visible = false;
-            装备库存管理.Visible = false;
-            系统管理.Visible = false;
-
-            // 将同层的panel隐藏
-            库存装备流水统计表.Visible = true;
-            部门人员查询.Visible = false;
-            装备经费汇总.Visible = false;
-            装备出入库统计表.Visible = false;
-        }
-
-        private void 出入库信息日期选择按钮_Click(object sender, EventArgs e)
-        {
-            // 数据库操作
-            string conStr = "Data Source = VCC-PC; Initial Catalog = master; Integrated Security = SSPI";
-            SqlConnection conn = new SqlConnection(conStr);
-            try
-            {
-                conn.Open();
-                //  MessageBox.Show("打开数据库成功！");
-                string cmdStr1 = "select * from Takeout where OptDate between " + 装备流水信息时间查询选择1.Value.ToString() + "and" + 装备流水信息时间查询选择2.Value.ToString();     // 出库时间命令
-                string cmdStr2 = "select * from StoreIn where OptDate between " + 装备流水信息时间查询选择1.Value.ToString() + "and" + 装备流水信息时间查询选择2.Value.ToString();     // 入时间库命令
-
-                SqlCommand command1 = new SqlCommand(cmdStr1, conn);  // 在出库中查找
-                SqlCommand command2 = new SqlCommand(cmdStr2, conn);  // 在入库中查找
-
-                /**********  绑定表  *******************/
-                if(time_flag == 1)
-                {
-
-                }
-                else if(time_flag == 2)
-                {
-
-                }
-                else if(time_flag == 3)
-                {
-
-                }
-
-
-                conn.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-            }
-
-
-        }
-
-        private void 出入库信息查询按钮_Click(object sender, EventArgs e)
-        {
-            int flag = 0;       // 判定选择按钮
-            if (出库信息查询选择.Checked == true)
-            {
-                flag = 1;
-            }
-            else if (入库信息查询选择.Checked == true)
-                flag = 2; 
-            else if (出入库信息查询选择.Checked == true)
-                flag = 3;
-
-            if (flag == 0)  // 判断查询类型是否为空
-            {
-                MessageBox.Show("请选择您所查询的类型！");
-                return;
-            }
-
-            // 数据库操作
-            string conStr = "Data Source = VCC-PC; Initial Catalog = master; Integrated Security = SSPI";
-            SqlConnection conn = new SqlConnection(conStr);
-            try
-            {
-                conn.Open();
-                //  MessageBox.Show("打开数据库成功！");
-                string cmdStr = "";     // 命令操作
-                if (flag == 1)       // 查询出库信息
-                {
-                    cmdStr = "select * from Takeout";
-                }
-                else if (flag == 2)  // 如果查询入库信息
-                {
-                    cmdStr = "select * from Storeln";
-
-                }
-                else if (flag == 3)  // 如果查询出入库信息
-                {
-                    /*         功能待实现              */
-                }
-                SqlCommand command = new SqlCommand(cmdStr, conn);  // 在departments表中查找
-                    
-        
-                /**********  绑定表  *******************/
-
-
-                conn.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-            }
-
-       
-
-
         }
 
         private void 出入库导出表格按钮_Click(object sender, EventArgs e)
@@ -433,8 +325,8 @@ namespace Equipment_Management
                 MessageBox.Show("查询内容不能为空，请重新输入！\n");
                 return;
             }
-            string conStr = "Data Source = VCC-PC; Initial Catalog = master; Integrated Security = SSPI";
-           // string conStr = "Data Source=DESKTOP-5MJOVVC;Initial Catalog=Equipment Management Information System;uid=liuliu;pwd=201608";
+            //string conStr = "Data Source = VCC-PC; Initial Catalog = master; Integrated Security = SSPI";
+            string conStr = "Data Source=DESKTOP-5MJOVVC;Initial Catalog=Equipment Management Information System;uid=liuliu;pwd=201608";
             SqlConnection conn = new SqlConnection(conStr);
             try
             {
@@ -487,8 +379,8 @@ namespace Equipment_Management
             }
 
             // 连接数据库 并显示信息
-            //  string conStr = "Data Source=DESKTOP-5MJOVVC;Initial Catalog=Equipment Management Information System;uid=liuliu;pwd=201608";
-            string conStr = "Data Source = VCC-PC; Initial Catalog = master; Integrated Security = SSPI";
+            string conStr = "Data Source=DESKTOP-5MJOVVC;Initial Catalog=Equipment Management Information System;uid=liuliu;pwd=201608";
+            //string conStr = "Data Source = VCC-PC; Initial Catalog = master; Integrated Security = SSPI";
             SqlConnection conn = new SqlConnection(conStr);
             try
             {
@@ -620,6 +512,157 @@ namespace Equipment_Management
         private void 装备经费汇总_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void 装备流水入库导出表格_Click(object sender, EventArgs e)
+        {
+            string fileName = "";
+            string saveFileName = "";
+            SaveFileDialog saveDialog = new SaveFileDialog();
+            saveDialog.DefaultExt = "xlsx";
+            saveDialog.Filter = "Excel文件|*.xlsx";
+            saveDialog.FileName = fileName;
+            saveDialog.ShowDialog();
+            saveFileName = saveDialog.FileName;
+            if (saveFileName.IndexOf(":") < 0) return; //被点了取消
+            Microsoft.Office.Interop.Excel.Application xlApp = new Microsoft.Office.Interop.Excel.Application();
+            if (xlApp == null)
+            {
+                MessageBox.Show("无法创建Excel对象，您的电脑可能未安装Excel");
+                return;
+            }
+            Microsoft.Office.Interop.Excel.Workbooks workbooks = xlApp.Workbooks;
+            Microsoft.Office.Interop.Excel.Workbook workbook =
+                        workbooks.Add(Microsoft.Office.Interop.Excel.XlWBATemplate.xlWBATWorksheet);
+            Microsoft.Office.Interop.Excel.Worksheet worksheet =
+                        (Microsoft.Office.Interop.Excel.Worksheet)workbook.Worksheets[1];//取得sheet1 
+                                                                                         //写入标题             
+            for (int i = 0; i < 装备流水入库数据显示.ColumnCount; i++)
+            { worksheet.Cells[1, i + 1] = 装备流水入库数据显示.Columns[i].HeaderText; }
+            //写入数值
+            for (int r = 0; r < 装备流水入库数据显示.Rows.Count; r++)
+            {
+                for (int i = 0; i < 装备流水入库数据显示.ColumnCount; i++)
+                {
+                    worksheet.Cells[r + 2, i + 1] = 装备流水入库数据显示.Rows[r].Cells[i].Value;
+                }
+                System.Windows.Forms.Application.DoEvents();
+            }
+            worksheet.Columns.EntireColumn.AutoFit();//列宽自适应
+            MessageBox.Show(fileName + "资料保存成功", "提示", MessageBoxButtons.OK);
+            if (saveFileName != "")
+            {
+                try
+                {
+                    workbook.Saved = true;
+                    workbook.SaveCopyAs(saveFileName);  //fileSaved = true;                 
+                }
+                catch (Exception ex)
+                {//fileSaved = false;                      
+                    MessageBox.Show("导出文件时出错,文件可能正被打开！\n" + ex.Message);
+                }
+            }
+            xlApp.Quit();
+            GC.Collect();//强行销毁       
+        }
+
+        private void 装备流水信息入库显示_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void 出库查询ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // 将其他层的panel隐藏
+            统计与查询.Visible = true;
+            装备经费管理.Visible = false;
+            装备库存管理.Visible = false;
+            系统管理.Visible = false;
+
+            // 将同层的panel隐藏
+            库存装备流水统计表.Visible = true;
+            部门人员查询.Visible = false;
+            装备经费汇总.Visible = false;
+            装备出入库统计表.Visible = false;
+
+            装备流水信息入库显示.Visible = false;
+            装备流水信息出库显示.Visible = true;
+        }
+
+        private void 入库查询ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // 将其他层的panel隐藏
+            统计与查询.Visible = true;
+            装备经费管理.Visible = false;
+            装备库存管理.Visible = false;
+            系统管理.Visible = false;
+
+            // 将同层的panel隐藏
+            库存装备流水统计表.Visible = true;
+            部门人员查询.Visible = false;
+            装备经费汇总.Visible = false;
+            装备出入库统计表.Visible = false;
+            装备流水信息入库显示.Visible = true;
+            装备流水信息出库显示.Visible = false;
+        }
+
+        private void 装备出库流水日期选择按钮_Click(object sender, EventArgs e)
+        {
+            // 数据库操作
+            //  string conStr = "Data Source = VCC-PC; Initial Catalog = master; Integrated Security = SSPI";
+            string conStr = "Data Source=DESKTOP-5MJOVVC;Initial Catalog=Equipment Management Information System;uid=liuliu;pwd=201608";
+
+            SqlConnection conn = new SqlConnection(conStr);
+            try
+            {
+                conn.Open();
+                //  MessageBox.Show("打开数据库成功！");
+                string cmdStr = "select * from Takeout where OptDate between '" + 装备流水信息时间查询选择1.Text + "' and '" + 装备流水信息时间查询选择2.Text + "'";     // 出库时间命令
+
+                SqlCommand command = new SqlCommand(cmdStr, conn);  // 在出库中查找
+
+                /**********  绑定表  *******************/
+
+                DataSet myds = new DataSet();
+                SqlDataAdapter myda = new SqlDataAdapter(cmdStr, conn);
+                myda.Fill(myds);         
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+
+        }
+
+        private void 装备流水入库时间选择_Click(object sender, EventArgs e)
+        {
+            // 数据库操作
+            //  string conStr = "Data Source = VCC-PC; Initial Catalog = master; Integrated Security = SSPI";
+            string conStr = "Data Source=DESKTOP-5MJOVVC;Initial Catalog=Equipment Management Information System;uid=liuliu;pwd=201608";
+
+            SqlConnection conn = new SqlConnection(conStr);
+            try
+            {
+                conn.Open();
+                //  MessageBox.Show("打开数据库成功！");
+                string cmdStr = "select * from Storeln where OptDate between '" + 装备流水入库时间选择1.Text + "' and '" + 装备流水入库时间选择2.Text + "'";     // 出库时间命令
+
+                SqlCommand command = new SqlCommand(cmdStr, conn);  // 在出库中查找
+
+                /**********  绑定表  *******************/
+
+                DataSet myds = new DataSet();
+                SqlDataAdapter myda = new SqlDataAdapter(cmdStr, conn);
+                myda.Fill(myds);
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
         }
     }
 }
