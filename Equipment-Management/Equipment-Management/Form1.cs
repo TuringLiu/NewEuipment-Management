@@ -19,9 +19,8 @@ namespace Equipment_Management
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Main mainn = new Main();
-            mainn.Show();
+            mainn.Show(this);
         }
     }
 }
