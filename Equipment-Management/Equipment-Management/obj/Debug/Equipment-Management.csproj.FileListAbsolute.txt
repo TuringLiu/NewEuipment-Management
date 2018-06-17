@@ -39,3 +39,6 @@ E:\Github\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\D
 E:\Github\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.装备库存管理框.出库信息管理修改.resources
 E:\Github\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.装备库存管理框.出库信息管理删除.resources
 E:\Github\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.装备库存管理框.出库信息管理添加.resources
+F:\装备信息管理备份\NewEuipment-Management\Equipment-Management\Equipment-Management\bin\Debug\Equipment-Management.exe.config
+F:\装备信息管理备份\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.exe
+F:\装备信息管理备份\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment-Management.pdb

@@ -46,6 +46,7 @@
             this.仓库信息管理添加添加.TabIndex = 0;
             this.仓库信息管理添加添加.Text = "添加";
             this.仓库信息管理添加添加.UseVisualStyleBackColor = true;
+            this.仓库信息管理添加添加.Click += new System.EventHandler(this.仓库信息管理添加添加_Click);
             // 
             // 仓库信息管理添加取消
             // 
@@ -55,6 +56,7 @@
             this.仓库信息管理添加取消.TabIndex = 1;
             this.仓库信息管理添加取消.Text = "取消";
             this.仓库信息管理添加取消.UseVisualStyleBackColor = true;
+            this.仓库信息管理添加取消.Click += new System.EventHandler(this.仓库信息管理添加取消_Click);
             // 
             // label1
             // 
@@ -121,6 +123,7 @@
             this.Controls.Add(this.仓库信息管理添加添加);
             this.Name = "仓库信息管理添加";
             this.Text = "仓库信息管理添加";
+            this.Load += new System.EventHandler(this.仓库信息管理添加_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

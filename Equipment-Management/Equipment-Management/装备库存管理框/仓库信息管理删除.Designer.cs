@@ -83,6 +83,7 @@
             this.仓库信息管理删除删除.TabIndex = 16;
             this.仓库信息管理删除删除.Text = "删除";
             this.仓库信息管理删除删除.UseVisualStyleBackColor = true;
+            this.仓库信息管理删除删除.Click += new System.EventHandler(this.仓库信息管理删除删除_Click);
             // 
             // label4
             // 
@@ -120,7 +121,7 @@
             this.label7.TabIndex = 24;
             this.label7.Text = "是否删除此仓库信息？";
             // 
-            // 仓库下信息管理删除
+            // 仓库信息管理删除
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -134,7 +135,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.仓库信息管理修改删除);
             this.Controls.Add(this.仓库信息管理删除删除);
-            this.Name = "仓库下信息管理删除";
+            this.Name = "仓库信息管理删除";
             this.Text = "仓库下信息管理删除";
             this.ResumeLayout(false);
             this.PerformLayout();
