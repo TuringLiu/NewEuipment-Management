@@ -66,6 +66,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Equipment_Management_Information_SystemDataSet11.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Equipment_Management_Information_SystemDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Equipment_Management_Information_SystemDataSet12.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Equipment_Management_Information_SystemDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -180,6 +185,18 @@
     <Compile Include="编辑部门信息.Designer.cs">
       <DependentUpon>编辑部门信息.cs</DependentUpon>
     </Compile>
+    <Compile Include="编辑部门信息2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="编辑部门信息2.Designer.cs">
+      <DependentUpon>编辑部门信息2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="编辑部门调转.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="编辑部门调转.Designer.cs">
+      <DependentUpon>编辑部门调转.cs</DependentUpon>
+    </Compile>
     <Compile Include="装备基本信息.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -261,6 +278,12 @@
     <EmbeddedResource Include="编辑部门信息.resx">
       <DependentUpon>编辑部门信息.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="编辑部门信息2.resx">
+      <DependentUpon>编辑部门信息2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="编辑部门调转.resx">
+      <DependentUpon>编辑部门调转.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="装备基本信息.resx">
       <DependentUpon>装备基本信息.cs</DependentUpon>
     </EmbeddedResource>
@@ -322,6 +345,17 @@
     </None>
     <None Include="Equipment_Management_Information_SystemDataSet11.xss">
       <DependentUpon>Equipment_Management_Information_SystemDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="Equipment_Management_Information_SystemDataSet12.xsc">
+      <DependentUpon>Equipment_Management_Information_SystemDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="Equipment_Management_Information_SystemDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Equipment_Management_Information_SystemDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Equipment_Management_Information_SystemDataSet12.xss">
+      <DependentUpon>Equipment_Management_Information_SystemDataSet12.xsd</DependentUpon>
     </None>
     <None Include="Equipment_Management_Information_SystemDataSet2.xsc">
       <DependentUpon>Equipment_Management_Information_SystemDataSet2.xsd</DependentUpon>

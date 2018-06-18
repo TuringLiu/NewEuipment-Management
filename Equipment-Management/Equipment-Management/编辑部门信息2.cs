@@ -12,22 +12,18 @@ using static Equipment_Management.Program;
 
 namespace Equipment_Management
 {
-    public partial class 编辑部门信息 : Form
+    public partial class 编辑部门信息2 : Form
     {
-        public 编辑部门信息()
+        public 编辑部门信息2()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
+
                 if (DBClass_xu.conn.State != ConnectionState.Open)//检查连接状态是否为已连接
                 {
                     DBClass_xu.conn.Open();
@@ -35,28 +31,41 @@ namespace Equipment_Management
                
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = DBClass_xu.conn;
-
-                    string strcmd = "select DepId from Departments where DepName='" + mystr.str + "'";
-                    cmd.CommandText = strcmd;
-                    string save = cmd.ExecuteScalar().ToString();
-
-                    cmd.CommandText = "Insert Departments(DepId,DepName,Describes,UpperId)values('" + textBox2.Text + "','" +textBox1.Text + "','" + textBox3.Text + "','" + int.Parse(save) + "')";
+                    cmd.CommandText = "update Departments set[DepId]='" + textBox1.Text + "'" +
+                      ",[DepName]='" + textBox2.Text + "'" +
+                      ",[Describes]='" + textBox3.Text + "'" +
+                      ",[UpperId]='" + comboBox1.Text + "'" +
+                    
+                      "where[DepId]='" + mystr.num + "'";
                     cmd.ExecuteNonQuery();
 
-                    DataSet dsMyDataBase = new DataSet();
-                    SqlDataAdapter daBaseInform = new SqlDataAdapter("Select*From Departments", DBClass_xu.conn);
-                    daBaseInform.Fill(dsMyDataBase, "Departments");
-                    MessageBox.Show("添加成功");
 
+                    //mystr.data.DataSource = dsMydataBase.Tables["Departments"];
+                    MessageBox.Show("成功修改数据");
+                    mystr.tree.Nodes.Clear();
                     TreeViewRefresh();
 
                     DBClass_xu.conn.Close();
                     Close();
+
+
             }
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString() + " 打开数据库失败");
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void 编辑部门信息2_Load(object sender, EventArgs e)
+        {
+            // TODO: 这行代码将数据加载到表“equipment_Management_Information_SystemDataSet12.Departments”中。您可以根据需要移动或删除它。
+            this.departmentsTableAdapter.Fill(this.equipment_Management_Information_SystemDataSet12.Departments);
 
         }
         public static void WriteList(string id, string name, string upperid, int count)
@@ -102,6 +111,7 @@ namespace Equipment_Management
         }
         public static void TreeViewRefresh()
         {
+            //这里是新加的，用来清空，要不然除非重开应用，否则一直都是之前的树
             TreeViewList.id.Clear();
             TreeViewList.name.Clear();
             //将整个表的内容读出来（除了“描述”这个无关属性）
@@ -159,10 +169,6 @@ namespace Equipment_Management
                     mystr.tree.SelectedNode = mystr.tree.Nodes.Find(TreeViewList.id[i][j], true)[0];
                 }
             }
-        }
-        private void 编辑部门信息_Load(object sender, EventArgs e)
-        {
-            label4.Text = mystr.str;
         }
     }
 }

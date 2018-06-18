@@ -38,9 +38,12 @@ namespace Equipment_Management
             {
                 if (mystr.i == 1)
                 {
+                    if (DBClass_xu.conn.State != ConnectionState.Open)//检查连接状态是否为已连接
+                    {
+                        DBClass_xu.conn.Open();
+                    }
 
-
-                    DBClass_xu.conn.Open();
+                 
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = DBClass_xu.conn;
 
@@ -72,7 +75,10 @@ namespace Equipment_Management
                 else if (mystr.i == 2)
                 {
                     mystr.str = mystr.data.CurrentRow.Cells[0].Value.ToString();
-                    DBClass_xu.conn.Open();
+                    if (DBClass_xu.conn.State != ConnectionState.Open)//检查连接状态是否为已连接
+                    {
+                        DBClass_xu.conn.Open();
+                    }
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = DBClass_xu.conn;
 

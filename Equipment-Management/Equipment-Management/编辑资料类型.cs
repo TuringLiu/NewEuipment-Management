@@ -36,9 +36,12 @@ namespace Equipment_Management
             {
                 if (mystr.i == 1)
                 {
+                    if (DBClass_xu.conn.State != ConnectionState.Open)//检查连接状态是否为已连接
+                    {
+                        DBClass_xu.conn.Open();
+                    }
 
-
-                    DBClass_xu.conn.Open();
+                  
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = DBClass_xu.conn;
                     cmd.CommandText = "Insert DataTypes(TypeId,TypeName)values('" + textBox1.Text + "','" + textBox2.Text + "')";
@@ -57,7 +60,10 @@ namespace Equipment_Management
                 }
                 else if (mystr.i == 2)
                 {
-                    DBClass_xu.conn.Open();
+                    if (DBClass_xu.conn.State != ConnectionState.Open)//检查连接状态是否为已连接
+                    {
+                        DBClass_xu.conn.Open();
+                    }
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = DBClass_xu.conn;
                     cmd.CommandText = "update DataTypes set[TypeId]='" + textBox1.Text + "'" +

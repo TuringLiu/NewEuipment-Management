@@ -21,7 +21,11 @@ namespace Equipment_Management
 
         private void 展示资料信息_Load(object sender, EventArgs e)
         {
-            DBClass_xu.conn.Open();
+            if (DBClass_xu.conn.State != ConnectionState.Open)//检查连接状态是否为已连接
+            {
+                DBClass_xu.conn.Open();
+            }
+            
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = DBClass_xu.conn;
 

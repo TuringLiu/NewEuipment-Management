@@ -47,3 +47,5 @@ D:\a million code\github\NewEuipment-Management-master\NewEuipment-Management\Eq
 D:\a million code\github\NewEuipment-Management-master\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.资料归档管理.resources
 D:\a million code\github\NewEuipment-Management-master\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.展示归档信息.resources
 D:\a million code\github\NewEuipment-Management-master\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.展示资料信息.resources
+D:\a million code\github\NewEuipment-Management-master\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.编辑部门信息2.resources
+D:\a million code\github\NewEuipment-Management-master\NewEuipment-Management\Equipment-Management\Equipment-Management\obj\Debug\Equipment_Management.编辑部门调转.resources

@@ -54,7 +54,11 @@ namespace Equipment_Management
             mystr.num = (int)dataGridView1.CurrentRow.Cells[0].Value;
             try
             {
-                DBClass_xu.conn.Open();
+                if (DBClass_xu.conn.State != ConnectionState.Open)//检查连接状态是否为已连接
+                {
+                    DBClass_xu.conn.Open();
+                }
+                
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = DBClass_xu.conn;
                 cmd.CommandText = "delete from DataIn where[Id]='" + mystr.num + "'";
@@ -79,8 +83,12 @@ namespace Equipment_Management
             {
                 if ((int)dataGridView1.CurrentRow.Cells[6].Value == 0)
                 {
+                    if (DBClass_xu.conn.State != ConnectionState.Open)//检查连接状态是否为已连接
+                    {
+                        DBClass_xu.conn.Open();
+                    }
                     int i = 1;
-                    DBClass_xu.conn.Open();
+                   
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = DBClass_xu.conn;
                     cmd.CommandText = "Update DataIn set[Id]='" + dataGridView1.CurrentRow.Cells[0].Value + "'" +

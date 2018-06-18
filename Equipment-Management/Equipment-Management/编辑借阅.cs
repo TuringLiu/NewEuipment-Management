@@ -29,8 +29,12 @@ namespace Equipment_Management
         {
             try
             {
-
+                if (DBClass_xu.conn.State != ConnectionState.Open)//检查连接状态是否为已连接
+                {
                     DBClass_xu.conn.Open();
+                }
+
+               
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = DBClass_xu.conn;
                     cmd.CommandText = "Insert DataLend(Id,DataNo,LendDate,Ryid,LendCount,Ryname,Flag)values('" + textBox1.Text + "','" + textBox2.Text + "','" + System.DateTime.Now.ToString() + "','" + textBox4.Text + "','" + textBox5.Text +"','"+ textBox6.Text + "','"+ 0 + "')";

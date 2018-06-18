@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,9 +24,19 @@ namespace Equipment_Management
         public static class mystr
         {
             public static string str = "";
+            public static string str2 = "";
             public static DataGridView data;
             public static int num;
             public static int i;
+            public static TreeView tree;
+        }
+        //存储树控件的节点信息
+        public static class TreeViewList
+        {
+            public static List<List<string>> name = new List<List<string>>();
+            public static List<List<string>> id = new List<List<string>>();
+            public static List<string> deleteid = new List<string>();
         }
     }
+        
 }

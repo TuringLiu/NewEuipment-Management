@@ -61,7 +61,11 @@ namespace Equipment_Management
             mystr.str = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             try
             {
-                DBClass_xu.conn.Open();
+                if (DBClass_xu.conn.State != ConnectionState.Open)//检查连接状态是否为已连接
+                {
+                    DBClass_xu.conn.Open();
+                }
+               
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = DBClass_xu.conn;
                 cmd.CommandText = "delete from ArmsInfo where[Zbid]='" + mystr.str + "'";

@@ -41,7 +41,10 @@ namespace Equipment_Management
             mystr.str = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             try
             {
-                DBClass_xu.conn.Open();
+                if (DBClass_xu.conn.State != ConnectionState.Open)//检查连接状态是否为已连接
+                {
+                    DBClass_xu.conn.Open();
+                }
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = DBClass_xu.conn;
                 cmd.CommandText = "delete from DataLend where[Id]='" + mystr.str + "'";
@@ -66,8 +69,12 @@ namespace Equipment_Management
             {
                 if ((int)dataGridView1.CurrentRow.Cells[6].Value == 1)
                 {
+                    if (DBClass_xu.conn.State != ConnectionState.Open)//检查连接状态是否为已连接
+                    {
+                        DBClass_xu.conn.Open();
+                    }
                     int i = 2;
-                    DBClass_xu.conn.Open();
+                   
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = DBClass_xu.conn;
                     cmd.CommandText = "Update DataLend set[Id]='" + dataGridView1.CurrentRow.Cells[0].Value + "'" +
@@ -104,8 +111,12 @@ namespace Equipment_Management
             {
                 if ((int)dataGridView1.CurrentRow.Cells[6].Value == 0)
                 {
+                    if (DBClass_xu.conn.State != ConnectionState.Open)//检查连接状态是否为已连接
+                    {
+                        DBClass_xu.conn.Open();
+                    }
                     int i = 1;
-                    DBClass_xu.conn.Open();
+                   
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = DBClass_xu.conn;
                     cmd.CommandText = "Update DataLend set[Id]='" + dataGridView1.CurrentRow.Cells[0].Value + "'" +
@@ -145,8 +156,12 @@ namespace Equipment_Management
             {
                 if ((int)dataGridView1.CurrentRow.Cells[6].Value == 2)
                 {
+                    if (DBClass_xu.conn.State != ConnectionState.Open)//检查连接状态是否为已连接
+                    {
+                        DBClass_xu.conn.Open();
+                    }
                     int i = 3;
-                    DBClass_xu.conn.Open();
+                    
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = DBClass_xu.conn;
                     cmd.CommandText = "Update DataLend set[Id]='" + dataGridView1.CurrentRow.Cells[0].Value + "'" +

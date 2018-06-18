@@ -27,9 +27,12 @@ namespace Equipment_Management
             {
                 if (i == 1)
                 {
+                    if (DBClass_xu.conn.State != ConnectionState.Open)//检查连接状态是否为已连接
+                    {
+                        DBClass_xu.conn.Open();
+                    }
 
-
-                    DBClass_xu.conn.Open();
+                   
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = DBClass_xu.conn;
                     cmd.CommandText = "Insert ArmsInfo(Zbid,Zbname,Zbspec,Zbkind,Zbunit)values('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "')";
@@ -48,7 +51,10 @@ namespace Equipment_Management
                 }
                 else if (i == 2)
                 {
-                    DBClass_xu.conn.Open();
+                    if (DBClass_xu.conn.State != ConnectionState.Open)//检查连接状态是否为已连接
+                    {
+                        DBClass_xu.conn.Open();
+                    }
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = DBClass_xu.conn;
                     cmd.CommandText = "update ArmsInfo set[Zbid]='" + textBox1.Text + "'" +
