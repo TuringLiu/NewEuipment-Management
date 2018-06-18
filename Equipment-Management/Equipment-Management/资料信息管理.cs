@@ -87,20 +87,36 @@ namespace Equipment_Management
                 {
                     DBClass_xu.conn.Open();
                 }
-                
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = DBClass_xu.conn;
-                cmd.CommandText = "Insert DataLend(Id,DataNo,LendDate,Ryid,LendCount,Ryname,Flag)values('" + 001 + "','" + dataGridView1.CurrentRow.Cells[0].Value.ToString() + "','" + System.DateTime.Now.ToString() + "','" + 2016081090 + "','" + 1 + "','" + "无" + "','" + 0 + "')";
-                cmd.ExecuteNonQuery();
-/*
-                DataSet dsMyDataBase = new DataSet();
-                SqlDataAdapter daBaseInform = new SqlDataAdapter("Select*From DataLend", DBClass_xu.conn);
-                daBaseInform.Fill(dsMyDataBase, "DataLend");
 
-                mystr.data.DataSource = dsMyDataBase.Tables["DataLend"];  */
+                int save = int.Parse(dataGridView1.CurrentRow.Cells[3].Value.ToString());
+                if (save == 0)
+                { MessageBox.Show("没有该资料，当前无法借阅"); DBClass_xu.conn.Close(); }
+                else
+                {
+                    //                                                                                                                                                                                                                               借阅人编号 RyId       应该是一回只能借阅一本吧         
+                string a = "Select Max(Id) from DataLend ";
+                cmd.CommandText = a;
+                increase.dataLend_id= int.Parse(cmd.ExecuteScalar().ToString())+1;
+
+                cmd.CommandText = "Insert DataLend(Id,DataNo,LendDate,Ryid,LendCount,Ryname,Flag)values('" + increase.dataLend_id + "','" + dataGridView1.CurrentRow.Cells[0].Value.ToString() + "','" + System.DateTime.Now.ToString() + "','" + 2016081090 + "','" + 1 + "','" + "待确认" + "','" + 0 + "')";
+                cmd.ExecuteNonQuery();
+
                 MessageBox.Show("借阅成功");
-                DBClass_xu.conn.Close();
-                Close();
+                    save = save - 1;
+                    cmd.CommandText = "update ArmsData set[ICount]='" + save + "'" +
+                          "where[DataNo]='" + dataGridView1.CurrentRow.Cells[0].Value.ToString() + "'";
+
+                    cmd.ExecuteNonQuery();
+                    DataSet dsMydataBase = new DataSet();
+                    SqlDataAdapter daBaseInform = new SqlDataAdapter("Select*From ArmsData", DBClass_xu.conn);
+                    daBaseInform.Fill(dsMydataBase, "ArmsData");
+
+                    dataGridView1.DataSource = dsMydataBase.Tables["ArmsData"];
+                    DBClass_xu.conn.Close();
+                }
+                
             }
             catch (Exception ex)
             {

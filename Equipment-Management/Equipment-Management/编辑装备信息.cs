@@ -35,7 +35,7 @@ namespace Equipment_Management
                    
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = DBClass_xu.conn;
-                    cmd.CommandText = "Insert ArmsInfo(Zbid,Zbname,Zbspec,Zbkind,Zbunit)values('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "')";
+                    cmd.CommandText = "Insert ArmsInfo(Zbid,Zbname,Zbspec,Zbkind,Zbunit)values('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + comboBox1.Text + "','" + textBox5.Text + "')";
                     cmd.ExecuteNonQuery();
 
                     DataSet dsMyDataBase = new DataSet();
@@ -60,7 +60,7 @@ namespace Equipment_Management
                     cmd.CommandText = "update ArmsInfo set[Zbid]='" + textBox1.Text + "'" +
                       ",[Zbname]='" + textBox2.Text + "'" +
                       ",[Zbspec]='" + textBox3.Text + "'" +
-                      ",[Zbkind]='" + textBox4.Text + "'" +
+                      ",[Zbkind]='" + comboBox1.Text+ "'" +
                       ",[Zbunit]='" + textBox5.Text + "'"+
                       "where[Zbid]='"+ mystr.str + "'";
                     cmd.ExecuteNonQuery();
@@ -92,6 +92,13 @@ namespace Equipment_Management
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void 编辑装备信息_Load(object sender, EventArgs e)
+        {
+            // TODO: 这行代码将数据加载到表“equipment_Management_Information_SystemDataSet13.DataTypes”中。您可以根据需要移动或删除它。
+            this.dataTypesTableAdapter.Fill(this.equipment_Management_Information_SystemDataSet13.DataTypes);
 
         }
     }

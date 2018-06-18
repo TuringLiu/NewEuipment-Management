@@ -36,7 +36,7 @@
             // 
             // treeView2
             // 
-            this.treeView2.Location = new System.Drawing.Point(67, 59);
+            this.treeView2.Location = new System.Drawing.Point(59, 67);
             this.treeView2.Name = "treeView2";
             this.treeView2.Size = new System.Drawing.Size(283, 242);
             this.treeView2.TabIndex = 0;
@@ -44,7 +44,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(93, 326);
+            this.button1.Location = new System.Drawing.Point(72, 331);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -54,7 +54,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(237, 325);
+            this.button2.Location = new System.Drawing.Point(239, 331);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 2;
@@ -65,7 +65,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(122, 28);
+            this.label1.Location = new System.Drawing.Point(113, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(157, 15);
             this.label1.TabIndex = 3;

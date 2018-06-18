@@ -48,6 +48,10 @@
             this.button5 = new System.Windows.Forms.Button();
             this.dataLendTableAdapter = new Equipment_Management.Equipment_Management_Information_SystemDataSet3TableAdapters.DataLendTableAdapter();
             this.dataLendTableAdapter1 = new Equipment_Management.Equipment_Management_Information_SystemDataSet6TableAdapters.DataLendTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLendBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipment_Management_Information_SystemDataSet6)).BeginInit();
@@ -71,7 +75,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 21);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(901, 314);
+            this.dataGridView1.Size = new System.Drawing.Size(926, 314);
             this.dataGridView1.TabIndex = 0;
             // 
             // idDataGridViewTextBoxColumn
@@ -194,11 +198,51 @@
             // 
             this.dataLendTableAdapter1.ClearBeforeFill = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(965, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 15);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "0-借阅";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(965, 78);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 15);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "1-借阅确认";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(968, 120);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 15);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "2-归还";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(968, 159);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(83, 15);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "3-归还确认";
+            // 
             // 资料借阅管理
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1016, 445);
+            this.ClientSize = new System.Drawing.Size(1103, 445);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -214,6 +258,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataLendBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipment_Management_Information_SystemDataSet3)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -238,5 +283,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn lendCountDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rynameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Flag;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

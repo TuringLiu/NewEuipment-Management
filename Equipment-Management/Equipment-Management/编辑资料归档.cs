@@ -38,7 +38,8 @@ namespace Equipment_Management
                     
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = DBClass_xu.conn;
-                    cmd.CommandText = "Insert DataIn(Id,InDate,DataNo,InCount,Usersname,Ryname,Detail,Flag)values('" + textBox1.Text +"','"+System.DateTime.Now.ToString()+"','"+textBox7.Text + "','" + textBox3.Text + "','" + textBox5.Text + "','" + textBox4.Text +"','"+textBox6.Text+"','"+ 0 + "')";
+                    //                                                                                                                                                                                                            当前添加的人的名字
+                    cmd.CommandText = "Insert DataIn(Id,InDate,DataNo,InCount,Usersname,Ryname,Detail,Flag)values('" + textBox1.Text +"','"+System.DateTime.Now.ToString()+"','"+textBox7.Text + "','" + textBox3.Text + "','" + "徐嘉豪" + "','" + "待审批" +"','"+textBox6.Text+"','"+ 0 + "')";
                     cmd.ExecuteNonQuery();
                     
                     DataSet dsMyDataBase = new DataSet();
@@ -63,8 +64,9 @@ namespace Equipment_Management
                     cmd.CommandText = "update DataIn set[Id]='" + textBox1.Text + "'" +
                       ",[DataNo]='" + textBox7.Text + "'" +
                       ",[InCount]='" + textBox3.Text + "'" +
-                      ",[Usersname]='" + textBox5.Text + "'" +
-                      ",[Ryname]='" + textBox4.Text + "'" +
+                      ",[Usersname]='" + mystr.str + "'" +
+                      //对这个资料进行修改的管理员姓名
+                      ",[Ryname]='" + "徐嘉豪" + "'" +
                       ",[Detail]='" + textBox6.Text + "'" +
                       ",[Flag]='" + 0 + "'" +
                       "where[Id]='" + mystr.num + "'";

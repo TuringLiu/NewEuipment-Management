@@ -70,6 +70,7 @@ namespace Equipment_Management
                 cmd.Connection = DBClass_xu.conn;
                 cmd.CommandText = "delete from ArmsInfo where[Zbid]='" + mystr.str + "'";
                 cmd.ExecuteNonQuery();
+
                 DataSet dsMyDataBase = new DataSet();
                 SqlDataAdapter daBaseInform = new SqlDataAdapter("Select*From ArmsInfo", DBClass_xu.conn);
                 daBaseInform.Fill(dsMyDataBase, "ArmsInfo");

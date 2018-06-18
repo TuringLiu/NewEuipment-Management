@@ -33,21 +33,41 @@ namespace Equipment_Management
                 {
                     DBClass_xu.conn.Open();
                 }
-
-               
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = DBClass_xu.conn;
-                    cmd.CommandText = "Insert DataLend(Id,DataNo,LendDate,Ryid,LendCount,Ryname,Flag)values('" + textBox1.Text + "','" + textBox2.Text + "','" + System.DateTime.Now.ToString() + "','" + textBox4.Text + "','" + textBox5.Text +"','"+ textBox6.Text + "','"+ 0 + "')";
-                    cmd.ExecuteNonQuery();
 
+                    string strcmd = "select ICount from ArmsData where DataNo='" + textBox2.Text + "'";
+                    cmd.CommandText = strcmd;
+                    int still =int.Parse( cmd.ExecuteScalar().ToString());
+                if((still-int.Parse(textBox5.Text))>=0)
+                {
+                    string a = "Select Max(Id) from DataLend ";
+                    cmd.CommandText = a;
+                    increase.dataLend_id = int.Parse(cmd.ExecuteScalar().ToString()) + 1;
+                    cmd.CommandText = "Insert DataLend(Id,DataNo,LendDate,Ryid,LendCount,Ryname,Flag)values('" + increase.dataLend_id + "','" + textBox2.Text + "','" + System.DateTime.Now.ToString() + "','" + textBox1.Text + "','" + textBox5.Text +"','"+   "待确认"   + "','"+ 0 + "')";
+
+                    cmd.ExecuteNonQuery();
                     DataSet dsMyDataBase = new DataSet();
                     SqlDataAdapter daBaseInform = new SqlDataAdapter("Select*From DataLend", DBClass_xu.conn);
                     daBaseInform.Fill(dsMyDataBase, "DataLend");
 
                     mystr.data.DataSource = dsMyDataBase.Tables["DataLend"];
                     MessageBox.Show("添加成功");
+
+                    //减少资料数量
+                    strcmd = "select ICount from ArmsData where DataNo='" + textBox2.Text + "'";
+                    cmd.CommandText = strcmd;
+                    int save = int.Parse(cmd.ExecuteScalar().ToString());
+                    save = save - int.Parse(textBox5.Text);
+                    cmd.CommandText = "update ArmsData set[ICount]='" + save + "'" +
+                         "where[DataNo]='" + textBox2.Text + "'";
+                    cmd.ExecuteNonQuery();
+                   
                     DBClass_xu.conn.Close();
                     Close();
+                }
+                else
+                { MessageBox.Show("资料不足，当前无法借阅"); DBClass_xu.conn.Close(); }
             }
             catch (Exception ex)
             {

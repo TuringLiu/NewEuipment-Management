@@ -71,6 +71,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Equipment_Management_Information_SystemDataSet12.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Equipment_Management_Information_SystemDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Equipment_Management_Information_SystemDataSet13.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Equipment_Management_Information_SystemDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -356,6 +361,17 @@
     </None>
     <None Include="Equipment_Management_Information_SystemDataSet12.xss">
       <DependentUpon>Equipment_Management_Information_SystemDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="Equipment_Management_Information_SystemDataSet13.xsc">
+      <DependentUpon>Equipment_Management_Information_SystemDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="Equipment_Management_Information_SystemDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Equipment_Management_Information_SystemDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Equipment_Management_Information_SystemDataSet13.xss">
+      <DependentUpon>Equipment_Management_Information_SystemDataSet13.xsd</DependentUpon>
     </None>
     <None Include="Equipment_Management_Information_SystemDataSet2.xsc">
       <DependentUpon>Equipment_Management_Information_SystemDataSet2.xsd</DependentUpon>

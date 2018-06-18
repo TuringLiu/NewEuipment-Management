@@ -124,7 +124,8 @@ namespace Equipment_Management
                         ",[LendDate]='" + dataGridView1.CurrentRow.Cells[2].Value.ToString() + "'" +
                         ",[Ryid]='" + dataGridView1.CurrentRow.Cells[3].Value + "'" +
                         ",[LendCount]='" + dataGridView1.CurrentRow.Cells[4].Value + "'" +
-                        ",[Ryname]='" + dataGridView1.CurrentRow.Cells[5].Value.ToString() + "'" +
+                        //               当前管理人员RyName
+                        ",[Ryname]='" + "徐嘉豪" + "'" +
                         ",[Flag]='" + i + "'" +
                         "where[Id]='" + dataGridView1.CurrentRow.Cells[0].Value + "'";
                     cmd.ExecuteNonQuery();

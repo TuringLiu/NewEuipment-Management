@@ -41,11 +41,12 @@ namespace Equipment_Management
             {
                 mystr.i = 2;
                 mystr.num = (int)dataGridView1.CurrentRow.Cells[0].Value;
+                mystr.str = dataGridView1.CurrentRow.Cells[4].Value.ToString();
                 编辑资料归档 do_zlgd = new 编辑资料归档();
                 do_zlgd.Show();
             }
             else
-                MessageBox.Show("该资料已审核", "wrong", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("该资料已审核无法修改", "wrong", MessageBoxButtons.OK, MessageBoxIcon.Information);
             
         }
 
@@ -96,7 +97,8 @@ namespace Equipment_Management
                         ",[DataNo]='" + dataGridView1.CurrentRow.Cells[2].Value.ToString() + "'" +
                         ",[InCount]='" + dataGridView1.CurrentRow.Cells[3].Value + "'" +
                         ",[Usersname]='" + dataGridView1.CurrentRow.Cells[4].Value + "'" +
-                        ",[Ryname]='" + dataGridView1.CurrentRow.Cells[5].Value.ToString() + "'" +
+                        //               审批人的名字
+                        ",[Ryname]='" + "徐嘉豪" + "'" +
                         ",[Detail]='" + dataGridView1.CurrentRow.Cells[5].Value.ToString() + "'" +
                         ",[Flag]='" + i + "'" +
                         "where[Id]='" + dataGridView1.CurrentRow.Cells[0].Value + "'";

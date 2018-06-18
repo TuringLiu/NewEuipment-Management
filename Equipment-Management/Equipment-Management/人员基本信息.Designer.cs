@@ -71,7 +71,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(246, 408);
+            this.button1.Location = new System.Drawing.Point(205, 399);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -81,7 +81,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(370, 408);
+            this.button2.Location = new System.Drawing.Point(349, 399);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
@@ -91,7 +91,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(491, 408);
+            this.button3.Location = new System.Drawing.Point(479, 399);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 4;
@@ -101,9 +101,9 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(615, 408);
+            this.button4.Location = new System.Drawing.Point(615, 399);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(95, 23);
             this.button4.TabIndex = 5;
             this.button4.Text = "部门调转";
             this.button4.UseVisualStyleBackColor = true;
@@ -111,7 +111,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(757, 408);
+            this.button5.Location = new System.Drawing.Point(752, 399);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 6;
@@ -125,7 +125,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(55, 408);
+            this.button6.Location = new System.Drawing.Point(56, 399);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 7;
@@ -146,7 +146,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(205, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(837, 358);
+            this.dataGridView1.Size = new System.Drawing.Size(866, 358);
             this.dataGridView1.TabIndex = 8;
             // 
             // 人员编号

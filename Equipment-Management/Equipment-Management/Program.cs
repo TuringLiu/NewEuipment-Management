@@ -30,6 +30,10 @@ namespace Equipment_Management
             public static int i;
             public static TreeView tree;
         }
+        public static class increase
+        {
+            public static int dataLend_id;
+        }
         //存储树控件的节点信息
         public static class TreeViewList
         {
